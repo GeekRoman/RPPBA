@@ -1,10 +1,10 @@
-package Interface;
+package GUI;
 
 import javax.swing.*;
 
-public class Get_products {
-    private JTextField textField1;
+public class Send_products {
     private JTextField textField2;
+    private JTextField textField1;
     private JComboBox comboBox1;
     private JTextField textField3;
     private JComboBox comboBox2;

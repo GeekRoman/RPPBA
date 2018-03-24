@@ -1,10 +1,8 @@
-package Interface;
+package GUI;
 
 import javax.swing.*;
 
 import java.awt.event.*;
-import java.io.IOException;
-import  java.io.*;
 import  java.lang.*;
 public class Menu extends JFrame implements ActionListener {
     private JButton Button1;
