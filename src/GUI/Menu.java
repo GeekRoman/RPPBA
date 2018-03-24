@@ -3,7 +3,11 @@ package GUI;
 import javax.swing.*;
 
 import java.awt.event.*;
+import java.io.IOException;
 import  java.lang.*;
+
+import static client.Client.quit;
+
 public class Menu extends JFrame implements ActionListener {
     private JButton Button1;
     private JButton ExitButton;
@@ -18,7 +22,6 @@ public class Menu extends JFrame implements ActionListener {
 
         switch(str){
             case "Управление продукцией": {
-                //ss
                 break;
             }
 
@@ -36,6 +39,12 @@ public class Menu extends JFrame implements ActionListener {
             }
 
             case "Выход":{
+                try {
+                    quit();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                this.dispose();
                 break;
             }
 
