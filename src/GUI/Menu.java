@@ -27,8 +27,7 @@ public class Menu extends JFrame implements ActionListener {
                 Storage newStorage = null;
                 try {
                     newStorage = new Storage();
-                    Storage.setResizable(false);
-                    Storage.setVisible(true);
+                   
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
