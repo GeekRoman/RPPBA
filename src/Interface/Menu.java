@@ -28,9 +28,9 @@ public class Menu extends JFrame implements ActionListener {
                 this.dispose();
                 Storage newStorage = null;
                 try {
-                    addBudget = new AddBudgetForClient();
-                    addBudget.setResizable(false);
-                    addBudget.setVisible(true);
+                    newStorage = new Storage();
+                    Storage.setResizable(false);
+                    Storage.setVisible(true);
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
