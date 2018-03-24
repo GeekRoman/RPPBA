@@ -18,7 +18,7 @@ public class Menu extends JFrame implements ActionListener {
 
         switch(str){
             case "Управление продукцией": {
-
+                //ss
                 break;
             }
 
@@ -33,8 +33,6 @@ public class Menu extends JFrame implements ActionListener {
                 }
                 break;
 
-
-                break;
             }
 
             case "Выход":{
