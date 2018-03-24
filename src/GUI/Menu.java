@@ -27,12 +27,6 @@ public class Menu extends JFrame implements ActionListener {
                 Storage newStorage = null;
                 try {
                     newStorage = new Storage();
-<<<<<<< HEAD
-
-
-=======
-                   
->>>>>>> roman
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
