@@ -46,7 +46,7 @@ public class StorageForm extends JFrame implements ActionListener {
         table1.setModel(tableModel);
 
         ArrayList <Storage> list;
-       /*list = new ArrayList<Storage>(getAllStorageInList());
+       list = new ArrayList<Storage>(getAllStorageInList());
 
         for (int i = 0; i < list.size(); i++) {
             tableModel.addRow(new String[]{
@@ -54,7 +54,7 @@ public class StorageForm extends JFrame implements ActionListener {
                     list.get(i).getAddress(),
                     list.get(i).getStatus(),
             });
-        };*/
+        };
 
     }
     public void actionPerformed(ActionEvent e) {
