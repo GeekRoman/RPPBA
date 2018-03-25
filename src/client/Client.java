@@ -51,7 +51,7 @@ public class Client {
 
         }
     }
-
+    //QUIT
     public static void quit() throws IOException {
         coos.writeObject("quit");
         currentUserLogin = "";
@@ -59,6 +59,29 @@ public class Client {
         clientSocket.close();
         coos.close();
         cois.close();
+    }
+    //ADD
+    public static String addStorage(String id, String address, String status) throws Exception{
+        String str = "addStorage " + id + " "+ address + " " + status;
+        System.out.println(str);
+        coos.writeObject(str);
+        answer = (String) cois.readObject();
+
+        return answer;
+
+    }
+    //DELETE
+    public static String delStorage (String storageId) throws Exception{
+        coos.writeObject("delStorage");
+        coos.writeObject(storageId);
+        answer = (String) cois.readObject();
+        return answer;
+    }
+    //GET
+    public static String getAllStorageId() throws Exception {
+        coos.writeObject("getAllstorageId");
+        answer = (String) cois.readObject();
+        return answer;
     }
     public static ArrayList<server.Storage> getAllStorageInList() throws Exception {
         coos.writeObject("getAllStorageInList");

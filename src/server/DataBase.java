@@ -88,7 +88,7 @@ public class DataBase {
             return list;
 
         } catch (Exception e){
-            System.out.println("Ошибка получения всех сотрудников");
+            System.out.println("Ошибка получения всех складов");
             return null;
         }
     }
@@ -121,10 +121,79 @@ public class DataBase {
             return list2;
 
         } catch (Exception e){
-            System.out.println("Ошибка получения всех сотрудников");
+            System.out.println("Ошибка получения всех ячеек");
             return null;
         }
     }
+    public String getAllStorageId() throws ClassNotFoundException {
+
+        try (Connection connection = getConnection()) {
+            int i = 0;
+            String str ="";
+
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_storage;");
+            String name = new String();
+
+            while (rs.next()) {
+                name = rs.getString("StorageId");
+                str += name.trim() + "\n";
+                i++;
+            }
+
+            return str;
+
+        } catch (Exception e){
+            System.out.println("Ошибка получения StorageId");
+            return null;
+        }
+
+    }
+    //DELETE
+    public boolean delStorage(String storageId){
+        try (Connection connection = getConnection()) {
+
+            String sql = "DELETE FROM log_storage WHERE StorageId = \"" + storageId + "\";";
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.executeUpdate(sql);
+            st = connection.prepareStatement(sql);
+            st.executeUpdate(sql);
+            return true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка удаления склада***");
+            return false;
+        }
+    }
+    //ADD
+    public boolean addStorage (String mystorageId, String myaddress, String mystatus) throws Exception {
+        boolean addstatus = false;
+        try (Connection connection = getConnection()) {
+
+            System.out.println("Проверка на свободный идентификатор...");
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_storage;");
+            while (rs.next()){
+                if (mystorageId.equals(rs.getString("StorageId"))){
+                    return addstatus=false;
+                }
+            }
+
+            String sql = "INSERT INTO log_storage(StorageId,Address,Status) VALUES (\"" + mystorageId + "\",\"" + myaddress + "\", \"" + mystatus + "\");";
+            System.out.println(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.executeUpdate(sql);
+            addstatus=true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка добавления склада");
+        }
+
+        return addstatus;
+    }
+
 
 
 }

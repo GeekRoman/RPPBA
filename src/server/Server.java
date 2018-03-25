@@ -66,6 +66,36 @@ public class Server extends Thread {
                         clientSocket.close();
                         break;
                     }
+                    case "addStorage": {
+                        String id = mas[1];
+                        String address = mas[2];
+                        String status = mas[3];
+
+                        if (db.addStorage(id, address, status)==false){
+                            answer = "false";
+                        } else {
+                            answer = "true";
+                        }
+
+                        soos.writeObject(answer);
+
+                        break;
+                    }
+                    case "delStorage": {
+                        String storageId = (String)sois.readObject();
+                        if (db.delStorage(storageId)){
+                            answer = "true";
+                        } else {
+                            answer = "false";
+                        }
+                        soos.writeObject(answer);
+                        break;
+                    }
+                    case "getAllstorageId": {
+                        String allStorages = db.getAllStorageId();
+                        soos.writeObject(allStorages);
+                        break;
+                    }
                     case "getAllStorageInList": {
                         ArrayList<Storage> storages = new ArrayList<Storage>(db.getAllStoragesInList());
                         soos.writeObject(storages);
