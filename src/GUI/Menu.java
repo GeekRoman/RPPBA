@@ -2,10 +2,10 @@ package GUI;
 
 import javax.swing.*;
 
-import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
 import  java.lang.*;
+import  server.Storage;
 
 import static client.Client.quit;
 
@@ -15,7 +15,7 @@ public class Menu extends JFrame implements ActionListener {
     private JButton Button2;
     private JPanel FormMenu;
 
-    public Menu (){
+    public Menu () throws Exception {
         super();
         setSize(600, 200);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -31,15 +31,25 @@ public class Menu extends JFrame implements ActionListener {
 
         switch(str){
             case "Управление продукцией": {
+                this.dispose();
+                Product_Information_Management PIManagement = null;
+                try {
+                    PIManagement = new Product_Information_Management();
+                    PIManagement.setResizable(false);
+                    PIManagement.setVisible(true);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
                 break;
             }
 
             case "Управление складом":{
                 this.dispose();
-                Storage newStorage = null;
+                StorageForm newStorage = null;
                 try {
-                    newStorage = new Storage();
-                   
+                    newStorage = new StorageForm();
+                    newStorage.setResizable(false);
+                    newStorage.setVisible(true);
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
@@ -56,9 +66,6 @@ public class Menu extends JFrame implements ActionListener {
                 this.dispose();
                 break;
             }
-
-
         }
-
     }
 }

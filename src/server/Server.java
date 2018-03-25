@@ -66,6 +66,11 @@ public class Server extends Thread {
                         clientSocket.close();
                         break;
                     }
+                    case "getAllStorageInList": {
+                        ArrayList<Storage> storages = new ArrayList<Storage>(db.getAllStoragesInList());
+                        soos.writeObject(storages);
+                        break;
+                    }
 
                     default: {
                         System.out.println("Команда не определена");

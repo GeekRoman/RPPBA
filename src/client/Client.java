@@ -1,10 +1,10 @@
 package client;
 import GUI.*;
-import server.*;
 
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
+import server.Storage;
 
 public class Client {
     private static ObjectInputStream cois;
@@ -52,7 +52,6 @@ public class Client {
         }
     }
 
-
     public static void quit() throws IOException {
         coos.writeObject("quit");
         currentUserLogin = "";
@@ -60,5 +59,10 @@ public class Client {
         clientSocket.close();
         coos.close();
         cois.close();
+    }
+    public static ArrayList<server.Storage> getAllStorageInList() throws Exception {
+        coos.writeObject("getAllStorageInList");
+        ArrayList<server.Storage> storages = (ArrayList<server.Storage>) cois.readObject();
+        return storages;
     }
 }
