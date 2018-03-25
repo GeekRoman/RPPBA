@@ -65,4 +65,16 @@ public class Client {
         ArrayList<server.Storage> storages = (ArrayList<server.Storage>) cois.readObject();
         return storages;
     }
+
+    public static ArrayList<server.Cell> getAllCellInList() throws Exception {
+        coos.writeObject("getAllCellInList");
+        ArrayList<server.Cell> Cells = (ArrayList<server.Cell>) cois.readObject();
+        return Cells;
+    }
+
+    public static ArrayList<server.Availability> getAllAvailabilityInList() throws Exception {
+        coos.writeObject("getAllAvailabilityStorageInList");
+        ArrayList<server.Availability> Availability = (ArrayList<server.Availability>) cois.readObject();
+        return Availability;
+    }
 }

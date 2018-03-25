@@ -1,8 +1,15 @@
 package GUI;
 
+import server.Storage;
+
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import static client.Client.getAllCellInList;
+import static client.Client.getAllStorageInList;
 
 public class Cell extends JFrame implements ActionListener {
     private JTable table1;
@@ -15,8 +22,14 @@ public class Cell extends JFrame implements ActionListener {
     private JComboBox comboBox3;
     private JButton DeleteButton;
     private JPanel CellForm;
+    private String []columnsHeader = {"ID чейки", "Длина", "Высота", "Ширина", "Тип", "Статус"};
+    DefaultTableModel tableModel = new DefaultTableModel() {
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return false;
+        }
+    };
 
-    public Cell (){
+    public Cell () throws Exception{
         super();
         setSize(600, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -26,6 +39,25 @@ public class Cell extends JFrame implements ActionListener {
         DeleteButton.addActionListener(this);
         AddButton.addActionListener(this);
         ExitButton.addActionListener(this);
+
+        for (String col: columnsHeader){
+            tableModel.addColumn(col);
+        }
+        table1.setModel(tableModel);
+
+        ArrayList<server.Cell> list;
+        list = new ArrayList<server.Cell>(getAllCellInList());
+
+        for (int i = 0; i < list.size(); i++) {
+            tableModel.addRow(new String[]{
+                    list.get(i).getCellId(),
+                    list.get(i).getLength(),
+                    list.get(i).getHeight(),
+                    list.get(i).getWight(),
+                    list.get(i).getType(),
+                    list.get(i).getStatus(),
+            });
+        };
     }
     public void actionPerformed(ActionEvent e) {
         String str = e.getActionCommand(), answer;

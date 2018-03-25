@@ -71,6 +71,16 @@ public class Server extends Thread {
                         soos.writeObject(storages);
                         break;
                     }
+                    case "getAllCellInList": {
+                        ArrayList<Cell> cells = new ArrayList<Cell>(db.getAllCellInList());
+                        soos.writeObject(cells);
+                        break;
+                    }
+                    case "getAllAvailabilityInList": {
+                        ArrayList<Availability> availability = new ArrayList<Availability>(db.getAllAvailabilityInList());
+                        soos.writeObject(availability);
+                        break;
+                    }
 
                     default: {
                         System.out.println("Команда не определена");
