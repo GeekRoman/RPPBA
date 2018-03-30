@@ -135,20 +135,27 @@ public class StorageForm extends JFrame implements ActionListener {
                             e1.printStackTrace();
                         }
                         JOptionPane.showMessageDialog(StorageForm, "Склад " + storageId + " удален!");
+                        DefaultTableModel tableModel2 = new DefaultTableModel() {
+                            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                                return false;
+                            }
+                        };
                         for (String col: columnsHeader){
-                            tableModel.addColumn(col);
+                            tableModel2.addColumn(col);
                         }
-                        table1.setModel(tableModel);
-
+                        table1.setModel(tableModel2);
                         ArrayList <Storage> list = new ArrayList<Storage>(getAllStorageInList());
 
                         for (int i = 0; i < list.size(); i++) {
-                            tableModel.addRow(new String[]{
+                            tableModel2.addRow(new String[]{
                                     list.get(i).getStorageId(),
                                     list.get(i).getAddress(),
                                     list.get(i).getStatus(),
                             });
                         };
+                        comboBox2.removeAllItems();
+                        comboBox3.removeAllItems();
+
 
 
                     } else {
@@ -162,6 +169,7 @@ public class StorageForm extends JFrame implements ActionListener {
 
             case "Управление ячейками":{
                 this.dispose();
+                String stid = comboBox3.getSelectedItem().toString();
                 Cell cellform = null;
                 try {
                     cellform = new Cell();
