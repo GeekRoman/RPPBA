@@ -21,7 +21,7 @@ public class DataBase {
 
     public ArrayList<Availability> getAllAvailabilityInList() throws ClassNotFoundException {
         try (Connection connection = getConnection()) {
-            int i = 1;
+
             ArrayList<Availability> list3 = new ArrayList<Availability>();
             String  ItemId, Name, Length,
                     Height, Wight, Config,
@@ -65,7 +65,7 @@ public class DataBase {
 
     public ArrayList<Storage> getAllStoragesInList() throws ClassNotFoundException {
         try (Connection connection = getConnection()) {
-            int i = 1;
+
             ArrayList<Storage> list = new ArrayList<Storage>();
 
             Statement statement = connection.createStatement();
@@ -94,7 +94,7 @@ public class DataBase {
     }
     public ArrayList<Cell> getAllCellInList() throws ClassNotFoundException {
         try (Connection connection = getConnection()) {
-            int i = 1;
+
             ArrayList<Cell> list2 = new ArrayList<Cell>();
 
             Statement statement = connection.createStatement();
@@ -119,6 +119,39 @@ public class DataBase {
             }
 
             return list2;
+
+        } catch (Exception e){
+            System.out.println("Ошибка получения всех ячеек");
+            return null;
+        }
+    }
+    public ArrayList<Cell> getAllCellInListbyId(String stringId) throws ClassNotFoundException {
+        try (Connection connection = getConnection()) {
+
+            ArrayList<Cell> list = new ArrayList<Cell>();
+
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_cell WHERE StorageId = \"" + stringId + "\";");
+
+            String cellId, storageId,length,height,widht, type, status;
+
+            while (rs.next()) {
+                cellId = rs.getString("CellId");
+                storageId = rs.getString("StorageId");
+                length = rs.getString("Lenght");
+                height = rs.getString("Height");
+                widht = rs.getString("Widht");
+                type = rs.getString("Type");
+                status = rs.getString("Status");
+
+                Cell mycell = new Cell(cellId, storageId,length,height,widht, type, status);
+
+                list.add(mycell);
+
+            }
+
+            return list;
 
         } catch (Exception e){
             System.out.println("Ошибка получения всех ячеек");

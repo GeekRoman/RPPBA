@@ -111,6 +111,12 @@ public class Server extends Thread {
                         soos.writeObject(availability);
                         break;
                     }
+                    case "getCellInListbyId": {
+                        String storageId = mas[1];
+                        ArrayList<Cell> cells = new ArrayList<Cell>(db.getAllCellInListbyId(storageId));
+                        soos.writeObject(cells);
+                        break;
+                    }
 
                     default: {
                         System.out.println("Команда не определена");

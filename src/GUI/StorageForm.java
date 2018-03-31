@@ -155,6 +155,12 @@ public class StorageForm extends JFrame implements ActionListener {
                         };
                         comboBox2.removeAllItems();
                         comboBox3.removeAllItems();
+                        String all_storage = getAllStorageId();
+                        String[] mas = all_storage.split("\n");
+                        for (int i = 0; i < mas.length; i++){
+                            comboBox2.addItem(mas[i]);
+                            comboBox3.addItem(mas[i]);
+                        }
 
 
 
@@ -169,10 +175,10 @@ public class StorageForm extends JFrame implements ActionListener {
 
             case "Управление ячейками":{
                 this.dispose();
-                String stid = comboBox3.getSelectedItem().toString();
+                String stringId = comboBox3.getSelectedItem().toString();
                 Cell cellform = null;
                 try {
-                    cellform = new Cell();
+                    cellform = new Cell(stringId);
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }

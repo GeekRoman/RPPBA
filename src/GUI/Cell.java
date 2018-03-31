@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import static client.Client.getAllCellInList;
+import static client.Client.getAllCellInListbyId;
 import static client.Client.getAllStorageInList;
 
 public class Cell extends JFrame implements ActionListener {
@@ -29,7 +30,7 @@ public class Cell extends JFrame implements ActionListener {
         }
     };
 
-    public Cell () throws Exception{
+    public Cell (String stringId) throws Exception{
         super();
         setSize(600, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -46,7 +47,7 @@ public class Cell extends JFrame implements ActionListener {
         table1.setModel(tableModel);
 
         ArrayList<server.Cell> list;
-        list = new ArrayList<server.Cell>(getAllCellInList());
+        list = new ArrayList<server.Cell>(getAllCellInListbyId(stringId));
 
         for (int i = 0; i < list.size(); i++) {
             tableModel.addRow(new String[]{

@@ -95,6 +95,12 @@ public class Client {
         return Cells;
     }
 
+    public static ArrayList<server.Cell> getAllCellInListbyId(String stringId) throws Exception {
+        coos.writeObject("getAllCellInList " + stringId);
+        ArrayList<server.Cell> Cells = (ArrayList<server.Cell>) cois.readObject();
+        return Cells;
+    }
+
     public static ArrayList<server.Availability> getAllAvailabilityInList() throws Exception {
         coos.writeObject("getAllAvailabilityStorageInList");
         ArrayList<server.Availability> Availability = (ArrayList<server.Availability>) cois.readObject();
