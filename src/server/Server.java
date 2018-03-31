@@ -111,7 +111,7 @@ public class Server extends Thread {
                         soos.writeObject(availability);
                         break;
                     }
-                    case "getCellInListbyId": {
+                    case "getAllCellInListbyId": {
                         String storageId = mas[1];
                         ArrayList<Cell> cells = new ArrayList<Cell>(db.getAllCellInListbyId(storageId));
                         soos.writeObject(cells);

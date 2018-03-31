@@ -132,7 +132,8 @@ public class DataBase {
 
             Statement statement = connection.createStatement();
             ResultSet rs;
-            rs = statement.executeQuery("SELECT * FROM log_cell WHERE StorageId = \"" + stringId + "\";");
+            String sql = "SELECT * FROM log_cell WHERE StorageId = \"" + stringId + "\";";
+            rs = statement.executeQuery(sql);
 
             String cellId, storageId,length,height,widht, type, status;
 

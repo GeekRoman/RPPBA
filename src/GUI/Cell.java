@@ -23,7 +23,7 @@ public class Cell extends JFrame implements ActionListener {
     private JComboBox comboBox3;
     private JButton DeleteButton;
     private JPanel CellForm;
-    private String []columnsHeader = {"ID чейки", "Длина", "Высота", "Ширина", "Тип", "Статус"};
+    private String []columnsHeader = {"ID ячейки", "Длина", "Высота", "Ширина", "Тип", "Статус"};
     DefaultTableModel tableModel = new DefaultTableModel() {
         public boolean isCellEditable(int rowIndex, int columnIndex) {
             return false;

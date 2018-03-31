@@ -96,7 +96,9 @@ public class Client {
     }
 
     public static ArrayList<server.Cell> getAllCellInListbyId(String stringId) throws Exception {
-        coos.writeObject("getAllCellInList " + stringId);
+        coos.writeObject("getAllCellInListbyId " + stringId);
+
+
         ArrayList<server.Cell> Cells = (ArrayList<server.Cell>) cois.readObject();
         return Cells;
     }
