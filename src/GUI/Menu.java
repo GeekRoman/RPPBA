@@ -16,7 +16,7 @@ public class Menu extends JFrame implements ActionListener {
     private JPanel FormMenu;
 
     public Menu () throws Exception {
-        super();
+        super("Меню");
         setSize(600, 200);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(FormMenu);

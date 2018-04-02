@@ -18,7 +18,6 @@ public class StorageForm extends JFrame implements ActionListener {
     private JButton ExitButton;
     private JButton AddButton;
     private JButton CellButton;
-    private JComboBox comboBox2;
     private JButton DeleteButton;
     private JPanel StorageForm;
     private JComboBox comboBox3;
@@ -32,8 +31,9 @@ public class StorageForm extends JFrame implements ActionListener {
 
 
     public StorageForm() throws Exception {
-        super();
-        setSize(600, 600);
+        super("Управление складом");
+
+        setSize(900, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(StorageForm);
         this.setResizable(false);
@@ -90,7 +90,8 @@ public class StorageForm extends JFrame implements ActionListener {
 
             case "Управление ячейками":{
                 this.dispose();
-                String stringId = comboBox3.getSelectedItem().toString();
+                String stringId = "";
+
                 Cell cellform = null;
                 try {
                     cellform = new Cell(stringId);

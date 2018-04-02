@@ -21,8 +21,8 @@ public class StorageDelete extends JFrame implements ActionListener{
 
 
     public StorageDelete() throws Exception {
-        super();
-        setSize(650, 300);
+        super("Удаление");
+        setSize(500, 200);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(DeleteForm);
         this.setResizable(false);

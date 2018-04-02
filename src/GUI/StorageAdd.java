@@ -22,7 +22,7 @@ public class StorageAdd extends JFrame implements ActionListener{
 
 
     public StorageAdd() throws Exception {
-        super();
+        super("Добавление склада");
         setSize(650, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(storageAdd);

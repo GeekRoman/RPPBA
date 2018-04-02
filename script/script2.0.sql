@@ -54,7 +54,7 @@ DROP TABLE IF EXISTS `log_cell`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_cell` (
   `CellId` int(11) NOT NULL,
-  `StorageId` int(11) NOT NULL,
+  `StorageId` varchar(11) NOT NULL,
   `Lenght` int(11) NOT NULL,
   `Height` int(11) NOT NULL,
   `Widht` int(11) NOT NULL,
@@ -72,6 +72,7 @@ CREATE TABLE `log_cell` (
 
 LOCK TABLES `log_cell` WRITE;
 /*!40000 ALTER TABLE `log_cell` DISABLE KEYS */;
+INSERT INTO `log_cell` VALUES (1,'1',10,10,15,'BOX','empty'),(2,'2',20,20,20,'20','empty');
 /*!40000 ALTER TABLE `log_cell` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,9 +112,9 @@ DROP TABLE IF EXISTS `log_storage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_storage` (
-  `StorageId` int(11) NOT NULL,
+  `StorageId` varchar(11) NOT NULL,
   `Address` varchar(45) NOT NULL,
-  `Name` varchar(45) NOT NULL,
+  `Status` varchar(45) NOT NULL,
   PRIMARY KEY (`StorageId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -124,6 +125,7 @@ CREATE TABLE `log_storage` (
 
 LOCK TABLES `log_storage` WRITE;
 /*!40000 ALTER TABLE `log_storage` DISABLE KEYS */;
+INSERT INTO `log_storage` VALUES ('1','г. Минск бля бля','10'),('2','2','Пустой');
 /*!40000 ALTER TABLE `log_storage` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -223,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-24 23:23:01
+-- Dump completed on 2018-04-02 15:21:25

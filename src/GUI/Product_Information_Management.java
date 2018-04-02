@@ -18,6 +18,9 @@ public class Product_Information_Management extends JFrame implements ActionList
     private JButton ExitButton;
     private JButton InventButton;
     private JPanel InventManagementForm;
+    private JButton номенклатураButton;
+    private JButton спискиЗаданийButton;
+    private JComboBox comboBox1;
     private String []columnsHeader = {"ID", "Название", "Длина", "Высота",
             "Ширина", "Цвет", "Постовщик", "В наличии", "Заказанно", "Склад","Ячейка"};
     DefaultTableModel tableModel = new DefaultTableModel() {
@@ -28,7 +31,7 @@ public class Product_Information_Management extends JFrame implements ActionList
 
 
     public Product_Information_Management  () throws Exception{
-        super();
+        super("Управление продукцией ");
         setSize(900, 650);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(InventManagementForm);

@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b554b-d693-42a4-a37c-1e31b677893e" name="Default" comment="1">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageForm$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageForm$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/script/2script.sql" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageAdd.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageAdd.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageDelete.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageDelete.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Cell.form" afterPath="$PROJECT_DIR$/src/GUI/Cell.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Menu.form" afterPath="$PROJECT_DIR$/src/GUI/Menu.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Menu.java" afterPath="$PROJECT_DIR$/src/GUI/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageAdd.form" afterPath="$PROJECT_DIR$/src/GUI/StorageAdd.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageAdd.java" afterPath="$PROJECT_DIR$/src/GUI/StorageAdd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageDelete.form" afterPath="$PROJECT_DIR$/src/GUI/StorageDelete.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageDelete.java" afterPath="$PROJECT_DIR$/src/GUI/StorageDelete.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageForm.form" afterPath="$PROJECT_DIR$/src/GUI/StorageForm.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageForm.java" afterPath="$PROJECT_DIR$/src/GUI/StorageForm.java" />
     </list>
@@ -60,8 +71,8 @@
       <file leaf-file-name="StorageAdd.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/StorageAdd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="441">
+              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +83,8 @@
       <file leaf-file-name="StorageDelete.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/StorageDelete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+            <state relative-caret-position="378">
+              <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,47 +92,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageDelete.form" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Product_Information_Management.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Menu.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageDelete.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/StorageDelete.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/StorageForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="86" column="17" lean-forward="true" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#802#940#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#1553#1562#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageAdd.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/StorageAdd.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellAdd.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/CellAdd.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
           </provider>
@@ -134,17 +120,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Cell.java">
+      <file leaf-file-name="Send_products.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Send_products.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#868#1006#0" expanded="true" />
-                <element signature="e#1005#1006#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="231">
+              <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageAdd.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/StorageAdd.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -179,23 +175,24 @@
         <option value="$PROJECT_DIR$/src/GUI/Storage.form" />
         <option value="$PROJECT_DIR$/src/server/Storage.java" />
         <option value="$PROJECT_DIR$/src/GUI/Storage.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Menu.java" />
         <option value="$PROJECT_DIR$/src/server/Availability.java" />
         <option value="$PROJECT_DIR$/src/server/Cell.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" />
-        <option value="$PROJECT_DIR$/src/GUI/Cell.form" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/GUI/Cell.java" />
         <option value="$PROJECT_DIR$/src/server/Server.java" />
         <option value="$PROJECT_DIR$/src/client/Client.java" />
         <option value="$PROJECT_DIR$/src/server/DataBase.java" />
-        <option value="$PROJECT_DIR$/src/GUI/StorageForm.form" />
+        <option value="$PROJECT_DIR$/src/GUI/StorageDelete.form" />
+        <option value="$PROJECT_DIR$/src/GUI/StorageForm.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Menu.java" />
         <option value="$PROJECT_DIR$/src/GUI/StorageAdd.form" />
         <option value="$PROJECT_DIR$/src/GUI/StorageAdd.java" />
         <option value="$PROJECT_DIR$/src/GUI/StorageDelete.java" />
-        <option value="$PROJECT_DIR$/src/GUI/StorageForm.java" />
-        <option value="$PROJECT_DIR$/src/GUI/StorageDelete.form" />
+        <option value="$PROJECT_DIR$/src/GUI/StorageForm.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Menu.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Cell.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" />
       </list>
     </option>
   </component>
@@ -229,7 +226,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,20 +250,6 @@
               <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
               <item name="Logistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="StorageDelete" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Logistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="StorageForm" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Logistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -273,19 +257,18 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BSUIR/IS_Bubget" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="398" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="299" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="290" />
   </component>
@@ -449,7 +432,9 @@
       <updated>1520532897207</updated>
       <workItem from="1521917739021" duration="4313000" />
       <workItem from="1521925723796" duration="20242000" />
-      <workItem from="1522480895229" duration="9049000" />
+      <workItem from="1522480895229" duration="9124000" />
+      <workItem from="1522651029036" duration="463000" />
+      <workItem from="1522667898494" duration="3859000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1521934423252</created>
@@ -462,7 +447,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34371000" />
+    <option name="totallyTimeSpent" value="38768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -475,6 +460,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -490,13 +476,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.052083332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0125" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -709,24 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Availability.java" />
-    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Menu.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43a4e85-b695-453e-8368-1207b4600de7/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -734,57 +702,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Send_products.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4550">
           <caret line="1019" column="0" lean-forward="false" selection-start-line="1019" selection-start-column="0" selection-end-line="1019" selection-end-column="0" />
-          <folding>
-            <marker date="1522490427933" expanded="true" signature="56933:56951" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="56933:56964" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="56933:56979" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57014:59234" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57027:59219" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57081:57376" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57100:57361" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57163:57341" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57203:57307" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57224:57285" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57426:57753" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57445:57738" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57540:57718" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57580:57684" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57601:57662" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57804:58069" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57823:58054" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57856:58034" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57896:58000" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="57917:57978" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58112:58418" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58131:58403" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58205:58383" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58245:58349" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58266:58327" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58469:58820" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58488:58805" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58568:58785" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58608:58751" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58629:58729" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58872:59205" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58891:59190" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="58992:59170" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="59032:59136" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="59053:59114" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="59285:61789" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="59299:59447" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="59466:61008" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="61032:61362" ph="..." />
-            <marker date="1522490427933" expanded="true" signature="61383:61774" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -800,14 +721,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,9 +744,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/CellAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/CellAdd.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2443">
+        <state relative-caret-position="640">
           <caret line="134" column="89" lean-forward="false" selection-start-line="134" selection-start-column="89" selection-end-line="134" selection-end-column="89" />
           <folding>
             <marker date="1522485547411" expanded="true" signature="1058:1088" ph="SELECT * FRO... log_nomenclature" />
@@ -850,40 +786,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/CellAdd.java">
+    <entry file="file://$PROJECT_DIR$/src/server/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="63">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/CellAdd.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Cell.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Cell.java">
+    <entry file="file://$PROJECT_DIR$/src/server/Availability.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/StorageForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#868#1006#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1541#1550#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+        <state relative-caret-position="252">
+          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -893,45 +826,60 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/StorageForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/StorageAdd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="441">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/StorageForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="86" column="17" lean-forward="true" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#802#940#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#1553#1562#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/StorageDelete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+        <state relative-caret-position="378">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/StorageForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/StorageDelete.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Cell.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Send_products.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
