@@ -27,17 +27,17 @@
     <table id="20" parent="13" name="log_transit"/>
     <column id="21" parent="14" name="AvailabilityId">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="22" parent="14" name="ItemId">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="23" parent="14" name="CellId">
       <Position>3</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="24" parent="14" name="QuantityOnHand">
@@ -73,7 +73,7 @@
     </foreign-key>
     <column id="31" parent="15" name="CellId">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="32" parent="15" name="StorageId">
@@ -122,7 +122,7 @@
     </foreign-key>
     <column id="41" parent="16" name="ItemId">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="42" parent="16" name="Name">
@@ -177,12 +177,12 @@
     </key>
     <column id="53" parent="18" name="TaskId">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="54" parent="18" name="TransitId">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
     </column>
     <column id="55" parent="18" name="Type">
       <Position>3</Position>
@@ -212,12 +212,12 @@
     </foreign-key>
     <column id="61" parent="19" name="TaskListId">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="62" parent="19" name="TaskId">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="63" parent="19" name="Name">
@@ -240,12 +240,12 @@
     </foreign-key>
     <column id="67" parent="20" name="TransitId">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="68" parent="20" name="AvailabilityId">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="69" parent="20" name="Move_Quantity">
@@ -254,11 +254,11 @@
     </column>
     <column id="70" parent="20" name="Out_Storage">
       <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
     </column>
     <column id="71" parent="20" name="In_Storage">
       <Position>5</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
     </column>
     <column id="72" parent="20" name="Status">
       <Position>6</Position>
@@ -271,7 +271,7 @@
     <index id="74" parent="20" name="In_Storage_idx">
       <ColNames>In_Storage</ColNames>
     </index>
-    <index id="75" parent="20" name="Out_storage_idx">
+    <index id="75" parent="20" name="Out_Storage_idx">
       <ColNames>Out_Storage</ColNames>
     </index>
     <key id="76" parent="20" name="PRIMARY">
@@ -285,7 +285,7 @@
       <RefTableName>log_availability</RefTableName>
       <RefColNames>AvailabilityId</RefColNames>
     </foreign-key>
-    <foreign-key id="78" parent="20" name="Out_storage">
+    <foreign-key id="78" parent="20" name="Out_Storage">
       <ColNames>Out_Storage</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_cell</RefTableName>

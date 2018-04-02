@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b554b-d693-42a4-a37c-1e31b677893e" name="Default" comment="1">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/2script.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageAdd.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageAdd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageDelete.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/StorageDelete.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Cell.form" afterPath="$PROJECT_DIR$/src/GUI/Cell.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Menu.form" afterPath="$PROJECT_DIR$/src/GUI/Menu.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Menu.java" afterPath="$PROJECT_DIR$/src/GUI/Menu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageAdd.form" afterPath="$PROJECT_DIR$/src/GUI/StorageAdd.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageAdd.java" afterPath="$PROJECT_DIR$/src/GUI/StorageAdd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageDelete.form" afterPath="$PROJECT_DIR$/src/GUI/StorageDelete.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageDelete.java" afterPath="$PROJECT_DIR$/src/GUI/StorageDelete.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageForm.form" afterPath="$PROJECT_DIR$/src/GUI/StorageForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StorageForm.java" afterPath="$PROJECT_DIR$/src/GUI/StorageForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b43a4e85-b695-453e-8368-1207b4600de7.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/b43a4e85-b695-453e-8368-1207b4600de7.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/StorageAdd.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,10 +78,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product_Information_Management.form" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Product_Information_Management.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/b43a4e85-b695-453e-8368-1207b4600de7.SCHEMA:logistics" pinned="false" current-in-tab="true">
+        <entry file="uml://DATABASE/b43a4e85-b695-453e-8368-1207b4600de7.SCHEMA:logistics">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>b43a4e85-b695-453e-8368-1207b4600de7.SCHEMA:logistics</OriginalElement>
+              <nodes>
+                <node x="179.16666666666666" y="669.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit</node>
+                <node x="0.0" y="169.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_nomenclature</node>
+                <node x="222.0" y="0.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_storage</node>
+                <node x="222.0" y="169.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell</node>
+                <node x="41.0" y="446.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability</node>
+                <node x="189.66666666666666" y="1142.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_tasklist</node>
+                <node x="193.16666666666666" y="919.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell">
+                  <point x="57.5" y="-86.5" />
+                  <point x="216.0" y="421.0" />
+                  <point x="257.1666666666667" y="421.0" />
+                  <point x="-70.33333333333331" y="113.5" />
+                </edge>
+                <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit">
+                  <point x="0.0" y="-86.5" />
+                  <point x="0.0" y="100.0" />
+                </edge>
+                <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_storage">
+                  <point x="0.0" y="-113.5" />
+                  <point x="0.0" y="59.5" />
+                </edge>
+                <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_tasklist" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task">
+                  <point x="0.0" y="-59.5" />
+                  <point x="0.0" y="86.5" />
+                </edge>
+                <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability">
+                  <point x="-72.66666666666669" y="-100.0" />
+                  <point x="223.99999999999997" y="644.0" />
+                  <point x="158.5" y="644.0" />
+                  <point x="0.0" y="86.5" />
+                </edge>
+                <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_nomenclature">
+                  <point x="-57.5" y="-86.5" />
+                  <point x="0.0" y="113.5" />
+                </edge>
+                <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0612021857923495" x="307.46601441812584" y="1209.0756951596293" />
+              <SelectedNodes>
+                <node>b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
           </provider>
         </entry>
       </file>
@@ -134,13 +182,6 @@
               <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageAdd.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/StorageAdd.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -226,8 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,8 +296,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,6 +476,7 @@
       <workItem from="1522480895229" duration="9124000" />
       <workItem from="1522651029036" duration="463000" />
       <workItem from="1522667898494" duration="3859000" />
+      <workItem from="1522687407181" duration="149000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1521934423252</created>
@@ -447,7 +489,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38768000" />
+    <option name="totallyTimeSpent" value="38917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,19 +507,18 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21600877" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21600877" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0125" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08020833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17864583" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -488,6 +529,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -615,27 +657,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../laba1/src/Part1/MainRailHedge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../laba1/laba1.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../laba1/src/Part1/RailHedge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../laba1/src/Part1/MainRailHedge.java" />
+    <entry file="file://$PROJECT_DIR$/../laba1/laba1.iml" />
+    <entry file="file://$PROJECT_DIR$/../laba1/src/Part1/RailHedge.java" />
     <entry file="file://$PROJECT_DIR$/src/GUI/Get_products.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -653,17 +677,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../laba1/src/Part1/Part1Form.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../laba1/src/Part1/Part1Form.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.793/ClientMenu.java" />
     <entry file="file://$PROJECT_DIR$/src/server.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43a4e85-b695-453e-8368-1207b4600de7/console_1.sql" />
-    <entry file="uml://DATABASE/b43a4e85-b695-453e-8368-1207b4600de7.SCHEMA:logistics" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7e8234e8-cde4-4233-a18d-5fd8a763c32e/console.sql" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/javax/swing/AbstractButton.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -740,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="98" column="46" lean-forward="false" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,7 +845,7 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/StorageAdd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -882,6 +898,66 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/b43a4e85-b695-453e-8368-1207b4600de7.SCHEMA:logistics">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>b43a4e85-b695-453e-8368-1207b4600de7.SCHEMA:logistics</OriginalElement>
+          <nodes>
+            <node x="179.16666666666666" y="669.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit</node>
+            <node x="0.0" y="169.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_nomenclature</node>
+            <node x="222.0" y="0.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_storage</node>
+            <node x="222.0" y="169.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell</node>
+            <node x="41.0" y="446.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability</node>
+            <node x="189.66666666666666" y="1142.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_tasklist</node>
+            <node x="193.16666666666666" y="919.0">b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell">
+              <point x="57.5" y="-86.5" />
+              <point x="216.0" y="421.0" />
+              <point x="257.1666666666667" y="421.0" />
+              <point x="-70.33333333333331" y="113.5" />
+            </edge>
+            <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit">
+              <point x="0.0" y="-86.5" />
+              <point x="0.0" y="100.0" />
+            </edge>
+            <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_storage">
+              <point x="0.0" y="-113.5" />
+              <point x="0.0" y="59.5" />
+            </edge>
+            <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_tasklist" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task">
+              <point x="0.0" y="-59.5" />
+              <point x="0.0" y="86.5" />
+            </edge>
+            <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability">
+              <point x="-72.66666666666669" y="-100.0" />
+              <point x="223.99999999999997" y="644.0" />
+              <point x="158.5" y="644.0" />
+              <point x="0.0" y="86.5" />
+            </edge>
+            <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_availability" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_nomenclature">
+              <point x="-57.5" y="-86.5" />
+              <point x="0.0" y="113.5" />
+            </edge>
+            <edge source="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_transit" target="b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_cell">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0612021857923495" x="307.46601441812584" y="1209.0756951596293" />
+          <SelectedNodes>
+            <node>b43a4e85-b695-453e-8368-1207b4600de7.TABLE:logistics.log_task</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
       </provider>
     </entry>
   </component>

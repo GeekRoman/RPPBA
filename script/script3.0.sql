@@ -23,9 +23,9 @@ DROP TABLE IF EXISTS `log_availability`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_availability` (
-  `AvailabilityId` int(11) NOT NULL,
-  `ItemId` int(11) NOT NULL,
-  `CellId` int(11) NOT NULL,
+  `AvailabilityId` varchar(15) NOT NULL,
+  `ItemId` varchar(15) NOT NULL,
+  `CellId` varchar(15) NOT NULL,
   `QuantityOnHand` int(11) DEFAULT NULL,
   `OrderQuantity` int(11) DEFAULT NULL,
   PRIMARY KEY (`AvailabilityId`),
@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `log_cell`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_cell` (
-  `CellId` int(11) NOT NULL,
+  `CellId` varchar(15) NOT NULL,
   `StorageId` varchar(11) NOT NULL,
   `Lenght` int(11) NOT NULL,
   `Height` int(11) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE `log_cell` (
 
 LOCK TABLES `log_cell` WRITE;
 /*!40000 ALTER TABLE `log_cell` DISABLE KEYS */;
-INSERT INTO `log_cell` VALUES (1,'1',10,10,15,'BOX','empty'),(2,'2',20,20,20,'20','empty');
+INSERT INTO `log_cell` VALUES ('1','1',10,10,15,'BOX','empty'),('2','2',20,20,20,'20','empty');
 /*!40000 ALTER TABLE `log_cell` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +84,7 @@ DROP TABLE IF EXISTS `log_nomenclature`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_nomenclature` (
-  `ItemId` int(11) NOT NULL,
+  `ItemId` varchar(15) NOT NULL,
   `Name` varchar(45) NOT NULL,
   `Lenght` int(11) DEFAULT NULL,
   `Height` int(11) DEFAULT NULL,
@@ -137,8 +137,8 @@ DROP TABLE IF EXISTS `log_task`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_task` (
-  `TaskId` int(11) NOT NULL,
-  `TransitId` int(11) DEFAULT NULL,
+  `TaskId` varchar(15) NOT NULL,
+  `TransitId` varchar(15) DEFAULT NULL,
   `Type` varchar(45) DEFAULT NULL,
   `Direction` varchar(45) DEFAULT NULL,
   `Status` varchar(45) DEFAULT NULL,
@@ -165,8 +165,8 @@ DROP TABLE IF EXISTS `log_tasklist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_tasklist` (
-  `TaskListId` int(11) NOT NULL,
-  `TaskId` int(11) NOT NULL,
+  `TaskListId` varchar(15) NOT NULL,
+  `TaskId` varchar(15) NOT NULL,
   `Name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`TaskListId`),
   KEY `TaskId_idx` (`TaskId`),
@@ -191,19 +191,19 @@ DROP TABLE IF EXISTS `log_transit`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_transit` (
-  `TransitId` int(11) NOT NULL,
-  `AvailabilityId` int(11) NOT NULL,
+  `TransitId` varchar(15) NOT NULL,
+  `AvailabilityId` varchar(15) NOT NULL,
   `Move_Quantity` int(11) DEFAULT NULL,
-  `Out_Storage` int(11) DEFAULT NULL,
-  `In_Storage` int(11) DEFAULT NULL,
+  `Out_Storage` varchar(15) DEFAULT NULL,
+  `In_Storage` varchar(15) DEFAULT NULL,
   `Status` varchar(45) NOT NULL,
   PRIMARY KEY (`TransitId`),
   KEY `AvailabilityId_idx` (`AvailabilityId`),
-  KEY `Out_storage_idx` (`Out_Storage`),
   KEY `In_Storage_idx` (`In_Storage`),
+  KEY `Out_Storage_idx` (`Out_Storage`),
   CONSTRAINT `AvailabilityId` FOREIGN KEY (`AvailabilityId`) REFERENCES `log_availability` (`AvailabilityId`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `In_Storage` FOREIGN KEY (`In_Storage`) REFERENCES `log_cell` (`CellId`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `Out_storage` FOREIGN KEY (`Out_Storage`) REFERENCES `log_cell` (`CellId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `Out_Storage` FOREIGN KEY (`Out_Storage`) REFERENCES `log_cell` (`CellId`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -225,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-02 15:21:25
+-- Dump completed on 2018-04-02 19:45:53
