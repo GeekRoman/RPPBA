@@ -22,6 +22,12 @@ public class Cell implements Serializable{
         this.Status = Status;
     }
 
+    // Set_products
+    public Cell (String CellId,String Type,String Status){
+        this.CellId = CellId;
+        this.Type = Type;
+        this.Status = Status;
+    }
     public String getStatus() {
         return Status;
     }

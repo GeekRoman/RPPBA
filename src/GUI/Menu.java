@@ -5,7 +5,8 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.io.IOException;
 import  java.lang.*;
-import  server.Storage;
+
+import GUI.Storage.StorageForm;
 
 import static client.Client.quit;
 
