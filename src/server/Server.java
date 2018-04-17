@@ -118,6 +118,44 @@ public class Server extends Thread {
                         break;
                     }
 
+                    // comboBoxProductName
+                    case "getNomenclatureComboBoxProductName" : {
+                        ArrayList<Nomenclature> nomenclatures = new ArrayList<Nomenclature>(db.comboBoxNameProduct());
+                        soos.writeObject(nomenclatures);
+                        break;
+                    }
+
+                    // comboBoxStorage
+                    case "getStorageComboBoxStorage" : {
+                        ArrayList<Storage> storages = new ArrayList<>(db.getStorageComboBoxStorage());
+                        soos.writeObject(storages);
+                        break;
+                    }
+
+                    // comboBoxCell
+                    case "getCellComboBoxCell" : {
+                        String storageId = mas[1];
+                        ArrayList<Cell> cells = new ArrayList<Cell>(db.getCellComboBoxCell(storageId));
+                        soos.writeObject(cells);
+                        break;
+                    }
+
+                    // Set_products,ButtonAdd
+                    case  "addItemAvailability" : {
+                        String ItemId = mas[1];
+                        String CellId = mas[2];
+                        String Quantity = mas[3];
+
+                        String status = "";
+                        if(db.addItemAvailability(ItemId,CellId,Quantity) == false) {
+                            status = "Ошибка";
+                            soos.writeObject(status);
+                        } else {
+                            status = "Добавлены";
+                            soos.writeObject(status);
+                        }
+                        break;
+                    }
                     default: {
                         System.out.println("Команда не определена");
                     }

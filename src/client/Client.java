@@ -4,6 +4,9 @@ import GUI.*;
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
+
+import server.Cell;
+import server.Nomenclature;
 import server.Storage;
 
 public class Client {
@@ -97,8 +100,6 @@ public class Client {
 
     public static ArrayList<server.Cell> getAllCellInListbyId(String stringId) throws Exception {
         coos.writeObject("getAllCellInListbyId " + stringId);
-
-
         ArrayList<server.Cell> Cells = (ArrayList<server.Cell>) cois.readObject();
         return Cells;
     }
@@ -107,5 +108,36 @@ public class Client {
         coos.writeObject("getAllAvailabilityStorageInList");
         ArrayList<server.Availability> Availability = (ArrayList<server.Availability>) cois.readObject();
         return Availability;
+    }
+
+    /////////////////////////////////////////////////////////////////////
+    // Set_products, Get_products
+
+    // Список продукции для comboBoxNameProduct
+    public static ArrayList<server.Nomenclature> getNomenclatureComboBoxNameProduct() throws Exception{
+        coos.writeObject("getNomenclatureComboBoxProductName");
+        ArrayList<server.Nomenclature> nomenclatures = (ArrayList<server.Nomenclature>) cois.readObject();
+        return nomenclatures;
+    }
+
+    // Список складов для combobBoxStorage
+    public static ArrayList<server.Storage> getStorageComboBoxStorage() throws Exception {
+        coos.writeObject("getStorageComboBoxStorage");
+        ArrayList<server.Storage> storages = (ArrayList<server.Storage>) cois.readObject();
+        return storages;
+    }
+
+    // Список ящиков для comboBoxCell
+    public static ArrayList<server.Cell> getCellComboBoxCell(String storageId) throws Exception {
+        coos.writeObject("getCellComboBoxCell " + storageId);
+        ArrayList<server.Cell> cells = (ArrayList<server.Cell>) cois.readObject();
+        return cells;
+    }
+
+    // Добавление в табл наличия
+    public static String addItemAvailability(String ItemId,String CellId,String Quantity) throws Exception{
+        coos.writeObject("addItemAvailability "+ItemId+ " " + CellId + " " + Quantity);
+        String answer = (String) cois.readObject();
+        return answer;
     }
 }

@@ -1,22 +1,20 @@
 package GUI;
 
-import server.Storage;
+import GUI.Tasks.Get_products;
+import GUI.Tasks.Inventory_products;
+import GUI.Tasks.Set_products;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.util.ArrayList;
 
-import static client.Client.*;
-
-public class Product_Information_Management extends JFrame implements ActionListener {
+public class Product_Information_Management extends JFrame{
     private JTable table1;
-    private JButton GetButton;
-    private JButton SetButton;
+    private JButton ButtonSetProduct;
+    private JButton ButtonGetProduct;
     private JButton ExitButton;
-    private JButton InventButton;
+    private JButton ButtonInventarization;
     private JPanel InventManagementForm;
     private JButton номенклатураButton;
     private JButton спискиЗаданийButton;
@@ -35,47 +33,67 @@ public class Product_Information_Management extends JFrame implements ActionList
         setSize(900, 650);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(InventManagementForm);
-        this.setResizable(false);
-        this.setVisible(true);
-        InventButton.addActionListener(this);
-        SetButton.addActionListener(this);
-        GetButton.addActionListener(this);
-        ExitButton.addActionListener(this);
+        setResizable(false);
+
         for (String col: columnsHeader){
             tableModel.addColumn(col);
         }
         table1.setModel(tableModel);
 
-        ArrayList<server.Availability> list;
-       // list = new ArrayList<server.Availability>(getAllAvailabilityInList());
+        initForm();
 
-
+        /*ArrayList<Availability> list;
+       list = new ArrayList<server.Availability>(getAllAvailabilityInList())*/;
     }
-    public void actionPerformed(ActionEvent e) {
-        String str = e.getActionCommand(), answer;
 
-        switch(str){
-            case "Получение продукции": {
-                break;
-            }
-            case "Отгрузку продукции": {
-                break;
-            }
-
-            case "Плановую инвентаризацию":{
-                break;
-
-            }
-            case "Назад":{
-                this.dispose();
-                Menu menuform = null;
+    // Обработка кнопок с заданиями
+    private void initForm(){
+        ButtonSetProduct.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
                 try {
-                    menuform = new Menu();
-                } catch (Exception e1) {
-                    e1.printStackTrace();
+                    openSet_Products();
+                } catch (Exception e1){
+
                 }
-                break;
             }
-        }
+        });
+
+        ButtonGetProduct.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openGet_Products();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+
+        ButtonInventarization.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openInventory_Products();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+    }
+
+    // Открытие формы Получение продукции
+    private void openSet_Products() throws Exception{
+        new Set_products().setVisible(true);
+    }
+
+    // Открытие формы Отгрузка продукции
+    private void openGet_Products() throws Exception{
+        new Get_products().setVisible(true);
+    }
+
+    // Открытие формы Инветаризация склада
+    private void openInventory_Products() throws Exception{
+        new Inventory_products().setVisible(true);
     }
 }
