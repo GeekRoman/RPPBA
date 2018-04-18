@@ -2,6 +2,7 @@ package GUI.Storage;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.*;
 import  java.lang.*;
@@ -16,8 +17,9 @@ import server.*;
 import static client.Client.*;
 
 public class StorageForm extends JFrame implements ActionListener {
+
     private JTextField idField;
-    private JTable table1;
+    public JTable table1;
     private JTextField addressField;
     private JComboBox comboBox1;
     private JButton ExitButton;
@@ -27,6 +29,7 @@ public class StorageForm extends JFrame implements ActionListener {
     private JPanel StorageForm;
     private JComboBox comboBox3;
     private JToolBar ToolBar;
+
     private String []columnsHeader = {"ID склада", "Адрес", "Статус"};
     DefaultTableModel tableModel = new DefaultTableModel() {
         public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -45,15 +48,19 @@ public class StorageForm extends JFrame implements ActionListener {
         this.setVisible(true);
         DeleteButton.addActionListener(this);
         AddButton.addActionListener(this);
-        CellButton.addActionListener(this);
+
         ExitButton.addActionListener(this);
+        ArrayList <Storage> list = new ArrayList<Storage>(getAllStorageInList());
 
         for (String col: columnsHeader){
             tableModel.addColumn(col);
         }
         table1.setModel(tableModel);
 
-        ArrayList <Storage> list = new ArrayList<Storage>(getAllStorageInList());
+
+
+
+
 
         for (int i = 0; i < list.size(); i++) {
             tableModel.addRow(new String[]{
@@ -63,9 +70,61 @@ public class StorageForm extends JFrame implements ActionListener {
             });
         };
 
+        table1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                if (e.getClickCount() == 2){
+
+                try {
+                    int column = 0;
+                    int row = table1.getSelectedRow();
+                    String value = table1.getModel().getValueAt(row, column).toString();
+                    new Cell(value).setVisible(true);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }}
+            }
+        });
+
+        DeleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int column = 0;
+                int row = table1.getSelectedRow();
+                String value = table1.getModel().getValueAt(row, column).toString();
+                try {
+                    if (delStorage(value).equals("true")) {
+                        JOptionPane.showMessageDialog(StorageForm, "Склад " + value + " удален!");
+                        DefaultTableModel tableModel = new DefaultTableModel() {
+                            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                                return false;
+                            }
+                        };
+                        ArrayList <Storage> list = new ArrayList<Storage>(getAllStorageInList());
+                        for (String col: columnsHeader){
+                            tableModel.addColumn(col);
+                        }
+                        table1.setModel(tableModel);
+
+                        for (int i = 0; i < list.size(); i++) {
+                            tableModel.addRow(new String[]{
+                                    list.get(i).getStorageId(),
+                                    list.get(i).getAddress(),
+                                    list.get(i).getStatus(),
+                            });
+                        };
 
 
 
+                    } else {
+                        JOptionPane.showMessageDialog(StorageForm, "Ошибка при удалении!");
+                    }
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
     }
     public void actionPerformed(ActionEvent e) {
         String str = e.getActionCommand(), answer;
@@ -82,31 +141,6 @@ public class StorageForm extends JFrame implements ActionListener {
                 break;
             }
 
-            case "Удалить":{
-                this.dispose();
-                StorageDelete deletestorage = null;
-                try {
-                    deletestorage = new StorageDelete();
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                break;
-            }
-
-            case "Управление ячейками":{
-                this.dispose();
-                String stringId = "";
-
-                GUI.Cell.Cell cellform = null;
-                try {
-                    cellform = new Cell(stringId);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                break;
-
-            }
-
             case "Назад":{
                 this.dispose();
                 Menu menuform = null;
@@ -116,7 +150,7 @@ public class StorageForm extends JFrame implements ActionListener {
                     e1.printStackTrace();
                 }
                 break;
-                }
+            }
         }
     }
 }

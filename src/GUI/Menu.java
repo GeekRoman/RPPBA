@@ -18,10 +18,10 @@ public class Menu extends JFrame implements ActionListener {
 
     public Menu () throws Exception {
         super("Меню");
-        setSize(600, 200);
+        setSize(600, 250);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(FormMenu);
-        this.setResizable(false);
+        this.setResizable(true);
         this.setVisible(true);
         Button1.addActionListener(this);
         Button2.addActionListener(this);
@@ -48,8 +48,6 @@ public class Menu extends JFrame implements ActionListener {
                 this.dispose();
                 StorageForm newStorage = null;
                 try {
-
-
                     newStorage = new StorageForm();
                     newStorage.setResizable(false);
                     newStorage.setVisible(true);

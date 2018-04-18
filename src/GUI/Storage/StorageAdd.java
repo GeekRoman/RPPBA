@@ -21,9 +21,10 @@ public class StorageAdd extends JFrame implements ActionListener{
     public StorageAdd() throws Exception {
         super("Добавление склада");
         setSize(650, 300);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setContentPane(storageAdd);
-        this.setResizable(false);
+        this.setResizable(true);
         this.setVisible(true);
         button1.addActionListener(this);
         button2.addActionListener(this);

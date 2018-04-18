@@ -39,7 +39,10 @@
         </constraints>
         <properties>
           <background color="-2631980"/>
+          <enabled value="true"/>
+          <font size="16" style="1"/>
           <text value="Получение продукции"/>
+          <verticalAlignment value="0"/>
         </properties>
       </component>
       <component id="78704" class="javax.swing.JButton" binding="ButtonGetProduct">
@@ -48,7 +51,10 @@
         </constraints>
         <properties>
           <background color="-2631980"/>
+          <enabled value="true"/>
+          <font size="16" style="1"/>
           <text value="Отгрузка продукции"/>
+          <verticalAlignment value="0"/>
         </properties>
       </component>
       <component id="b433e" class="javax.swing.JToolBar$Separator">
@@ -79,7 +85,10 @@
         </constraints>
         <properties>
           <background color="-2631980"/>
+          <enabled value="true"/>
+          <font size="16" style="1"/>
           <text value="Плановую инвентаризацию"/>
+          <verticalAlignment value="0"/>
         </properties>
       </component>
       <component id="5a2df" class="javax.swing.JLabel">

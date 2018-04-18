@@ -10,7 +10,7 @@ public class DataBase {
 
     private Connection getConnection() throws Exception {
         String username = "root";
-        String password = "sasha";
+        String password = "root";
         String url = "jdbc:mysql://localhost:3306/logistics";
 
         Class.forName("com.mysql.jdbc.Driver");
@@ -189,6 +189,7 @@ public class DataBase {
         try (Connection connection = getConnection()) {
 
             String sql = "DELETE FROM log_storage WHERE StorageId = \"" + storageId + "\";";
+            System.out.println("Будет удален склад: " + storageId + " - " + sql);
             PreparedStatement st = connection.prepareStatement(sql);
             st.executeUpdate(sql);
             st = connection.prepareStatement(sql);

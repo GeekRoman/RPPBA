@@ -17,7 +17,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="74a6e" class="javax.swing.JTable" binding="table1" default-binding="true">
+          <component id="74a6e" class="javax.swing.JTable" binding="table1">
             <constraints/>
             <properties/>
           </component>
@@ -57,14 +57,6 @@
               <enabled value="true"/>
               <font size="16" style="1"/>
               <text value="Удалить"/>
-            </properties>
-          </component>
-          <component id="5c06" class="javax.swing.JButton" binding="CellButton">
-            <constraints/>
-            <properties>
-              <background color="-2631980"/>
-              <font size="16" style="1"/>
-              <text value="Управление ячейками"/>
             </properties>
           </component>
           <component id="d36e3" class="javax.swing.JSeparator">

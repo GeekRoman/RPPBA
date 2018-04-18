@@ -17,7 +17,7 @@ public class Cell extends JFrame implements ActionListener {
     private JTextField textField1;
     private JComboBox comboBox2;
     private JButton AddButton;
-    private JButton ExitButton;
+
     private JComboBox comboBox3;
     private JButton DeleteButton;
     private JPanel CellForm;
@@ -31,13 +31,13 @@ public class Cell extends JFrame implements ActionListener {
     public Cell (String stringId) throws Exception{
         super();
         setSize(600, 600);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setContentPane(CellForm);
-        this.setResizable(false);
+        this.setResizable(true);
         this.setVisible(true);
         DeleteButton.addActionListener(this);
         AddButton.addActionListener(this);
-        ExitButton.addActionListener(this);
+
 
         for (String col: columnsHeader){
             tableModel.addColumn(col);
@@ -71,16 +71,7 @@ public class Cell extends JFrame implements ActionListener {
 
             }
 
-            case "Назад":{
-                this.dispose();
-                StorageForm storageform = null;
-                try {
-                    storageform = new StorageForm();
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                break;
-            }
+
         }
     }
 }

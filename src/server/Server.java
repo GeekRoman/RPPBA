@@ -82,7 +82,7 @@ public class Server extends Thread {
                         break;
                     }
                     case "delStorage": {
-                        String storageId = (String)sois.readObject();
+                        String storageId = mas[1];
                         if (db.delStorage(storageId)){
                             answer = "true";
                         } else {

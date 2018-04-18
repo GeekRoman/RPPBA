@@ -44,6 +44,8 @@ public class Product_Information_Management extends JFrame{
 
         /*ArrayList<Availability> list;
        list = new ArrayList<server.Availability>(getAllAvailabilityInList())*/;
+
+      
     }
 
     // Обработка кнопок с заданиями
@@ -58,6 +60,7 @@ public class Product_Information_Management extends JFrame{
                 }
             }
         });
+
 
         ButtonGetProduct.addActionListener(new ActionListener() {
             @Override
@@ -84,7 +87,8 @@ public class Product_Information_Management extends JFrame{
 
     // Открытие формы Получение продукции
     private void openSet_Products() throws Exception{
-        new Set_products().setVisible(true);
+        Set_products set_products =  new Set_products();
+        set_products.setVisible(true);
     }
 
     // Открытие формы Отгрузка продукции
@@ -96,4 +100,7 @@ public class Product_Information_Management extends JFrame{
     private void openInventory_Products() throws Exception{
         new Inventory_products().setVisible(true);
     }
+
+
+
 }

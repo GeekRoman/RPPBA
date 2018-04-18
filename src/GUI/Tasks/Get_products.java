@@ -26,7 +26,7 @@ public class Get_products extends JFrame{
         setContentPane(PanelGetProduct);
         setLocationRelativeTo(null); // Появляется по центру экрана
         setResizable(true);
-
+        this.setVisible(true);
         initForm();
     }
 

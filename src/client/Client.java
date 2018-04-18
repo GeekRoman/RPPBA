@@ -75,8 +75,7 @@ public class Client {
     }
     //DELETE
     public static String delStorage (String storageId) throws Exception{
-        coos.writeObject("delStorage");
-        coos.writeObject(storageId);
+        coos.writeObject("delStorage " + storageId);
         answer = (String) cois.readObject();
         return answer;
     }
