@@ -135,18 +135,18 @@ public class DataBase {
             String sql = "SELECT * FROM log_cell WHERE StorageId = \"" + stringId + "\";";
             rs = statement.executeQuery(sql);
 
-            String cellId, storageId,length,height,widht, type, status;
+            String cellId, storageId,length,height,width, type, status;
 
             while (rs.next()) {
                 cellId = rs.getString("CellId");
                 storageId = rs.getString("StorageId");
-                length = rs.getString("Lenght");
+                length = rs.getString("Length");
                 height = rs.getString("Height");
-                widht = rs.getString("Widht");
+                width = rs.getString("Width");
                 type = rs.getString("Type");
                 status = rs.getString("Status");
 
-                Cell mycell = new Cell(cellId, storageId,length,height,widht, type, status);
+                Cell mycell = new Cell(cellId, storageId,length,height,width, type, status);
 
                 list.add(mycell);
 
@@ -201,6 +201,22 @@ public class DataBase {
             return false;
         }
     }
+    public boolean delCell(String cellId){
+        try (Connection connection = getConnection()) {
+
+            String sql = "DELETE FROM log_cell WHERE CellId = \"" + cellId + "\";";
+            System.out.println("Будет удалена ячейка: " + cellId + " - " + sql);
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.executeUpdate(sql);
+            st = connection.prepareStatement(sql);
+            st.executeUpdate(sql);
+            return true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка удаления ячейки!!!");
+            return false;
+        }
+    }
     //ADD
     public boolean addStorage (String mystorageId, String myaddress, String mystatus) throws Exception {
         boolean addstatus = false;
@@ -224,6 +240,39 @@ public class DataBase {
 
         } catch (Exception e){
             System.out.println("Ошибка добавления склада");
+        }
+
+        return addstatus;
+    }
+
+    public boolean addCell (String cellId, String storageId, String Length, String Height, String Width,
+                            String Type, String Status) throws Exception {
+
+        boolean addstatus = false;
+        //int Length2int = Integer.parseInt(Length);
+        //int Height2int = Integer.parseInt(Height);
+        //int Width2int = Integer.parseInt(Width);
+        try (Connection connection = getConnection()) {
+
+            System.out.println("Проверка на свободный идентификатор...");
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_cell;");
+            while (rs.next()){
+                if (cellId.equals(rs.getString("CellId"))){
+                    return addstatus=false;
+                }
+            }
+
+            String sql = "INSERT INTO log_cell(CellId,StorageId,Length,Height,Width,Type,Status)" +
+                    " VALUES (\"" + cellId + "\",\"" + storageId + "\", \"" + Length + "\", \"" + Height + "\", \"" + Width + "\", \"" + Type + "\", \"" + Status + "\");";
+            System.out.println(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.executeUpdate(sql);
+            addstatus=true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка добавления ячейки");
         }
 
         return addstatus;

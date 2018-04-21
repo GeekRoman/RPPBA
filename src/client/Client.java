@@ -71,11 +71,27 @@ public class Client {
         answer = (String) cois.readObject();
 
         return answer;
-
     }
+
+    public static String addCell(String Id, String storageId, String Length, String Height, String Width,
+                                    String Type, String Status) throws Exception{
+        String str = "addCell " + Id + " "+ storageId + " " + Length + " " +
+                Height + " " + Width + " " + Type + " " + Status;
+        System.out.println(str);
+        coos.writeObject(str);
+        answer = (String) cois.readObject();
+        return answer;
+    }
+
     //DELETE
     public static String delStorage (String storageId) throws Exception{
         coos.writeObject("delStorage " + storageId);
+        answer = (String) cois.readObject();
+        return answer;
+    }
+
+    public static String delCell (String cellId) throws Exception{
+        coos.writeObject("delCell " + cellId);
         answer = (String) cois.readObject();
         return answer;
     }

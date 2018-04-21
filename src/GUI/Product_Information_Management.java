@@ -45,7 +45,7 @@ public class Product_Information_Management extends JFrame{
         /*ArrayList<Availability> list;
        list = new ArrayList<server.Availability>(getAllAvailabilityInList())*/;
 
-      
+
     }
 
     // Обработка кнопок с заданиями

@@ -66,6 +66,7 @@ public class Server extends Thread {
                         clientSocket.close();
                         break;
                     }
+                    //Add
                     case "addStorage": {
                         String id = mas[1];
                         String address = mas[2];
@@ -81,6 +82,28 @@ public class Server extends Thread {
 
                         break;
                     }
+
+                    case "addCell": {
+                        String Id = mas[1];
+                        String StorageId = mas[2];
+                        String Length = mas[3];
+                        String Heigth = mas[4];
+                        String Width = mas[5];
+                        String Type = mas[6];
+                        String Status = mas[7];
+
+
+                        if (db.addCell(Id, StorageId, Length,Heigth,Width,Type,Status)==false){
+                            answer = "false";
+                        } else {
+                            answer = "true";
+                        }
+
+                        soos.writeObject(answer);
+
+                        break;
+                    }
+                    //DELETE
                     case "delStorage": {
                         String storageId = mas[1];
                         if (db.delStorage(storageId)){
@@ -91,6 +114,18 @@ public class Server extends Thread {
                         soos.writeObject(answer);
                         break;
                     }
+
+                    case "delCell": {
+                        String cellId = mas[1];
+                        if (db.delCell(cellId)){
+                            answer = "true";
+                        } else {
+                            answer = "false";
+                        }
+                        soos.writeObject(answer);
+                        break;
+                    }
+                    //GET
                     case "getAllstorageId": {
                         String allStorages = db.getAllStorageId();
                         soos.writeObject(allStorages);

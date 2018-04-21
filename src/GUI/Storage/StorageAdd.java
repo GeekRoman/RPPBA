@@ -16,6 +16,7 @@ public class StorageAdd extends JFrame implements ActionListener{
     private JPanel storageAdd;
     private JButton button1;
     private JButton button2;
+    private JTextField textField;
 
 
     public StorageAdd() throws Exception {
@@ -30,7 +31,7 @@ public class StorageAdd extends JFrame implements ActionListener{
         button2.addActionListener(this);
 
 
-        String[] statusBox = {"Пустой", "Заполненыый"};
+        String[] statusBox = {"Действующий", "Резервный"};
         for (int j = 0; j<statusBox.length; j++){
             comboBox1.addItem(statusBox[j]);
         }
@@ -52,6 +53,32 @@ public class StorageAdd extends JFrame implements ActionListener{
                             JOptionPane.showMessageDialog(storageAdd, "Такой склад уже существует!");
                         } else {
                             JOptionPane.showMessageDialog(storageAdd, "Склад упешно добавлен!");
+
+
+                            String volume  = this.textField.getText().trim();
+
+
+                            String[] typeBox = {"Верхняя", "Средняя", "Нижняя"};
+                            int j = 0;
+                            int volume2int = Integer.parseInt(volume);
+                            for (int i = 0; i < volume2int; i++){
+                                String cellId = this.idField.getText().trim();
+                                cellId += "-";
+                                cellId += Integer.toString(i);
+                                String IdStorage = this.idField.getText().trim();
+                                String length = "10";
+                                String height = "10";
+                                String width = "10";
+                                String type = typeBox[j];
+                                String statusCell = "Пустая";
+                                addCell(cellId,IdStorage, length, height, width, type, statusCell);
+                                j++;
+                                if (j>=3) j = 0;
+
+
+
+                            }
+
                         }
                     } catch (Exception e1) {
                         e1.printStackTrace();
