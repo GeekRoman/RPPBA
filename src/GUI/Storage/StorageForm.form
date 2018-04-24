@@ -45,7 +45,7 @@
           <component id="ab9d" class="javax.swing.JButton" binding="AddButton">
             <constraints/>
             <properties>
-              <background color="-2631980"/>
+              <background color="-777"/>
               <font size="16" style="1"/>
               <text value="Добавить"/>
             </properties>
@@ -53,10 +53,18 @@
           <component id="7181e" class="javax.swing.JButton" binding="DeleteButton">
             <constraints/>
             <properties>
-              <background color="-2631980"/>
+              <background color="-777"/>
               <enabled value="true"/>
               <font size="16" style="1"/>
               <text value="Удалить"/>
+            </properties>
+          </component>
+          <component id="cb072" class="javax.swing.JButton" binding="CellButton">
+            <constraints/>
+            <properties>
+              <background color="-777"/>
+              <font size="16" style="1"/>
+              <text value="Управление ячейками"/>
             </properties>
           </component>
           <component id="d36e3" class="javax.swing.JSeparator">
@@ -68,7 +76,7 @@
           <component id="87c11" class="javax.swing.JButton" binding="ExitButton">
             <constraints/>
             <properties>
-              <background color="-2631980"/>
+              <background color="-777"/>
               <enabled value="true"/>
               <font size="16" style="1"/>
               <text value="Назад"/>

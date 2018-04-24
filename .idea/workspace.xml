@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java" line="80" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="307b554b-d693-42a4-a37c-1e31b677893e" name="Default" comment="1">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageTableModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GUI/Storage/StorageTableModel.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Cell/Cell$1.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Cell/Cell$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Cell/Cell.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Cell/Cell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageAdd.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageAdd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/client/Client.class" afterPath="$PROJECT_DIR$/out/production/Logistics/client/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageDelete.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GUI/Storage/StorageDelete.form" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GUI/Storage/StorageDelete.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm$2.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm$3$1.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm$3.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageForm.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Cell/Cell.form" afterPath="$PROJECT_DIR$/src/GUI/Cell/Cell.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Cell/Cell.java" afterPath="$PROJECT_DIR$/src/GUI/Cell/Cell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Storage/StorageAdd.form" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageAdd.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/Client.java" afterPath="$PROJECT_DIR$/src/client/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/DataBase.java" afterPath="$PROJECT_DIR$/src/server/DataBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/Server.java" afterPath="$PROJECT_DIR$/src/server/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Storage/StorageForm.form" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Storage/StorageForm.java" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageForm.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,18 +58,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="76" column="62" lean-forward="false" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Cell/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,20 +76,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log_cell" pinned="false" current-in-tab="false">
-        <entry file="das://table:/41aaf3b/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_cell">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="StorageAdd.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageAdd.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java">
+      <file leaf-file-name="StorageForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1004">
-              <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+            <state relative-caret-position="395">
+              <caret line="85" column="73" lean-forward="false" selection-start-line="85" selection-start-column="73" selection-end-line="85" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1469#1478#0" expanded="true" />
+                <element signature="e#3685#3694#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageForm.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageDetailsPage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageDetailsPage.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellAdd.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellAdd.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -128,81 +157,6 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cell.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Cell/Cell.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="95" column="85" lean-forward="false" selection-start-line="95" selection-start-column="85" selection-end-line="95" selection-end-column="85" />
-              <folding>
-                <element signature="e#4634#4640#0" expanded="true" />
-                <element signature="e#5217#5223#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/DataBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="267" column="21" lean-forward="false" selection-start-line="267" selection-start-column="21" selection-end-line="267" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2399#2408#0" expanded="true" />
-                <marker date="1524274856387" expanded="true" signature="1058:1088" ph="SELECT * FRO... log_nomenclature" />
-                <marker date="1524274856387" expanded="true" signature="2544:2569" ph="SELECT * FRO... log_storage" />
-                <marker date="1524274856387" expanded="true" signature="3430:3452" ph="SELECT * FRO... log_cell" />
-                <marker date="1524274856387" expanded="true" signature="4543:4604" ph="SELECT * FRO... log_cell" />
-                <marker date="1524274856387" expanded="true" signature="5717:5742" ph="SELECT * FRO... log_storage" />
-                <marker date="1524274856387" expanded="true" signature="6254:6317" ph="DELETE FROM " />
-                <marker date="1524274856387" expanded="true" signature="6879:6933" ph="DELETE FROM " />
-                <marker date="1524274856387" expanded="true" signature="7780:7805" ph="SELECT * FRO... log_storage" />
-                <marker date="1524274856387" expanded="true" signature="8012:8138" ph="INSERT INTO log_storage... " />
-                <marker date="1524274856387" expanded="true" signature="9082:9104" ph="SELECT * FRO... log_cell" />
-                <marker date="1524274856387" expanded="true" signature="9303:9464" ph="INSERT INTO log_cell... " />
-                <marker date="1524274856387" expanded="true" signature="9303:9483" ph="INSERT INTO log_cell... " />
-                <marker date="1524274856387" expanded="true" signature="9303:9484" ph="INSERT INTO log_cell... " />
-                <marker date="1524274856387" expanded="true" signature="9303:9503" ph="INSERT INTO log_cell... " />
-                <marker date="1524274856387" expanded="true" signature="9303:9545" ph="INSERT INTO log_cell... " />
-                <marker date="1524274856387" expanded="true" signature="10377:10417" ph="SELECT ItemI... log_nomenclature" />
-                <marker date="1524274856387" expanded="true" signature="11203:11243" ph="SELECT Stora... log_storage" />
-                <marker date="1524274856387" expanded="true" signature="11985:12059" ph="SELECT CellI... log_cell" />
-                <marker date="1524274856387" expanded="true" signature="12906:12978" ph="SELECT ItemI... log_availability" />
-                <marker date="1524274856387" expanded="true" signature="13156:13236" ph="select Avail... log_availability" />
-                <marker date="1524274856387" expanded="true" signature="13655:13853" ph="INSERT INTO log_availability... " />
-                <marker date="1524274856387" expanded="true" signature="14020:14110" ph="update log_a... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1491">
-              <caret line="95" column="16" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#902#1040#0" expanded="true" />
-                <element signature="e#1039#1040#0" expanded="true" />
-                <element signature="e#1502#1511#0" expanded="true" />
-                <element signature="e#1961#2523#0" expanded="true" />
-                <element signature="e#2522#2523#0" expanded="true" />
-                <element signature="e#3072#3290#0" expanded="true" />
-                <element signature="e#3289#3290#0" expanded="true" />
-                <element signature="e#3356#3365#0" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -259,12 +213,10 @@
         <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" />
         <option value="$PROJECT_DIR$/src/GUI/Tasks/Set_products.form" />
         <option value="$PROJECT_DIR$/src/GUI/Storage/StorageTableModel.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Storage/StorageForm.form" />
         <option value="$PROJECT_DIR$/src/GUI/Tasks/Get_products.java" />
         <option value="$PROJECT_DIR$/src/GUI/Tasks/Set_products.java" />
         <option value="$PROJECT_DIR$/src/GUI/Storage/StorageDelete.java" />
         <option value="$PROJECT_DIR$/src/GUI/Menu.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Storage/StorageForm.java" />
         <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
         <option value="$PROJECT_DIR$/src/GUI/Storage/StorageAdd.form" />
         <option value="$PROJECT_DIR$/src/client/Client.java" />
@@ -273,6 +225,10 @@
         <option value="$PROJECT_DIR$/src/server/DataBase.java" />
         <option value="$PROJECT_DIR$/src/GUI/Cell/Cell.java" />
         <option value="$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Storage/StorageForm.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Storage/StorageForm.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.java" />
       </list>
     </option>
   </component>
@@ -360,7 +316,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="Cell" type="462c0819:PsiDirectoryNode" />
-              <item name="Cell" type="e9f4de52:FormNode" />
+              <item name="CellAdd" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
@@ -376,6 +332,22 @@
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="Storage" type="462c0819:PsiDirectoryNode" />
               <item name="StorageAdd" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Logistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="Storage" type="462c0819:PsiDirectoryNode" />
+              <item name="StorageDetailsPage" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Logistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="Storage" type="462c0819:PsiDirectoryNode" />
+              <item name="StorageForm" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
@@ -601,7 +573,7 @@
       <workItem from="1523911956942" duration="1961000" />
       <workItem from="1523957327593" duration="1638000" />
       <workItem from="1523959689906" duration="1025000" />
-      <workItem from="1523966122436" duration="19385000" />
+      <workItem from="1523966122436" duration="24653000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1521934423252</created>
@@ -614,7 +586,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164895000" />
+    <option name="totallyTimeSpent" value="170163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,7 +599,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -638,7 +609,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24671052" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24671052" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -729,8 +700,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/970bbd54/53a706aa-fab4-4483-81fd-637d1f7bcf1e/rppba.log_nomenclature" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/server/Availability.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -857,15 +826,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
@@ -879,19 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/41aaf3b/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_storage">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -902,24 +851,6 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
-          <caret line="95" column="16" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#902#1040#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-            <element signature="e#1502#1511#0" expanded="true" />
-            <element signature="e#1961#2523#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
-            <element signature="e#3072#3290#0" expanded="true" />
-            <element signature="e#3289#3290#0" expanded="true" />
-            <element signature="e#3356#3365#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Client.java">
@@ -993,6 +924,27 @@
         <state />
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Cell/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1009,19 +961,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1004">
-          <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        <state relative-caret-position="395">
+          <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="85" column="73" lean-forward="false" selection-start-line="85" selection-start-column="73" selection-end-line="85" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1469#1478#0" expanded="true" />
+            <element signature="e#3685#3694#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

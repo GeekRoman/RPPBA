@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import GUI.Cell.Cell;
 import GUI.Menu;
 import GUI.Storage.StorageAdd;
-import GUI.Storage.StorageDelete;
+
 import server.*;
 
 import static client.Client.*;
@@ -75,15 +75,19 @@ public class StorageForm extends JFrame implements ActionListener {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 if (e.getClickCount() == 2){
-
-                try {
-                    int column = 0;
-                    int row = table1.getSelectedRow();
-                    String value = table1.getModel().getValueAt(row, column).toString();
-                    new Cell(value).setVisible(true);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }}
+                    try {
+                        int column0 = 0;
+                        int column1 = 1;
+                        int column2 = 2;
+                        int row = table1.getSelectedRow();
+                        String storageId = table1.getModel().getValueAt(row, column0).toString();
+                        String address = table1.getModel().getValueAt(row, column1).toString();
+                        String status = table1.getModel().getValueAt(row, column2).toString();
+                        new StorageDetailsPage(storageId, address, status).setVisible(true);
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
+                }
             }
         });
 
@@ -120,6 +124,19 @@ public class StorageForm extends JFrame implements ActionListener {
                     } else {
                         JOptionPane.showMessageDialog(StorageForm, "Ошибка при удалении!");
                     }
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
+        CellButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int column = 0;
+                    int row = table1.getSelectedRow();
+                    String value = table1.getModel().getValueAt(row, column).toString();
+                    new Cell(value).setVisible(true);
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
