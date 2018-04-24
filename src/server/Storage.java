@@ -17,6 +17,7 @@ public class Storage implements Serializable{
         this.StorageId = StorageId;
         this.Status = Status;
     }
+
     public String getStatus() {
         return Status;
     }

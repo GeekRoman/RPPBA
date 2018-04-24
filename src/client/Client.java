@@ -5,6 +5,7 @@ import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 
+import server.Availability;
 import server.Cell;
 import server.Nomenclature;
 import server.Storage;
@@ -120,7 +121,7 @@ public class Client {
         return nomenclatures;
     }
 
-    // Список складов для combobBoxStorage
+    // Список складов для comboBoxStorage
     public static ArrayList<server.Storage> getStorageComboBoxStorage() throws Exception {
         coos.writeObject("getStorageComboBoxStorage");
         ArrayList<server.Storage> storages = (ArrayList<server.Storage>) cois.readObject();
@@ -128,16 +129,71 @@ public class Client {
     }
 
     // Список ящиков для comboBoxCell
-    public static ArrayList<server.Cell> getCellComboBoxCell(String storageId) throws Exception {
-        coos.writeObject("getCellComboBoxCell " + storageId);
+    public static ArrayList<server.Cell> getCellComboBoxCell(String storageId,String itemId) throws Exception {
+        coos.writeObject("getCellComboBoxCell " + storageId + " " + itemId);
         ArrayList<server.Cell> cells = (ArrayList<server.Cell>) cois.readObject();
         return cells;
     }
 
-    // Добавление в табл наличия
+    // Отключение списка складов и ящиков
+    public static String getComboBoxNameProduct(String ItemId) throws Exception {
+        coos.writeObject("getComboBoxNameProduct " + ItemId);
+        return (String) cois.readObject();
+    }
+
+    // Добавление в табл log_availability
     public static String addItemAvailability(String ItemId,String CellId,String Quantity) throws Exception{
         coos.writeObject("addItemAvailability "+ItemId+ " " + CellId + " " + Quantity);
         String answer = (String) cois.readObject();
         return answer;
+    }
+
+    // Добавление в табл log_task
+    public static String addTask(String Date) throws Exception{
+        coos.writeObject("addTask " + Date);
+        String answer = (String) cois.readObject();
+        return answer;
+    }
+
+    // Добавление в табл log_transit
+    public static String addTransit(String Storage,String Type) throws Exception{
+        coos.writeObject("addTransit "+Storage + " " + Type);
+        String answer = (String) cois.readObject();
+        return answer;
+    }
+
+    // Get_products, Получение продуктов с табл log_availability
+    public static ArrayList<Availability> getProductsForAvailability() throws Exception{
+        coos.writeObject("getProductsForAvailability");
+        ArrayList<Availability> availabilities = (ArrayList<Availability>) cois.readObject();
+        return availabilities;
+    }
+
+    // Get_products, Отгрузка в табл log_availability
+    public static String getQuantityAvailability(String ItemId,String Quantity) throws Exception{
+        coos.writeObject("getQuantityAvailability " +  ItemId + " " + Quantity);
+        String answer = (String) cois.readObject();
+        return answer;
+    }
+
+    // Get_products,Set_products, Получение информации о продукте
+    public static Nomenclature getInfoNomenclature(String ItemId) throws Exception{
+        coos.writeObject("getInfoNomenclature" + " " + ItemId);
+        Nomenclature nomenclature = (Nomenclature) cois.readObject();
+        return nomenclature;
+    }
+
+    // Get_products, Ящик и склад
+    public static ArrayList getCellAndStorage(String itemId) throws Exception{
+        coos.writeObject("getCellAndStorage " + itemId);
+        ArrayList storageCell = (ArrayList) cois.readObject();
+        return storageCell;
+    }
+
+    // Get_products, Получение кол-ва продукта
+    public static String quantityAvailability(String ItemId) throws Exception{
+        coos.writeObject("quantityAvailability " + ItemId);
+        String quantity = (String) cois.readObject();
+        return quantity;
     }
 }

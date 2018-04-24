@@ -228,23 +228,30 @@ public class DataBase {
         return addstatus;
     }
 
+
     ////////////////////////////////////////////////////////////////////////
     // Set_products,Get_products
 
-    // Set_products,comboBoxNameProduct
+    private String setAvailabilityId = "";
+    private String moveQuantity = "";
+    private String transitId = "";
+    private String type = "";
+
+
+    // Set_products,comboBoxNameProduct // Работает
     public ArrayList<Nomenclature> comboBoxNameProduct () throws Exception {
         ArrayList<Nomenclature> nomenclatures = new ArrayList<Nomenclature>();
-        String itemdId,Name;
+        String itemId;String typeNomenclature = "";
+
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
             ResultSet rs;
-            rs = statement.executeQuery("SELECT ItemId,Name FROM log_nomenclature");
+            rs = statement.executeQuery("SELECT ItemId,Type FROM log_nomenclature");
 
-            System.out.println(rs);
             while (rs.next()){
-                itemdId = rs.getString("ItemId");
-                Name = rs.getString("Name");
-                nomenclatures.add(new Nomenclature(itemdId,Name));
+                itemId = rs.getString("ItemId");
+                typeNomenclature = rs.getString("Type");
+                nomenclatures.add(new Nomenclature(itemId,typeNomenclature));
             }
 
         } catch (Exception e){
@@ -254,7 +261,7 @@ public class DataBase {
         return nomenclatures;
     }
 
-    // Set_products,comboBoxStorage
+    // Set_products,comboBoxStorage // Работает
     public ArrayList<Storage> getStorageComboBoxStorage () throws Exception{
         ArrayList<Storage> storages = new ArrayList<Storage>();
         String StorageId,Status;
@@ -277,15 +284,21 @@ public class DataBase {
         return storages;
     }
 
-    // Set_product,comboBoxCell
-    public ArrayList<Cell> getCellComboBoxCell (String storageId) throws Exception{
+    // Set_product,comboBoxCell // Работает
+    public ArrayList<Cell> getCellComboBoxCell (String storageId,String itemIdNomenclature) throws Exception{
         ArrayList<Cell> cells = new ArrayList<Cell>();
-        String CellId,Type,Status;
+        String CellId,Type,Status,typeNomenclature = "";
         try (Connection connection = getConnection()) {
-
             Statement statement = connection.createStatement();
-            ResultSet rs;
-            rs = statement.executeQuery("SELECT CellId,Type,Status FROM log_cell WHERE StorageId="+"'"+storageId+"'");
+            ResultSet resultSet = statement.executeQuery("SELECT Type FROM log_nomenclature WHERE ItemId = " + itemIdNomenclature);
+
+            while (resultSet.next()){
+                typeNomenclature = resultSet.getString("Type");
+            }
+
+            PreparedStatement preparedStatement =
+                    connection.prepareStatement("SELECT CellId,Type,Status FROM log_cell WHERE StorageId = "+"'"+storageId+"'" + " AND Type = " + "'" + typeNomenclature + "'");
+            ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()){
                 CellId = rs.getString("CellId");
@@ -301,33 +314,57 @@ public class DataBase {
         return cells;
     }
 
-    // Добавление в log_availability // Работает
+    // Set_product,comboBoxNameProduct // Работает
+    public String getComboBoxNameProduct(String ItemId) throws Exception{
+        String status = ""; String ItemIdStr = "";
+        try (Connection connection = getConnection()){
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT ItemId FROM log_availability WHERE ItemId = " + ItemId);
+
+             while (resultSet.next()){
+                 ItemIdStr = resultSet.getString("ItemId");
+             }
+
+             if(ItemIdStr.equals("")){
+                 status = "Нету";
+             } else {
+                 status = "Есть";
+             }
+
+        } catch (Exception e) {
+            System.out.println("Ошибка выборки ящиков");
+        }
+        return status;
+    }
+
+    // Set_product,Добавление в log_availability // Работает
     public boolean addItemAvailability(String ItemId,String CellId,String Quantity) throws Exception{
         boolean addStatus = false;String AvailabilityId = "",resultItemId ="";
-        int OrderQuantity = 0;
         int Id = 0;
+        moveQuantity = Quantity;
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
             ResultSet rs;
-            rs = statement.executeQuery("SELECT ItemId FROM log_availability WHERE ItemId = " + "'" + ItemId + "'");
+            rs = statement.executeQuery("SELECT AvailabilityId,ItemId FROM log_availability WHERE ItemId = " + "'" + ItemId + "'");
 
             while (rs.next()){
+                setAvailabilityId = rs.getString("AvailabilityId");
                 resultItemId = rs.getString("ItemId");
             }
 
-            if(resultItemId == null){
+            if(resultItemId.equals("")){
                 String sqlNull = "select AvailabilityId from log_availability order by AvailabilityId desc limit 1;";
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlNull);
-                preparedStatement.executeQuery(sqlNull);
-                while (rs.next()){
-                    AvailabilityId = rs.getString("AvailabilityId");
+                ResultSet resultSet1 = preparedStatement.executeQuery(sqlNull);
+
+                while (resultSet1.next()){
+                    AvailabilityId = resultSet1.getString("AvailabilityId");
                 }
 
-                Id = Integer.parseInt(AvailabilityId) + 1;
-                AvailabilityId = String.valueOf(Id);
+                setAvailabilityId = idPlus(AvailabilityId);
 
                 String sql = "INSERT INTO log_availability(AvailabilityId,ItemId,CellId,OrderQuantity) " +
-                        "VALUES (\"" + AvailabilityId + "\",\"" + ItemId + "\", \"" + CellId + "\", \"" + Quantity + "\");";
+                        "VALUES (" + setAvailabilityId + "," + ItemId + "," + CellId + "," + Quantity + ");";
                 PreparedStatement ps = connection.prepareStatement(sql);
                 ps.executeUpdate(sql);
             } else {
@@ -339,10 +376,228 @@ public class DataBase {
             addStatus = true;
 
         } catch (Exception e){
-            System.out.println("Ошибка добавления склада");
+            System.out.println("Ошибка добавления продукта");
         }
         return addStatus;
     }
 
+    // Set_product,Get_product Добавление перемещения в табл log_transit // Работает
+    public boolean addTransit(String Storage,String Type) throws Exception{
+        boolean addStatus = false;String Status = "Не выполнен";
+        type = Type;
 
+        try(Connection connection = getConnection()) {
+
+            if(Type.equals("Получение")) {
+
+                String sqlSet = "select TransitId from log_transit order by TransitId desc limit 1;";
+                Statement statementSet = connection.createStatement();
+                ResultSet resultSet = statementSet.executeQuery(sqlSet);
+
+                while (resultSet.next()) {
+                    transitId = resultSet.getString("TransitId");
+                }
+
+                transitId = idPlus(transitId);
+
+                String sqlAddTransitSet = "INSERT INTO log_transit(TransitId, AvailabilityId, Move_Quantity, In_Storage, Status) " +
+                        "VALUES (" + transitId + "," + setAvailabilityId + "," + moveQuantity + "," + Storage + "," +"'" + Status + "'" +");";
+                PreparedStatement preparedStatement = connection.prepareStatement(sqlAddTransitSet);
+                preparedStatement.executeUpdate(sqlAddTransitSet);
+
+            } else if(Type.equals("Отгрузка")){
+
+                String sqlGet = "select TransitId from log_transit order by TransitId desc limit 1;";
+                Statement statementGet = connection.createStatement();
+                ResultSet resultSet = statementGet.executeQuery(sqlGet);
+
+                while (resultSet.next()) {
+                    transitId = resultSet.getString("TransitId");
+                }
+
+                transitId = idPlus(transitId);
+
+                String sqlAddTransitGet = "INSERT INTO log_transit(TransitId, AvailabilityId, Move_Quantity, Out_Storage, Status) " +
+                        "VALUES (" + transitId + "," + setAvailabilityId + "," + moveQuantity + "," + Storage + "," +"'" + Status + "'" +");";
+                PreparedStatement preparedStatement = connection.prepareStatement(sqlAddTransitGet);
+                preparedStatement.executeUpdate(sqlAddTransitGet);
+            }
+
+            addStatus = true;
+
+        } catch (Exception e) {
+            System.out.println("Ошибка добавления перемещения");
+        }
+        return addStatus;
+    }
+
+    // Set_product,Get_product Добавление задачи в табл log_task // Работает
+    public boolean addTask(String Date) throws Exception{
+        boolean addStatus = false;String TaskId = "";String Status = "Не выполнен";
+        System.out.println(type + " " + transitId);
+        try(Connection connection = getConnection()){
+
+            Statement statement = connection.createStatement();
+            String sqlTask = "select TaskId from log_task order by TaskId desc limit 1;";
+            ResultSet resultSet = statement.executeQuery(sqlTask);
+
+            while (resultSet.next()){
+                TaskId = resultSet.getString("TaskId");
+            }
+
+            String sqlInsertTask = "INSERT INTO log_task(TaskId, TransitId, Type,Date,Status) " +
+                    "VALUES (" + idPlus(TaskId) + "," + transitId + "," + "'" + type + "'" + "," + "'" + Date + "'" + "," + "'" + Status + "'" + ");";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlInsertTask);
+            preparedStatement.executeUpdate(sqlInsertTask);
+
+            addStatus = true;
+
+        } catch (Exception e) {
+            System.out.println("Ошибка добавления задачи");
+        }
+
+        return addStatus;
+    }
+
+    // Get_products,comboBoxProductAvailability //
+    public ArrayList<Availability> getProductsForAvailability() throws Exception {
+        ArrayList<Availability> availabilities = new ArrayList<Availability>();
+        String itemId,orderQuantity = "";
+
+        try (Connection connection = getConnection()) {
+            Statement statementAvailability = connection.createStatement();
+            ResultSet resultSet = statementAvailability.executeQuery("SELECT ItemId,OrderQuantity FROM log_availability");
+
+            while (resultSet.next()){
+                itemId = resultSet.getString("ItemId");
+                orderQuantity = resultSet.getString("OrderQuantity");
+                availabilities.add(new Availability(itemId,orderQuantity));
+            }
+
+        } catch (Exception e){
+            System.out.println("Ошибка выборки продуктов");
+        }
+
+        return availabilities;
+    }
+
+    // Get_products,labelCell labelStorage // Работает
+    public ArrayList getCellAndStorage(String itemId) throws Exception{
+        String CellId = "",Type =  "",StorageId = "",Address = "";ArrayList storageCell = new ArrayList();
+
+        try (Connection connection = getConnection()){
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT CellId FROM log_availability WHERE ItemId = " + itemId);
+
+            while (resultSet.next()){
+                CellId = resultSet.getString("CellId");
+            }
+
+            String queryCell = "SELECT StorageId,Type FROM log_cell WHERE CellId = " + CellId;
+            PreparedStatement preparedStatement = connection.prepareStatement(queryCell);
+            ResultSet resultSetCell = preparedStatement.executeQuery();
+
+            while (resultSetCell.next()){
+                StorageId = resultSetCell.getString("StorageId");
+                Type = resultSetCell.getString("Type");
+            }
+
+            storageCell.add(new Cell(CellId,Type));
+
+            String queryStorage = "SELECT Address FROM log_storage WHERE StorageId = " + StorageId;
+            PreparedStatement preparedStatementStorage = connection.prepareStatement(queryStorage);
+            ResultSet resultSetStorage = preparedStatementStorage.executeQuery();
+
+            while (resultSetStorage.next()){
+                Address = resultSetStorage.getString("Address");
+            }
+
+            storageCell.add(new Storage(StorageId,Address));
+
+        } catch (Exception e){
+            System.out.println("Ошибка выборки ящиков и складов");
+        }
+
+        return storageCell;
+    }
+
+    // Get_product,Отгрузка в log_availability // Работает
+    public boolean getQuantityAvailability(String ItemId,String OrderQuantity) throws Exception{
+        boolean addStatus = false;
+        moveQuantity = OrderQuantity;
+        try (Connection connection = getConnection()) {
+            Statement statementSelect = connection.createStatement();
+            ResultSet resultSet = statementSelect.executeQuery("SELECT AvailabilityId FROM log_availability WHERE ItemId = " + ItemId);
+
+            while (resultSet.next()){
+                setAvailabilityId = resultSet.getString("AvailabilityId");
+            }
+
+            String prepared = "update log_availability set OrderQuantity = OrderQuantity - " + OrderQuantity + " where ItemId = " + ItemId;
+            PreparedStatement preparedStatement = connection.prepareStatement(prepared);
+            preparedStatement.executeUpdate();
+
+            addStatus = true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка отгрузки склада");
+        }
+        return addStatus;
+    }
+
+    public String quantityAvailability(String ItemId) throws Exception{
+        String Quantity = "";
+        try(Connection connection = getConnection()){
+
+            Statement statementQuantity = connection.createStatement();
+            ResultSet resultSet = statementQuantity.executeQuery("SELECT OrderQuantity FROM log_availability WHERE ItemId = " + ItemId);
+
+            while (resultSet.next()){
+                Quantity = resultSet.getString("OrderQuantity");
+            }
+
+        } catch (Exception e) {
+            System.out.println("Ошибка выборки кол-ва");
+        }
+
+        return Quantity;
+    }
+
+    // Get_product,Set_product,информация о продукте // Работает
+    public Nomenclature getInfoNomenclature(String ItemId) throws Exception{
+        Nomenclature nomenclature = new Nomenclature();
+        String itemId,Type,Length,Height,Width,Config,Provider;
+        try(Connection connection = getConnection()) {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT ItemId,Type,Lenght,Height,Width,Config,Provider FROM log_nomenclature WHERE ItemId = " + ItemId);
+
+            while (resultSet.next()){
+                itemId = resultSet.getString("ItemId");
+                Type = resultSet.getString("Type");
+                Length = resultSet.getString("Lenght");
+                Height = resultSet.getString("Height");
+                Width = resultSet.getString("Width");
+                Config = resultSet.getString("Config");
+                Provider = resultSet.getString("Provider");
+                nomenclature = new Nomenclature(itemId,Type,Length,Height,Width,Config,Provider);
+            }
+        } catch (Exception e){
+            System.out.println("Ошибка получение информации");
+        }
+        return nomenclature;
+    }
+
+    // Увелечение iD на 1
+    private String idPlus(String id){
+        int Id =0;
+        if(id.equals("")) {
+            Id = 1;
+            id = String.valueOf(Id);
+        } else {
+            Id = Integer.parseInt(id) + 1;
+            id = String.valueOf(Id);
+        }
+        return id;
+    }
 }

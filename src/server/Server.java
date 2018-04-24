@@ -97,46 +97,55 @@ public class Server extends Thread {
                         break;
                     }
                     case "getAllStorageInList": {
-                        ArrayList<Storage> storages = new ArrayList<Storage>(db.getAllStoragesInList());
+                        ArrayList<Storage> storages = new ArrayList<>(db.getAllStoragesInList());
                         soos.writeObject(storages);
                         break;
                     }
                     case "getAllCellInList": {
-                        ArrayList<Cell> cells = new ArrayList<Cell>(db.getAllCellInList());
+                        ArrayList<Cell> cells = new ArrayList<>(db.getAllCellInList());
                         soos.writeObject(cells);
                         break;
                     }
                     case "getAllAvailabilityInList": {
-                        ArrayList<Availability> availability = new ArrayList<Availability>(db.getAllAvailabilityInList());
+                        ArrayList<Availability> availability = new ArrayList<>(db.getAllAvailabilityInList());
                         soos.writeObject(availability);
                         break;
                     }
                     case "getAllCellInListbyId": {
                         String storageId = mas[1];
-                        ArrayList<Cell> cells = new ArrayList<Cell>(db.getAllCellInListbyId(storageId));
+                        ArrayList<Cell> cells = new ArrayList<>(db.getAllCellInListbyId(storageId));
                         soos.writeObject(cells);
                         break;
                     }
 
-                    // comboBoxProductName
+                    // Set_products,comboBoxProductName
                     case "getNomenclatureComboBoxProductName" : {
-                        ArrayList<Nomenclature> nomenclatures = new ArrayList<Nomenclature>(db.comboBoxNameProduct());
+                        ArrayList<Nomenclature> nomenclatures = new ArrayList<>(db.comboBoxNameProduct());
                         soos.writeObject(nomenclatures);
                         break;
                     }
 
-                    // comboBoxStorage
+                    // Set_products,comboBoxStorage
                     case "getStorageComboBoxStorage" : {
                         ArrayList<Storage> storages = new ArrayList<>(db.getStorageComboBoxStorage());
                         soos.writeObject(storages);
                         break;
                     }
 
-                    // comboBoxCell
+                    // Set_products,comboBoxCell
                     case "getCellComboBoxCell" : {
                         String storageId = mas[1];
-                        ArrayList<Cell> cells = new ArrayList<Cell>(db.getCellComboBoxCell(storageId));
+                        String itemId = mas[2];
+                        ArrayList<Cell> cells = new ArrayList<>(db.getCellComboBoxCell(storageId,itemId));
                         soos.writeObject(cells);
+                        break;
+                    }
+
+                    // Set_products,comboBoxNameProduct
+                    case "getComboBoxNameProduct" : {
+                        String productId = mas[1];
+                        String status = db.getComboBoxNameProduct(productId);
+                        soos.writeObject(status);
                         break;
                     }
 
@@ -154,6 +163,84 @@ public class Server extends Thread {
                             status = "Добавлены";
                             soos.writeObject(status);
                         }
+                        break;
+                    }
+
+                    // Set_products,ButtonAdd
+                    case "addTask" :{
+                        String Date = mas[1];
+
+                        String status = "";
+                        if(db.addTask(Date) == false) {
+                            status = "Ошибка";
+                            soos.writeObject(status);
+                        } else {
+                            status = "Добавлены";
+                            soos.writeObject(status);
+                        }
+                        break;
+                    }
+
+                    // Set_products,ButtonAdd
+                    case "addTransit" :{
+                        String Storage = mas[1];
+                        String Type = mas[2];
+
+                        String status = "";
+                        if(db.addTransit(Storage,Type) == false) {
+                            status = "Ошибка";
+                            soos.writeObject(status);
+                        } else {
+                            status = "Добавлены";
+                            soos.writeObject(status);
+                        }
+                        break;
+                    }
+
+                    // Get_products,ButtonGet
+                    case  "getQuantityAvailability" : {
+                        String ItemId = mas[1];
+                        String Quantity = mas[2];
+
+                        String status = "";
+                        if(db.getQuantityAvailability(ItemId,Quantity) == false) {
+                            status = "Ошибка";
+                            soos.writeObject(status);
+                        } else {
+                            status = "Добавлены";
+                            soos.writeObject(status);
+                        }
+                        break;
+                    }
+
+                    // Get_products,ComboBoxProductAvailability
+                    case  "getProductsForAvailability" : {
+                        ArrayList<Availability> availabilities = new ArrayList<>(db.getProductsForAvailability());
+                        soos.writeObject(availabilities);
+                        break;
+                    }
+
+                    // Get_products,ButtonInfo
+                    case  "getInfoNomenclature" : {
+                        String itemID = mas[1];
+                        Nomenclature nomenclature = db.getInfoNomenclature(itemID);
+                        soos.writeObject(nomenclature);
+                        break;
+                    }
+
+                    // Get_products,labelStorage,labelCell
+                    case  "getCellAndStorage" : {
+                        String itemId = mas[1];
+                        ArrayList storageCell = db.getCellAndStorage(itemId);
+                        soos.writeObject(storageCell);
+                        break;
+                    }
+
+                    // Get_products,
+                    case  "quantityAvailability" : {
+                        String itemId = mas[1];
+                        String storageCell = db.quantityAvailability(itemId);
+                        soos.writeObject(storageCell);
                         break;
                     }
                     default: {

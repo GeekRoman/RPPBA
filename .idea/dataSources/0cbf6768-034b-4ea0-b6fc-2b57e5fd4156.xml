@@ -941,7 +941,7 @@
     </table>
     <column id="239" parent="232" name="AvailabilityId">
       <Position>1</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1052,7 +1052,7 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="234" name="Name">
+    <column id="260" parent="234" name="Type">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
@@ -1113,13 +1113,13 @@
     </key>
     <column id="271" parent="236" name="TaskId">
       <Position>1</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="272" parent="236" name="TransitId">
       <Position>2</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="273" parent="236" name="Type">
@@ -1143,7 +1143,7 @@
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="277" parent="236" name="TransitId_idx">
+    <index id="277" parent="236" name="log_task_log_transit_TransitId_fk">
       <ColNames>TransitId</ColNames>
     </index>
     <key id="278" parent="236" name="PRIMARY">
@@ -1151,7 +1151,7 @@
       <ColNames>TaskId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="279" parent="236" name="TransitId">
+    <foreign-key id="279" parent="236" name="log_task_log_transit_TransitId_fk">
       <ColNames>TransitId</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_transit</RefTableName>
@@ -1165,7 +1165,7 @@
     </column>
     <column id="281" parent="237" name="TaskId">
       <Position>2</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1182,7 +1182,7 @@
       <ColNames>TaskListId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="285" parent="237" name="TaskId">
+    <foreign-key id="285" parent="237" name="log_tasklist_log_task_TaskId_fk">
       <ColNames>TaskId</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_task</RefTableName>
@@ -1190,13 +1190,13 @@
     </foreign-key>
     <column id="286" parent="238" name="TransitId">
       <Position>1</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="287" parent="238" name="AvailabilityId">
       <Position>2</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1221,7 +1221,7 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="292" parent="238" name="AvailabilityId_idx">
+    <index id="292" parent="238" name="log_transit_log_availability_AvailabilityId_fk">
       <ColNames>AvailabilityId</ColNames>
     </index>
     <index id="293" parent="238" name="Out_Storage_idx">
@@ -1235,7 +1235,7 @@
       <ColNames>TransitId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="296" parent="238" name="AvailabilityId">
+    <foreign-key id="296" parent="238" name="log_transit_log_availability_AvailabilityId_fk">
       <ColNames>AvailabilityId</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_availability</RefTableName>

@@ -3,22 +3,25 @@ package GUI;
 import GUI.Tasks.Get_products;
 import GUI.Tasks.Inventory_products;
 import GUI.Tasks.Set_products;
+import GUI.Tasks.Transfer_products;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 public class Product_Information_Management extends JFrame{
     private JTable table1;
-    private JButton ButtonSetProduct;
-    private JButton ButtonGetProduct;
+    private JButton buttonSetProduct;
+    private JButton buttonGetProduct;
     private JButton ExitButton;
-    private JButton ButtonInventarization;
+    private JButton buttonInventarization;
     private JPanel InventManagementForm;
     private JButton номенклатураButton;
     private JButton спискиЗаданийButton;
     private JComboBox comboBox1;
+    private JButton buttonTransfer;
     private String []columnsHeader = {"ID", "Название", "Длина", "Высота",
             "Ширина", "Цвет", "Постовщик", "В наличии", "Заказанно", "Склад","Ячейка"};
     DefaultTableModel tableModel = new DefaultTableModel() {
@@ -48,7 +51,7 @@ public class Product_Information_Management extends JFrame{
 
     // Обработка кнопок с заданиями
     private void initForm(){
-        ButtonSetProduct.addActionListener(new ActionListener() {
+        buttonSetProduct.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
                 try {
@@ -59,7 +62,7 @@ public class Product_Information_Management extends JFrame{
             }
         });
 
-        ButtonGetProduct.addActionListener(new ActionListener() {
+        buttonGetProduct.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -70,11 +73,24 @@ public class Product_Information_Management extends JFrame{
             }
         });
 
-        ButtonInventarization.addActionListener(new ActionListener() {
+        buttonInventarization.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     openInventory_Products();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+
+
+
+        buttonTransfer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openTransfer_Products();
                 } catch (Exception e1){
 
                 }
@@ -95,5 +111,10 @@ public class Product_Information_Management extends JFrame{
     // Открытие формы Инветаризация склада
     private void openInventory_Products() throws Exception{
         new Inventory_products().setVisible(true);
+    }
+
+    // Открытие формы Перемещение продукции
+    private void openTransfer_Products() throws Exception{
+        new Transfer_products().setVisible(true);
     }
 }
