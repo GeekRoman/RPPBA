@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b554b-d693-42a4-a37c-1e31b677893e" name="Default" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$1.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$2.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$3.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$4.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management$4.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Product_Information_Management.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products$1.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products$2.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products$3.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Get_products.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products$1.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products$2.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products$3.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products.class" afterPath="$PROJECT_DIR$/out/production/Logistics/GUI/Tasks/Set_products.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/client/Client.class" afterPath="$PROJECT_DIR$/out/production/Logistics/client/Client.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/server/Availability.class" afterPath="$PROJECT_DIR$/out/production/Logistics/server/Availability.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/server/Cell.class" afterPath="$PROJECT_DIR$/out/production/Logistics/server/Cell.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/server/DataBase.class" afterPath="$PROJECT_DIR$/out/production/Logistics/server/DataBase.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/server/Nomenclature.class" afterPath="$PROJECT_DIR$/out/production/Logistics/server/Nomenclature.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/server/Server.class" afterPath="$PROJECT_DIR$/out/production/Logistics/server/Server.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics/server/Storage.class" afterPath="$PROJECT_DIR$/out/production/Logistics/server/Storage.class" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Tasks/Get_products.form" afterPath="$PROJECT_DIR$/src/GUI/Tasks/Get_products.form" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Tasks/Get_products.java" afterPath="$PROJECT_DIR$/src/GUI/Tasks/Get_products.java" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Tasks/Set_products.form" afterPath="$PROJECT_DIR$/src/GUI/Tasks/Set_products.form" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Tasks/Set_products.java" afterPath="$PROJECT_DIR$/src/GUI/Tasks/Set_products.java" />
-      <change beforePath="$PROJECT_DIR$/src/client/Client.java" afterPath="$PROJECT_DIR$/src/client/Client.java" />
-      <change beforePath="$PROJECT_DIR$/src/server/Availability.java" afterPath="$PROJECT_DIR$/src/server/Availability.java" />
-      <change beforePath="$PROJECT_DIR$/src/server/Cell.java" afterPath="$PROJECT_DIR$/src/server/Cell.java" />
-      <change beforePath="$PROJECT_DIR$/src/server/DataBase.java" afterPath="$PROJECT_DIR$/src/server/DataBase.java" />
-      <change beforePath="$PROJECT_DIR$/src/server/Nomenclature.java" afterPath="$PROJECT_DIR$/src/server/Nomenclature.java" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" afterPath="$PROJECT_DIR$/src/server/Server.java" />
-      <change beforePath="$PROJECT_DIR$/src/server/Storage.java" afterPath="$PROJECT_DIR$/src/server/Storage.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,45 +26,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="logistics@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="logistics@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="logistics@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="logistics: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="logistics@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="logistics: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="log_availability: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="logistics@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="logistics: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="log_nomenclature: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="logistics@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="logistics: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="log_task: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="logistics@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="logistics: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="log_transit: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -107,7 +34,7 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
+            <state relative-caret-position="2652">
               <caret line="173" column="54" lean-forward="false" selection-start-line="173" selection-start-column="54" selection-end-line="173" selection-end-column="54" />
               <folding />
             </state>
@@ -117,7 +44,7 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
+            <state relative-caret-position="4029">
               <caret line="241" column="30" lean-forward="false" selection-start-line="241" selection-start-column="30" selection-end-line="241" selection-end-column="30" />
               <folding />
             </state>
@@ -127,17 +54,9 @@
       <file leaf-file-name="DataBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="7361">
               <caret line="436" column="49" lean-forward="false" selection-start-line="436" selection-start-column="49" selection-end-line="436" selection-end-column="49" />
               <folding>
-                <element signature="e#723#737#0" expanded="true" />
-                <element signature="e#2400#2409#0" expanded="true" />
-                <element signature="e#3289#3295#0" expanded="true" />
-                <element signature="e#4417#4423#0" expanded="true" />
-                <element signature="e#8201#8215#0" expanded="true" />
-                <element signature="e#9049#9058#0" expanded="true" />
-                <element signature="e#9870#9876#0" expanded="true" />
-                <element signature="e#17608#17622#0" expanded="true" />
                 <marker date="1524568479988" expanded="true" signature="1059:1089" ph="SELECT * FRO... log_nomenclature" />
                 <marker date="1524568479988" expanded="true" signature="2545:2570" ph="SELECT * FRO... log_storage" />
                 <marker date="1524568479988" expanded="true" signature="3431:3453" ph="SELECT * FRO... log_cell" />
@@ -202,8 +121,8 @@
       <file leaf-file-name="Get_products.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Get_products.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -212,7 +131,7 @@
       <file leaf-file-name="Set_products.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Set_products.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1530">
+            <state relative-caret-position="663">
               <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
               <folding />
             </state>
@@ -329,7 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -390,8 +309,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -624,6 +543,8 @@
       <workItem from="1524499715054" duration="83000" />
       <workItem from="1524507910915" duration="4772000" />
       <workItem from="1524556525432" duration="9006000" />
+      <workItem from="1524599852321" duration="614000" />
+      <workItem from="1524658476529" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1521934423252</created>
@@ -636,7 +557,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281567000" />
+    <option name="totallyTimeSpent" value="282207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -649,22 +570,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31784582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20063359" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1234375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -676,6 +597,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31784582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -924,7 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +893,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
+        <state relative-caret-position="4029">
           <caret line="241" column="30" lean-forward="false" selection-start-line="241" selection-start-column="30" selection-end-line="241" selection-end-column="30" />
           <folding />
         </state>
@@ -988,7 +908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
+        <state relative-caret-position="2652">
           <caret line="173" column="54" lean-forward="false" selection-start-line="173" selection-start-column="54" selection-end-line="173" selection-end-column="54" />
           <folding />
         </state>
@@ -996,17 +916,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="7361">
           <caret line="436" column="49" lean-forward="false" selection-start-line="436" selection-start-column="49" selection-end-line="436" selection-end-column="49" />
           <folding>
-            <element signature="e#723#737#0" expanded="true" />
-            <element signature="e#2400#2409#0" expanded="true" />
-            <element signature="e#3289#3295#0" expanded="true" />
-            <element signature="e#4417#4423#0" expanded="true" />
-            <element signature="e#8201#8215#0" expanded="true" />
-            <element signature="e#9049#9058#0" expanded="true" />
-            <element signature="e#9870#9876#0" expanded="true" />
-            <element signature="e#17608#17622#0" expanded="true" />
             <marker date="1524568479988" expanded="true" signature="1059:1089" ph="SELECT * FRO... log_nomenclature" />
             <marker date="1524568479988" expanded="true" signature="2545:2570" ph="SELECT * FRO... log_storage" />
             <marker date="1524568479988" expanded="true" signature="3431:3453" ph="SELECT * FRO... log_cell" />
@@ -1069,7 +981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Set_products.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1530">
+        <state relative-caret-position="663">
           <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
           <folding />
         </state>
@@ -1091,8 +1003,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Get_products.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding />
         </state>
       </provider>
