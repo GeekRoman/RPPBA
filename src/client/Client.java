@@ -84,9 +84,24 @@ public class Client {
         return answer;
     }
 
+    public static String addNomenclature(String ItemId,String Type, String Length,String Height,
+                                         String Width,String Color,String Config,String Provider) throws Exception{
+        String str = "addNomenclature " + ItemId + " "+ Type + " " + Length + " " +
+                Height + " " + Width + " " + Color + " " + Config + " " +Provider;
+        System.out.println(str);
+        coos.writeObject(str);
+        answer = (String) cois.readObject();
+        return answer;
+    }
+
     //DELETE
     public static String delStorage (String storageId) throws Exception{
         coos.writeObject("delStorage " + storageId);
+        answer = (String) cois.readObject();
+        return answer;
+    }
+    public static String delNomenclature (String itemId) throws Exception{
+        coos.writeObject("delNomenclature " + itemId);
         answer = (String) cois.readObject();
         return answer;
     }
@@ -106,6 +121,12 @@ public class Client {
         coos.writeObject("getAllStorageInList");
         ArrayList<server.Storage> storages = (ArrayList<server.Storage>) cois.readObject();
         return storages;
+    }
+
+    public static ArrayList<server.Nomenclature> getAllNomenclatureInList() throws Exception {
+        coos.writeObject("getAllNomenclatureInList");
+        ArrayList<server.Nomenclature> nomenclatures = (ArrayList<server.Nomenclature>) cois.readObject();
+        return nomenclatures;
     }
 
     public static ArrayList<server.Cell> getAllCellInList() throws Exception {

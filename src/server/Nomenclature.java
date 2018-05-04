@@ -8,6 +8,7 @@ public class Nomenclature implements Serializable{
     private String Length;
     private String Height;
     private String Width;
+    private String Color;
     private String Config;
     private String Provider;
 
@@ -20,12 +21,14 @@ public class Nomenclature implements Serializable{
     }
 
     // Set_products,Get_products
-    public Nomenclature(String ItemId,String Type,String Length,String Height,String Width,String Config,String Provider) {
+    public Nomenclature(String ItemId,String Type, String Length,String Height,
+                        String Width,String Color,String Config,String Provider) {
         this.ItemId = ItemId;
         this.Type = Type;
         this.Length = Length;
         this.Height = Height;
         this.Width = Width;
+        this.Color = Color;
         this.Config = Config;
         this.Provider = Provider;
     }
@@ -56,5 +59,8 @@ public class Nomenclature implements Serializable{
 
     public String getWidth() {
         return Width;
+    }
+    public String getColor(){
+        return  Color;
     }
 }

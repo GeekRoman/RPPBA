@@ -92,6 +92,41 @@ public class DataBase {
             return null;
         }
     }
+    public ArrayList<Nomenclature> getAllNomenclatureInList() throws ClassNotFoundException {
+        try (Connection connection = getConnection()) {
+
+            ArrayList<Nomenclature> list = new ArrayList<Nomenclature>();
+
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_nomenclature;");
+
+            String itemId, mytype, length, height, width, color, config, provider;
+
+            while (rs.next()) {
+                itemId = rs.getString("ItemId");
+                mytype = rs.getString("ItemId");
+                length = rs.getString("Length");
+                height = rs.getString("Height");
+                width = rs.getString("Width");
+                color = rs.getString("Color");
+                config = rs.getString("Config");
+                provider = rs.getString("Provider");
+
+                Nomenclature oneNomenclature = new Nomenclature(itemId, mytype, length,
+                        height, width, color, config, provider);
+                list.add(oneNomenclature);
+
+            }
+
+            return list;
+
+        } catch (Exception e){
+            System.out.println("Ошибка получения всей номенклатуры");
+            return null;
+        }
+    }
+
     public ArrayList<Cell> getAllCellInList() throws ClassNotFoundException {
         try (Connection connection = getConnection()) {
 
@@ -149,7 +184,6 @@ public class DataBase {
                 Cell mycell = new Cell(cellId, storageId,length,height,width, type, status);
 
                 list.add(mycell);
-
             }
 
             return list;
@@ -159,6 +193,7 @@ public class DataBase {
             return null;
         }
     }
+
     public String getAllStorageId() throws ClassNotFoundException {
 
         try (Connection connection = getConnection()) {
@@ -201,6 +236,24 @@ public class DataBase {
             return false;
         }
     }
+
+    public boolean delNomenclature(String itemId){
+        try (Connection connection = getConnection()) {
+
+            String sql = "DELETE FROM log_nomenclature WHERE ItemId = \"" + itemId + "\";";
+            System.out.println("Будет удалена номенклатура: " + itemId + " - " + sql);
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.executeUpdate(sql);
+            st = connection.prepareStatement(sql);
+            st.executeUpdate(sql);
+            return true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка удаления номенклатуры***");
+            return false;
+        }
+    }
+
     public boolean delCell(String cellId){
         try (Connection connection = getConnection()) {
 
@@ -266,6 +319,36 @@ public class DataBase {
 
             String sql = "INSERT INTO log_cell(CellId,StorageId,Length,Height,Width,Type,Status)" +
                     " VALUES (\"" + cellId + "\",\"" + storageId + "\", \"" + Length + "\", \"" + Height + "\", \"" + Width + "\", \"" + Type + "\", \"" + Status + "\");";
+            System.out.println(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.executeUpdate(sql);
+            addstatus=true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка добавления ячейки");
+        }
+
+        return addstatus;
+    }
+
+    public boolean addNomenclature (String itemId,String mytype, String length,String height,
+                                    String width,String color,String config,String provide) throws Exception {
+
+        boolean addstatus = false;
+        try (Connection connection = getConnection()) {
+
+            System.out.println("Проверка на свободный идентификатор...");
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_nomenclature;");
+            while (rs.next()){
+                if (itemId.equals(rs.getString("ItemId"))){
+                    return addstatus=false;
+                }
+            }
+
+            String sql = "INSERT INTO log_nomenclature(ItemId, Type, Length, Height, Width, Config, Color, Provider)" +
+                    " VALUES (\"" + itemId + "\",\"" + mytype + "\", \"" + length + "\", \"" + height + "\", \"" + width + "\", \"" + config + "\", \"" + color + "\", \"" + provide + "\");";
             System.out.println(sql);
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate(sql);
@@ -616,7 +699,7 @@ public class DataBase {
     // Get_product,Set_product,информация о продукте // Работает
     public Nomenclature getInfoNomenclature(String ItemId) throws Exception{
         Nomenclature nomenclature = new Nomenclature();
-        String itemId,Type,Length,Height,Width,Config,Provider;
+        String itemId,Type,Length,Height,Width,Config,Provider, Color;
         try(Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT ItemId,Type,Lenght,Height,Width,Config,Provider FROM log_nomenclature WHERE ItemId = " + ItemId);
@@ -627,9 +710,10 @@ public class DataBase {
                 Length = resultSet.getString("Lenght");
                 Height = resultSet.getString("Height");
                 Width = resultSet.getString("Width");
+                Color = resultSet.getString("Color");
                 Config = resultSet.getString("Config");
                 Provider = resultSet.getString("Provider");
-                nomenclature = new Nomenclature(itemId,Type,Length,Height,Width,Config,Provider);
+                nomenclature = new Nomenclature(itemId,Type,Length,Height,Width,Color,Config,Provider);
             }
         } catch (Exception e){
             System.out.println("Ошибка получение информации");

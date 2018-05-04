@@ -22,6 +22,7 @@ public class Product_Information_Management extends JFrame{
     private JButton listTasksButton;
     private JComboBox comboBox1;
     private JButton buttonTransfer;
+
     private String []columnsHeader = {"ID", "Длина", "Высота",
             "Ширина", "Цвет", "Постовщик", "В наличии", "Заказанно", "Склад","Ячейка"};
     DefaultTableModel tableModel = new DefaultTableModel() {

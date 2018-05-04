@@ -12,10 +12,8 @@ public class StorageAdd extends JFrame implements ActionListener{
     private JTextField idField;
     private JTextField addressField;
     private JComboBox comboBox1;
-
     private JPanel storageAdd;
     private JButton button1;
-    private JButton button2;
     private JTextField textField;
 
 
@@ -28,7 +26,6 @@ public class StorageAdd extends JFrame implements ActionListener{
         this.setResizable(true);
         this.setVisible(true);
         button1.addActionListener(this);
-        button2.addActionListener(this);
 
 
         String[] statusBox = {"Действующий", "Резервный"};
@@ -41,9 +38,15 @@ public class StorageAdd extends JFrame implements ActionListener{
 
         switch(str){
             case "Добавить": {
-                if (idField.getText().equals("") || addressField.getText().equals("")){
+                if (idField.getText().equals("") || addressField.getText().equals(""))
+                {
                     JOptionPane.showMessageDialog(storageAdd, "Необходимо заполнить все поля!");
-                } else {
+                } else if (idField.getText().length()<2)
+                {
+                    JOptionPane.showMessageDialog(storageAdd, "Идентификатор слишком короткий!");
+                }
+                else
+                {
                     String storageId = this.idField.getText().trim();
                     String address = this.addressField.getText().trim();
                     String status = this.comboBox1.getSelectedItem().toString();
@@ -75,8 +78,6 @@ public class StorageAdd extends JFrame implements ActionListener{
                                 j++;
                                 if (j>=3) j = 0;
 
-
-
                             }
 
                         }
@@ -99,22 +100,6 @@ public class StorageAdd extends JFrame implements ActionListener{
 
                 break;
             }
-            case "Назад":{
-                this.dispose();
-                StorageForm newStorage = null;
-                try
-                {
-                    newStorage = new StorageForm();
-                    newStorage.setResizable(false);
-                    newStorage.setVisible(true);
-
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                break;
-            }
-
-
         }
     }
 }

@@ -103,10 +103,43 @@ public class Server extends Thread {
 
                         break;
                     }
+
+                    case "addNomenclature": {
+                        String itemId = mas[1];
+                        String mytype = mas[2];
+                        String length = mas[3];
+                        String height = mas[4];
+                        String width = mas[5];
+                        String color = mas[6];
+                        String config = mas[7];
+                        String provider = mas[7];
+
+                        if (db.addNomenclature(itemId, mytype, length,
+                                height, width, color, config, provider)==false){
+                            answer = "false";
+                        } else {
+                            answer = "true";
+                        }
+
+                        soos.writeObject(answer);
+
+                        break;
+                    }
                     //DELETE
                     case "delStorage": {
                         String storageId = mas[1];
                         if (db.delStorage(storageId)){
+                            answer = "true";
+                        } else {
+                            answer = "false";
+                        }
+                        soos.writeObject(answer);
+                        break;
+                    }
+
+                    case "delNomenclature": {
+                        String itemId = mas[1];
+                        if (db.delNomenclature(itemId)){
                             answer = "true";
                         } else {
                             answer = "false";
@@ -134,6 +167,11 @@ public class Server extends Thread {
                     case "getAllStorageInList": {
                         ArrayList<Storage> storages = new ArrayList<>(db.getAllStoragesInList());
                         soos.writeObject(storages);
+                        break;
+                    }
+                    case "getAllNomenclatureInList": {
+                        ArrayList<Nomenclature> nomenclatures = new ArrayList<>(db.getAllNomenclatureInList());
+                        soos.writeObject(nomenclatures);
                         break;
                     }
                     case "getAllCellInList": {
@@ -256,12 +294,12 @@ public class Server extends Thread {
                     }
 
                     // Get_products,ButtonInfo
-                    case  "getInfoNomenclature" : {
+                   /* case  "getInfoNomenclature" : {
                         String itemID = mas[1];
                         Nomenclature nomenclature = db.getInfoNomenclature(itemID);
                         soos.writeObject(nomenclature);
                         break;
-                    }
+                    }*/
 
                     // Get_products,labelStorage,labelCell
                     case  "getCellAndStorage" : {
