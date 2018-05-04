@@ -1,5 +1,6 @@
 package GUI;
 
+import GUI.Nomenclature.NomenclatureListPage;
 import GUI.Tasks.Get_products;
 import GUI.Tasks.Inventory_products;
 import GUI.Tasks.Set_products;
@@ -9,7 +10,6 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.ResultSet;
 
 public class Product_Information_Management extends JFrame{
     private JTable table1;
@@ -18,8 +18,8 @@ public class Product_Information_Management extends JFrame{
     private JButton ExitButton;
     private JButton buttonInventarization;
     private JPanel InventManagementForm;
-    private JButton номенклатураButton;
-    private JButton спискиЗаданийButton;
+    private JButton nomenclatureListButton;
+    private JButton listTasksButton;
     private JComboBox comboBox1;
     private JButton buttonTransfer;
     private String []columnsHeader = {"ID", "Название", "Длина", "Высота",
@@ -49,6 +49,25 @@ public class Product_Information_Management extends JFrame{
        list = new ArrayList<server.Availability>(getAllAvailabilityInList())*/;
 
 
+        ExitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+
+            }
+        });
+        nomenclatureListButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openNomenclature();
+                } catch (Exception e1){
+
+                }
+
+            }
+        });
     }
 
     // Обработка кнопок с заданиями
@@ -119,5 +138,9 @@ public class Product_Information_Management extends JFrame{
     // Открытие формы Перемещение продукции
     private void openTransfer_Products() throws Exception{
         new Transfer_products().setVisible(true);
+    }
+
+    private void openNomenclature() throws Exception{
+        new NomenclatureListPage().setVisible(true);
     }
 }

@@ -49,6 +49,7 @@ public class StorageForm extends JFrame implements ActionListener {
         DeleteButton.addActionListener(this);
         AddButton.addActionListener(this);
 
+
         ExitButton.addActionListener(this);
         ArrayList <Storage> list = new ArrayList<Storage>(getAllStorageInList());
 
@@ -56,11 +57,6 @@ public class StorageForm extends JFrame implements ActionListener {
             tableModel.addColumn(col);
         }
         table1.setModel(tableModel);
-
-
-
-
-
 
         for (int i = 0; i < list.size(); i++) {
             tableModel.addRow(new String[]{

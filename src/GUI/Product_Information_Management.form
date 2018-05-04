@@ -118,7 +118,7 @@
             <constraints/>
             <properties/>
           </component>
-          <component id="d8b1c" class="javax.swing.JButton" binding="номенклатураButton" default-binding="true">
+          <component id="d8b1c" class="javax.swing.JButton" binding="nomenclatureListButton">
             <constraints/>
             <properties>
               <background color="-2631980"/>
@@ -130,7 +130,7 @@
             <constraints/>
             <properties/>
           </component>
-          <component id="d108c" class="javax.swing.JButton" binding="спискиЗаданийButton" default-binding="true">
+          <component id="d108c" class="javax.swing.JButton" binding="listTasksButton">
             <constraints/>
             <properties>
               <background color="-2631980"/>
@@ -179,6 +179,7 @@
         </constraints>
         <properties>
           <background color="-2631980"/>
+          <font size="16" style="1"/>
           <text value="Перемещение продукции"/>
         </properties>
       </component>
