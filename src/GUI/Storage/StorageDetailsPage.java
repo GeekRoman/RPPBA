@@ -13,7 +13,7 @@ public class StorageDetailsPage extends JFrame {
     private JPanel Form;
 
     public StorageDetailsPage(String storageId, String Address, String Status) throws Exception {
-        super("Форма дитализации");
+        super("Форма детализации");
 
         setSize(500, 200);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
