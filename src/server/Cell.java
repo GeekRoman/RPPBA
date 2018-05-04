@@ -28,6 +28,12 @@ public class Cell implements Serializable{
         this.Type = Type;
         this.Status = Status;
     }
+
+    // Get_products
+    public Cell(String CellId,String Type){
+        this.CellId = CellId;
+        this.Type = Type;
+    }
     public String getStatus() {
         return Status;
     }

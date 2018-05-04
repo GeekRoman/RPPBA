@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b554b-d693-42a4-a37c-1e31b677893e" name="Default" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.form" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Logistics/GUI/Storage/StorageDelete.class" afterPath="" />
@@ -61,6 +62,9 @@
       <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Cell/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2652">
+              <caret line="173" column="54" lean-forward="false" selection-start-line="173" selection-start-column="54" selection-end-line="173" selection-end-column="54" />
+              <folding />
             <state relative-caret-position="248">
               <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
               <folding>
@@ -79,6 +83,8 @@
       <file leaf-file-name="StorageAdd.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4029">
+              <caret line="241" column="30" lean-forward="false" selection-start-line="241" selection-start-column="30" selection-end-line="241" selection-end-column="30" />
             <state relative-caret-position="395">
               <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
               <folding />
@@ -89,9 +95,67 @@
       <file leaf-file-name="StorageForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7361">
+              <caret line="436" column="49" lean-forward="false" selection-start-line="436" selection-start-column="49" selection-end-line="436" selection-end-column="49" />
             <state relative-caret-position="395">
               <caret line="85" column="73" lean-forward="false" selection-start-line="85" selection-start-column="73" selection-end-line="85" selection-end-column="73" />
               <folding>
+                <marker date="1524568479988" expanded="true" signature="1059:1089" ph="SELECT * FRO... log_nomenclature" />
+                <marker date="1524568479988" expanded="true" signature="2545:2570" ph="SELECT * FRO... log_storage" />
+                <marker date="1524568479988" expanded="true" signature="3431:3453" ph="SELECT * FRO... log_cell" />
+                <marker date="1524568479988" expanded="true" signature="4544:4605" ph="SELECT * FRO... log_cell" />
+                <marker date="1524568479988" expanded="true" signature="5718:5743" ph="SELECT * FRO... log_storage" />
+                <marker date="1524568479988" expanded="true" signature="6255:6318" ph="DELETE FROM log_storage... " />
+                <marker date="1524568479988" expanded="true" signature="7084:7109" ph="SELECT * FRO... log_storage" />
+                <marker date="1524568479988" expanded="true" signature="7316:7442" ph="INSERT INTO log_storage... " />
+                <marker date="1524568479988" expanded="true" signature="8459:8499" ph="SELECT ItemI... log_nomenclature" />
+                <marker date="1524568479988" expanded="true" signature="9283:9323" ph="SELECT Stora... log_storage" />
+                <marker date="1524568479988" expanded="true" signature="9283:9325" ph="SELECT Stora... log_storage" />
+                <marker date="1524568479988" expanded="true" signature="10115:10163" ph="SELECT Type log_nomenclature" />
+                <marker date="1524568479988" expanded="true" signature="10115:10164" ph="SELECT Type log_nomenclature" />
+                <marker date="1524568479988" expanded="true" signature="10406:10530" ph="SELECT CellI... log_cell" />
+                <marker date="1524568479988" expanded="true" signature="11323:11373" ph="SELECT ItemI... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="11323:11374" ph="SELECT ItemI... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="12259:12346" ph="SELECT ItemI... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="12595:12675" ph="select Avail... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="13082:13155" ph="INSERT INTO log_availability... " />
+                <marker date="1524568479988" expanded="true" signature="13082:13264" ph="INSERT INTO log_availability... " />
+                <marker date="1524568479988" expanded="true" signature="13082:13265" ph="INSERT INTO log_availability... " />
+                <marker date="1524568479988" expanded="true" signature="13082:13266" ph="INSERT INTO log_availability... " />
+                <marker date="1524568479988" expanded="true" signature="13432:13522" ph="update log_availability... " />
+                <marker date="1524568479988" expanded="true" signature="14245:14310" ph="select Avail... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="14678:14763" ph="INSERT INTO log_transit... " />
+                <marker date="1524568479988" expanded="true" signature="14678:14819" ph="INSERT INTO log_transit... " />
+                <marker date="1524568479988" expanded="true" signature="14678:14887" ph="INSERT INTO log_transit... " />
+                <marker date="1524568479988" expanded="true" signature="14678:14907" ph="INSERT INTO log_transit... " />
+                <marker date="1524568479988" expanded="true" signature="14678:14908" ph="INSERT INTO log_transit... " />
+                <marker date="1524568479988" expanded="true" signature="15162:15227" ph="select Trans... log_transit" />
+                <marker date="1524568479988" expanded="true" signature="15595:15825" ph="INSERT INTO log_transit... " />
+                <marker date="1524568479988" expanded="true" signature="16603:16659" ph="select Avail... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="16876:16920" ph="INSERT INTO log_task... " />
+                <marker date="1524568479988" expanded="true" signature="16876:16925" ph="INSERT INTO log_task... " />
+                <marker date="1524568479988" expanded="true" signature="16876:16967" ph="INSERT INTO log_task... " />
+                <marker date="1524568479988" expanded="true" signature="16876:17014" ph="INSERT INTO log_task... " />
+                <marker date="1524568479988" expanded="true" signature="16876:17064" ph="INSERT INTO log_task... " />
+                <marker date="1524568479988" expanded="true" signature="16876:17085" ph="INSERT INTO log_task... " />
+                <marker date="1524568479988" expanded="true" signature="16876:17086" ph="INSERT INTO log_task... " />
+                <marker date="1524568479988" expanded="true" signature="17871:17903" ph="SELECT ItemI... " />
+                <marker date="1524568479988" expanded="true" signature="17871:17920" ph="SELECT ItemI... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="18732:18773" ph="SELECT ItemI... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="18732:18783" ph="SELECT ItemI... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="18938:18988" ph="SELECT Stora... log_cell" />
+                <marker date="1524568479988" expanded="true" signature="18938:18989" ph="SELECT Stora... log_cell" />
+                <marker date="1524568479988" expanded="true" signature="19431:19480" ph="SELECT Stora... log_storage" />
+                <marker date="1524568479988" expanded="true" signature="20429:20478" ph="SELECT Avail... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="20429:20487" ph="SELECT Avail... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="20429:20488" ph="SELECT Avail... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="20661:20758" ph="update log_availability... " />
+                <marker date="1524568479988" expanded="true" signature="20903:20904" ph="update log_availability... " />
+                <marker date="1524568479988" expanded="true" signature="21365:21413" ph="SELECT Order... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="21365:21423" ph="SELECT Order... log_availability" />
+                <marker date="1524568479988" expanded="true" signature="22126:22185" ph="SELECT Type,... " />
+                <marker date="1524568479988" expanded="true" signature="22126:22217" ph="SELECT Type,... log_nomenclature" />
+                <marker date="1524568479988" expanded="true" signature="22126:22218" ph="SELECT Type,... log_nomenclature" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#1469#1478#0" expanded="true" />
                 <element signature="e#3685#3694#0" expanded="true" />
@@ -100,6 +164,8 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Get_products.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Get_products.java">
       <file leaf-file-name="StorageForm.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.form">
           <provider selected="true" editor-type-id="ui-designer">
@@ -110,6 +176,9 @@
       <file leaf-file-name="StorageDetailsPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+              <folding />
             <state relative-caret-position="290">
               <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding>
@@ -119,6 +188,8 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Set_products.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Set_products.java">
       <file leaf-file-name="StorageDetailsPage.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.form">
           <provider selected="true" editor-type-id="ui-designer">
@@ -136,6 +207,9 @@
       <file leaf-file-name="CellAdd.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+              <folding />
             <state relative-caret-position="42">
               <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
@@ -190,7 +264,6 @@
         <option value="$PROJECT_DIR$/src/Interface/Menu.java" />
         <option value="$PROJECT_DIR$/src/GUI/Storage.form" />
         <option value="$PROJECT_DIR$/src/GUI/Storage.java" />
-        <option value="$PROJECT_DIR$/src/server/Availability.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/GUI/Cell.java" />
         <option value="$PROJECT_DIR$/src/GUI/StorageDelete.form" />
@@ -205,6 +278,22 @@
         <option value="$PROJECT_DIR$/src/GUI/StorageAdd.java" />
         <option value="$PROJECT_DIR$/src/GUI/Send_products.java" />
         <option value="$PROJECT_DIR$/src/GUI/Tasks/Inventory_products.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Storage/StorageForm.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Tasks/Transfer_products.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Tasks/Transfer_products.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.form" />
+        <option value="$PROJECT_DIR$/src/server/Availability.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Tasks/Get_products.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Tasks/Set_products.form" />
+        <option value="$PROJECT_DIR$/src/server/Nomenclature.java" />
+        <option value="$PROJECT_DIR$/src/server/Cell.java" />
+        <option value="$PROJECT_DIR$/src/server/Storage.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Tasks/Set_products.java" />
+        <option value="$PROJECT_DIR$/src/server/Server.java" />
+        <option value="$PROJECT_DIR$/src/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/server/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Tasks/Get_products.java" />
         <option value="$PROJECT_DIR$/src/server/Nomenclature.java" />
         <option value="$PROJECT_DIR$/src/server/Storage.java" />
         <option value="$PROJECT_DIR$/src/server/Cell.java" />
@@ -278,6 +367,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -313,6 +403,13 @@
             <path>
               <item name="Logistics" type="b2602c69:ProjectViewProjectNode" />
               <item name="Logistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="Cell" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPPBA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPPBA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="Cell" type="462c0819:PsiDirectoryNode" />
@@ -362,18 +459,22 @@
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Универ/РИС/Курсовая/Kursach/KursachRIS/kur" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="229" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="261" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="132" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="173" />
   </component>
   <component name="RecentsManager">
@@ -573,6 +674,28 @@
       <workItem from="1523911956942" duration="1961000" />
       <workItem from="1523957327593" duration="1638000" />
       <workItem from="1523959689906" duration="1025000" />
+      <workItem from="1523992437984" duration="6338000" />
+      <workItem from="1524044429580" duration="4030000" />
+      <workItem from="1524057036066" duration="3481000" />
+      <workItem from="1524072710669" duration="3179000" />
+      <workItem from="1524128232540" duration="2921000" />
+      <workItem from="1524136309169" duration="7115000" />
+      <workItem from="1524151397309" duration="12655000" />
+      <workItem from="1524234113859" duration="16448000" />
+      <workItem from="1524287226927" duration="4344000" />
+      <workItem from="1524293247733" duration="5110000" />
+      <workItem from="1524304950646" duration="872000" />
+      <workItem from="1524312604890" duration="1003000" />
+      <workItem from="1524386891030" duration="17024000" />
+      <workItem from="1524423068022" duration="5852000" />
+      <workItem from="1524430057067" duration="3785000" />
+      <workItem from="1524469852172" duration="6668000" />
+      <workItem from="1524491808795" duration="5263000" />
+      <workItem from="1524499715054" duration="83000" />
+      <workItem from="1524507910915" duration="4772000" />
+      <workItem from="1524556525432" duration="9006000" />
+      <workItem from="1524599852321" duration="614000" />
+      <workItem from="1524658476529" duration="26000" />
       <workItem from="1523966122436" duration="24653000" />
     </task>
     <task id="LOCAL-00001" summary="1">
@@ -586,6 +709,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="282207000" />
     <option name="totallyTimeSpent" value="170163000" />
   </component>
   <component name="TodoView">
@@ -598,6 +722,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -611,9 +737,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24671052" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1234375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19635417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18697916" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -621,12 +750,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39809927" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31784582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -695,11 +828,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.java">
     <entry file="file://$PROJECT_DIR$/src/server/Availability.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -762,6 +896,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/javax/swing/AbstractButton.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.form">
     <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Inventory_products.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -814,6 +951,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/Serializable.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/ArrayList.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/javax/swing/DefaultComboBoxModel.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/javax/swing/JComboBox.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/Cell/Cell.java">
     <entry file="file://$PROJECT_DIR$/src/GUI/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -830,6 +972,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/String.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.sql/java/sql/DriverManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="45" column="72" lean-forward="true" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
     <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="647">
@@ -841,6 +989,10 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
     <entry file="das://table:/41aaf3b/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_storage">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -848,13 +1000,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.sql/java/sql/Connection.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.sql/java/sql/ResultSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1924" column="16" lean-forward="false" selection-start-line="1924" selection-start-column="16" selection-end-line="1924" selection-end-column="16" />
+        </state>
     <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/sql/Wrapper.java">
     <entry file="file://$PROJECT_DIR$/src/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
         <state relative-caret-position="294">
           <caret line="76" column="62" lean-forward="false" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
           <folding>
@@ -863,8 +1032,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/AutoCloseable.java">
     <entry file="file://$PROJECT_DIR$/src/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
         <state relative-caret-position="500">
           <caret line="95" column="85" lean-forward="false" selection-start-line="95" selection-start-column="85" selection-end-line="95" selection-end-column="85" />
           <folding>
@@ -874,11 +1046,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/sql/ResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="147" column="53" lean-forward="false" selection-start-line="147" selection-start-column="53" selection-end-line="147" selection-end-column="53" />
+        </state>
     <entry file="file://$PROJECT_DIR$/src/GUI/Cell/Cell.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="103" column="14" lean-forward="false" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Transfer_products.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="das://table:/970bbd54/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_storage">
     <entry file="das://table:/41aaf3b/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_cell">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -886,8 +1076,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
     <entry file="file://$PROJECT_DIR$/src/server/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="116" column="33" lean-forward="true" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
         <state relative-caret-position="437">
           <caret line="267" column="21" lean-forward="false" selection-start-line="267" selection-start-column="21" selection-end-line="267" selection-end-column="21" />
           <folding>
@@ -924,27 +1117,78 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Transfer_products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/sql/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://index:/970bbd54/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_tasklist.TaskId_idx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Set_products.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Availability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Nomenclature.java">
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
         <state relative-caret-position="218">
           <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Get_products.form">
     <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Cell.java">
     <entry file="file://$PROJECT_DIR$/src/GUI/Cell/CellAdd.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/970bbd54/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_cell">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
     <entry file="file://$PROJECT_DIR$/src/GUI/Cell/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -961,6 +1205,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/970bbd54/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_nomenclature">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
     <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -968,19 +1217,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageAdd.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4029">
+          <caret line="241" column="30" lean-forward="false" selection-start-line="241" selection-start-column="30" selection-end-line="241" selection-end-column="30" />
         <state relative-caret-position="395">
           <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/970bbd54/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_availability">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
     <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
     <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="173" column="54" lean-forward="false" selection-start-line="173" selection-start-column="54" selection-end-line="173" selection-end-column="54" />
+          <folding />
         <state relative-caret-position="395">
           <caret line="85" column="73" lean-forward="false" selection-start-line="85" selection-start-column="73" selection-end-line="85" selection-end-column="73" />
           <folding>
@@ -993,11 +1253,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageDetailsPage.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7361">
+          <caret line="436" column="49" lean-forward="false" selection-start-line="436" selection-start-column="49" selection-end-line="436" selection-end-column="49" />
         <state relative-caret-position="290">
           <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding>
+            <marker date="1524568479988" expanded="true" signature="1059:1089" ph="SELECT * FRO... log_nomenclature" />
+            <marker date="1524568479988" expanded="true" signature="2545:2570" ph="SELECT * FRO... log_storage" />
+            <marker date="1524568479988" expanded="true" signature="3431:3453" ph="SELECT * FRO... log_cell" />
+            <marker date="1524568479988" expanded="true" signature="4544:4605" ph="SELECT * FRO... log_cell" />
+            <marker date="1524568479988" expanded="true" signature="5718:5743" ph="SELECT * FRO... log_storage" />
+            <marker date="1524568479988" expanded="true" signature="6255:6318" ph="DELETE FROM log_storage... " />
+            <marker date="1524568479988" expanded="true" signature="7084:7109" ph="SELECT * FRO... log_storage" />
+            <marker date="1524568479988" expanded="true" signature="7316:7442" ph="INSERT INTO log_storage... " />
+            <marker date="1524568479988" expanded="true" signature="8459:8499" ph="SELECT ItemI... log_nomenclature" />
+            <marker date="1524568479988" expanded="true" signature="9283:9323" ph="SELECT Stora... log_storage" />
+            <marker date="1524568479988" expanded="true" signature="9283:9325" ph="SELECT Stora... log_storage" />
+            <marker date="1524568479988" expanded="true" signature="10115:10163" ph="SELECT Type log_nomenclature" />
+            <marker date="1524568479988" expanded="true" signature="10115:10164" ph="SELECT Type log_nomenclature" />
+            <marker date="1524568479988" expanded="true" signature="10406:10530" ph="SELECT CellI... log_cell" />
+            <marker date="1524568479988" expanded="true" signature="11323:11373" ph="SELECT ItemI... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="11323:11374" ph="SELECT ItemI... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="12259:12346" ph="SELECT ItemI... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="12595:12675" ph="select Avail... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="13082:13155" ph="INSERT INTO log_availability... " />
+            <marker date="1524568479988" expanded="true" signature="13082:13264" ph="INSERT INTO log_availability... " />
+            <marker date="1524568479988" expanded="true" signature="13082:13265" ph="INSERT INTO log_availability... " />
+            <marker date="1524568479988" expanded="true" signature="13082:13266" ph="INSERT INTO log_availability... " />
+            <marker date="1524568479988" expanded="true" signature="13432:13522" ph="update log_availability... " />
+            <marker date="1524568479988" expanded="true" signature="14245:14310" ph="select Avail... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="14678:14763" ph="INSERT INTO log_transit... " />
+            <marker date="1524568479988" expanded="true" signature="14678:14819" ph="INSERT INTO log_transit... " />
+            <marker date="1524568479988" expanded="true" signature="14678:14887" ph="INSERT INTO log_transit... " />
+            <marker date="1524568479988" expanded="true" signature="14678:14907" ph="INSERT INTO log_transit... " />
+            <marker date="1524568479988" expanded="true" signature="14678:14908" ph="INSERT INTO log_transit... " />
+            <marker date="1524568479988" expanded="true" signature="15162:15227" ph="select Trans... log_transit" />
+            <marker date="1524568479988" expanded="true" signature="15595:15825" ph="INSERT INTO log_transit... " />
+            <marker date="1524568479988" expanded="true" signature="16603:16659" ph="select Avail... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="16876:16920" ph="INSERT INTO log_task... " />
+            <marker date="1524568479988" expanded="true" signature="16876:16925" ph="INSERT INTO log_task... " />
+            <marker date="1524568479988" expanded="true" signature="16876:16967" ph="INSERT INTO log_task... " />
+            <marker date="1524568479988" expanded="true" signature="16876:17014" ph="INSERT INTO log_task... " />
+            <marker date="1524568479988" expanded="true" signature="16876:17064" ph="INSERT INTO log_task... " />
+            <marker date="1524568479988" expanded="true" signature="16876:17085" ph="INSERT INTO log_task... " />
+            <marker date="1524568479988" expanded="true" signature="16876:17086" ph="INSERT INTO log_task... " />
+            <marker date="1524568479988" expanded="true" signature="17871:17903" ph="SELECT ItemI... " />
+            <marker date="1524568479988" expanded="true" signature="17871:17920" ph="SELECT ItemI... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="18732:18773" ph="SELECT ItemI... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="18732:18783" ph="SELECT ItemI... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="18938:18988" ph="SELECT Stora... log_cell" />
+            <marker date="1524568479988" expanded="true" signature="18938:18989" ph="SELECT Stora... log_cell" />
+            <marker date="1524568479988" expanded="true" signature="19431:19480" ph="SELECT Stora... log_storage" />
+            <marker date="1524568479988" expanded="true" signature="20429:20478" ph="SELECT Avail... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="20429:20487" ph="SELECT Avail... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="20429:20488" ph="SELECT Avail... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="20661:20758" ph="update log_availability... " />
+            <marker date="1524568479988" expanded="true" signature="20903:20904" ph="update log_availability... " />
+            <marker date="1524568479988" expanded="true" signature="21365:21413" ph="SELECT Order... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="21365:21423" ph="SELECT Order... log_availability" />
+            <marker date="1524568479988" expanded="true" signature="22126:22185" ph="SELECT Type,... " />
+            <marker date="1524568479988" expanded="true" signature="22126:22217" ph="SELECT Type,... log_nomenclature" />
+            <marker date="1524568479988" expanded="true" signature="22126:22218" ph="SELECT Type,... log_nomenclature" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Set_products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/970bbd54/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_task">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/970bbd54/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156/logistics.log_transit">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Tasks/Get_products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

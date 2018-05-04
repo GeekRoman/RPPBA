@@ -1,9 +1,10 @@
 package GUI.Tasks;
 
-import GUI.Product_Information_Management;
+import server.Availability;
 import server.Cell;
 import server.Nomenclature;
 import server.Storage;
+
 import static client.Client.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,13 +13,14 @@ import java.util.ArrayList;
 
 public class Get_products extends JFrame{
     private JPanel PanelGetProduct;
-    private JComboBox comboBoxNameProduct;
-    private JComboBox comboBoxStorage;
-    private JButton ButtonAdd;
+    private JComboBox comboBoxProductAvailability;
+    private JButton buttonGet;
     private JTextField textFieldQuantity;
-    private JButton ButtonBack;
+    private JButton buttonBack;
     private JTextField textFieldDate;
-    private JComboBox comboBoxCell;
+    private JLabel labelCell;
+    private JLabel labelStorage;
+    private JButton buttonInfo;
 
     public Get_products() throws Exception{
         super("Отгрузка продукции");
@@ -26,101 +28,176 @@ public class Get_products extends JFrame{
         setContentPane(PanelGetProduct);
         setLocationRelativeTo(null); // Появляется по центру экрана
         setResizable(true);
-        this.setVisible(true);
+        buttonGet.setEnabled(false);
         initForm();
     }
 
-    public void initForm() throws Exception{
-        ArrayList<Nomenclature> nameProduct = new ArrayList<Nomenclature>(getNomenclatureComboBoxNameProduct());
-        ArrayList<Storage> storages = new ArrayList<>(getStorageComboBoxStorage());
+    private void initForm() throws Exception{
+        ArrayList<Availability> availabilities = new ArrayList<>(getProductsForAvailability());
 
-        String storage[] = new String[storages.size()];
-        String product[] = new String[nameProduct.size()];
-
-        for(int i=0;i<storage.length;i++){
-            product[i] = nameProduct.get(i).getItemId() + " " + nameProduct.get(i).getName();
-        }
+        String product[] = new String[availabilities.size()];
 
         for(int i=0;i<product.length;i++){
-            storage[i] = storages.get(i).getStorageId() + " " + storages.get(i).getStatus();
+            product[i] = "Номер: " + availabilities.get(i).getItemId() + " Кол-во: " + availabilities.get(i).getOrderQuantity();
         }
 
-        comboBoxStorage.setModel(new DefaultComboBoxModel(storage));
-        comboBoxNameProduct.setModel(new DefaultComboBoxModel(product));
+        comboBoxProductAvailability.setModel(new DefaultComboBoxModel(product));
 
         textFieldDate.setText(addDate());
-        comboBoxStorage.addActionListener(new ActionListener() {
+        textFieldDate.setEditable(false);
+
+        comboBoxProductAvailability.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    addActionListenercomboBoxStorage();
-                }
-                catch (Exception ex) {
-
+                    addActionListenerСomboBoxProductAvailability();
+                } catch (Exception e1) {
+                    System.out.println("Ошибка нажатии наличия продукта");
                 }
             }
         });
 
-        ButtonAdd.addActionListener(new ActionListener() {
+        buttonGet.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    addActionListenerButtonAdd();
+                    addActionListenerButtonGet();
                 }
                 catch (Exception ex) {
-
+                    System.out.println("Ошибка нажатии отгрузки");
                 }
             }
         });
 
-        ButtonBack.addActionListener(new ActionListener() {
+        buttonBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     addActionListenerButtonBack();
                 }
                 catch (Exception ex) {
+                    System.out.println("Ошибка нажатии закрытии окна");
+                }
+            }
+        });
 
+        buttonInfo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    addActionListenerButtonInfo();
+                } catch (Exception e1){
+                    System.out.println("Ошибка нажатии закрытии окна");
                 }
             }
         });
     }
 
-    private void addActionListenercomboBoxStorage() throws Exception{
-        String storage = "";
-        storage = (String) comboBoxStorage.getSelectedItem();
-        char first = storage.charAt(0);
-        String firsrId = String.valueOf(first);
-        ArrayList<Cell> cells = new ArrayList<>(getCellComboBoxCell(firsrId));
-        String cell[] = new String[cells.size()];
-
-        for(int i=0;i<cell.length;i++){
-            cell[i] = cells.get(i).getCellId() + " " + cells.get(i).getType()+ " " + cells.get(i).getStatus();
-        }
-
-        comboBoxCell.setModel(new DefaultComboBoxModel(cell));
-    }
-
+    // Нажатие кнопки "Назад"
     private void addActionListenerButtonBack() throws Exception{
         setVisible(false);
     }
 
+    // Нажатие кнопки "Отгрузить"
+    private void addActionListenerButtonGet() throws Exception{
+        String answerAvailability = "";
+        String answerTask = "";
+        String answerTransit = "";
 
+        String ItemId = IdCharToString((String) comboBoxProductAvailability.getSelectedItem());
+        String Quantity = textFieldQuantity.getText();
+        String Date = textFieldDate.getText();
+        String Type = "Отгрузка";
+        String Storage = IdCharToString(labelStorage.getText());
+
+        if(notStringQuantity(Quantity) == false || minusQuantity(Quantity) == false){
+            JOptionPane.showMessageDialog(null,"Некорректная запись в поле 'Количество'");
+        } else {
+            answerAvailability = getQuantityAvailability(ItemId,Quantity);
+            answerTransit = addTransit(Storage,Type);
+            answerTask = addTask(Date);
+        }
+
+        System.out.println("Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
+        String message = "";
+        if(answerAvailability.equals("Ошибка") || answerTask.equals("Ошибка") || answerTransit.equals("Ошибка")) {
+            message = "Ошибка в добавлении!";
+        } else {
+            message = "Данные добавлены!";
+        }
+
+        JOptionPane.showMessageDialog(null,message);
+    }
+
+    // Нажатие списка продукции // Работает
+    private void addActionListenerСomboBoxProductAvailability() throws Exception{
+        buttonGet.setEnabled(true);
+
+        String ItemId = IdCharToString((String) comboBoxProductAvailability.getSelectedItem());
+        ArrayList storageCell = getCellAndStorage(ItemId);
+        Cell cellOb = (Cell) storageCell.get(0);
+        Storage storageOb = (Storage) storageCell.get(1);
+
+        labelCell.setText("Номер: " + cellOb.getCellId() + " " + "Тип: " + cellOb.getType());
+
+        // getStatus = Address
+        labelStorage.setText("Номер: " + storageOb.getStorageId() + " " + "Адрес: " + storageOb.getStatus());
+    }
+
+    // Нажатие кнопки "Информация" // Работает
+    private void addActionListenerButtonInfo() throws Exception{
+        String ItemId = IdCharToString((String) comboBoxProductAvailability.getSelectedItem());
+        Nomenclature nomenclature = getInfoNomenclature(ItemId);
+        String message ="Номер: " + nomenclature.getItemId() + " " + "Тип: " + nomenclature.getType()+ " " + "Размеры: " + nomenclature.getLength()+ " " + nomenclature.getHeight()+ " "
+                + nomenclature.getWidth()+ " " + "Конфигурация: " + nomenclature.getConfig()+ " " + nomenclature.getProvider();
+        JOptionPane.showMessageDialog(null,message);
+    }
+
+    // Получение первого элемента в строке // Работает
+    private String IdCharToString(String Id){
+        char first = Id.charAt(7);
+        Id = String.valueOf(first);
+        return Id;
+    }
+
+    // Получение текущей даты // Работает
     private String addDate(){
         java.util.Date dt = new java.util.Date();
 
         java.text.SimpleDateFormat sdf =
                 new java.text.SimpleDateFormat("yyyy-MM-dd");
 
-        String currentTime = sdf.format(dt);
-        return currentTime;
+        return sdf.format(dt);
     }
-    private void addActionListenerButtonAdd() throws Exception{
-        String nameProduct ="";
-        String Quantity = "";
-        String Storage ="";
-        String Cell="";
 
+    // Проверка на ввод кол-ва // Работает
+    private boolean notStringQuantity(String Quantity){
+        try {
+            Integer.parseInt(Quantity);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    // Проверка на разность кол-ва
+    private boolean minusQuantity(String Quantity){
+        int quantityFiled; int quantityAvailability;
+
+        try {
+            String ItemId = IdCharToString((String) comboBoxProductAvailability.getSelectedItem());
+            quantityAvailability = Integer.parseInt(quantityAvailability(ItemId));
+            quantityFiled = Integer.parseInt(Quantity);
+
+            int quantityMinus = quantityAvailability - quantityFiled;
+            System.out.println(quantityMinus);
+            if(quantityMinus < 0){
+                return false;
+            }
+
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

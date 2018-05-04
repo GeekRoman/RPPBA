@@ -34,6 +34,12 @@ public class Availability  implements Serializable{
         this.CellId = CellId;
     }
 
+    public Availability(String ItemId,String OrderQuantity){
+        this.ItemId = ItemId;
+        this.OrderQuantity = OrderQuantity;
+    }
+
+
     public String getName() {
         return Name;
     }
