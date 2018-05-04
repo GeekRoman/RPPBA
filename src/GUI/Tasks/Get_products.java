@@ -17,10 +17,10 @@ public class Get_products extends JFrame{
     private JButton buttonGet;
     private JTextField textFieldQuantity;
     private JButton buttonBack;
-    private JTextField textFieldDate;
     private JLabel labelCell;
     private JLabel labelStorage;
     private JButton buttonInfo;
+    private JLabel labelDate;
 
     public Get_products() throws Exception{
         super("Отгрузка продукции");
@@ -43,8 +43,7 @@ public class Get_products extends JFrame{
 
         comboBoxProductAvailability.setModel(new DefaultComboBoxModel(product));
 
-        textFieldDate.setText(addDate());
-        textFieldDate.setEditable(false);
+        labelDate.setText(addDate());
 
         comboBoxProductAvailability.addActionListener(new ActionListener() {
             @Override
@@ -106,27 +105,29 @@ public class Get_products extends JFrame{
 
         String ItemId = IdCharToString((String) comboBoxProductAvailability.getSelectedItem());
         String Quantity = textFieldQuantity.getText();
-        String Date = textFieldDate.getText();
         String Type = "Отгрузка";
         String Storage = IdCharToString(labelStorage.getText());
 
-        if(notStringQuantity(Quantity) == false || minusQuantity(Quantity) == false){
+        if(notStringQuantity(Quantity) == false || minusQuantity(Quantity,ItemId) == false){
             JOptionPane.showMessageDialog(null,"Некорректная запись в поле 'Количество'");
         } else {
             answerAvailability = getQuantityAvailability(ItemId,Quantity);
             answerTransit = addTransit(Storage,Type);
-            answerTask = addTask(Date);
+            answerTask = addTask(labelDate.getText());
         }
 
         System.out.println("Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
         String message = "";
         if(answerAvailability.equals("Ошибка") || answerTask.equals("Ошибка") || answerTransit.equals("Ошибка")) {
             message = "Ошибка в добавлении!";
-        } else {
+        } else if(answerAvailability.equals("Добавлены") || answerTask.equals("Добавлены") || answerTransit.equals("Добавлены")){
             message = "Данные добавлены!";
         }
 
-        JOptionPane.showMessageDialog(null,message);
+        if(message.equals("")){
+            JOptionPane.showMessageDialog(null,"Ошибка в добавлении!");
+        } else
+            JOptionPane.showMessageDialog(null,message);
     }
 
     // Нажатие списка продукции // Работает
@@ -151,53 +152,5 @@ public class Get_products extends JFrame{
         String message ="Номер: " + nomenclature.getItemId() + " " + "Тип: " + nomenclature.getType()+ " " + "Размеры: " + nomenclature.getLength()+ " " + nomenclature.getHeight()+ " "
                 + nomenclature.getWidth()+ " " + "Конфигурация: " + nomenclature.getConfig()+ " " + nomenclature.getProvider();
         JOptionPane.showMessageDialog(null,message);
-    }
-
-    // Получение первого элемента в строке // Работает
-    private String IdCharToString(String Id){
-        char first = Id.charAt(7);
-        Id = String.valueOf(first);
-        return Id;
-    }
-
-    // Получение текущей даты // Работает
-    private String addDate(){
-        java.util.Date dt = new java.util.Date();
-
-        java.text.SimpleDateFormat sdf =
-                new java.text.SimpleDateFormat("yyyy-MM-dd");
-
-        return sdf.format(dt);
-    }
-
-    // Проверка на ввод кол-ва // Работает
-    private boolean notStringQuantity(String Quantity){
-        try {
-            Integer.parseInt(Quantity);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    // Проверка на разность кол-ва
-    private boolean minusQuantity(String Quantity){
-        int quantityFiled; int quantityAvailability;
-
-        try {
-            String ItemId = IdCharToString((String) comboBoxProductAvailability.getSelectedItem());
-            quantityAvailability = Integer.parseInt(quantityAvailability(ItemId));
-            quantityFiled = Integer.parseInt(Quantity);
-
-            int quantityMinus = quantityAvailability - quantityFiled;
-            System.out.println(quantityMinus);
-            if(quantityMinus < 0){
-                return false;
-            }
-
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
     }
 }

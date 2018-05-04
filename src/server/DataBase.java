@@ -463,16 +463,17 @@ public class DataBase {
     // Get_products,comboBoxProductAvailability //
     public ArrayList<Availability> getProductsForAvailability() throws Exception {
         ArrayList<Availability> availabilities = new ArrayList<Availability>();
-        String itemId,orderQuantity = "";
+        String itemId,orderQuantity,cellID;
 
         try (Connection connection = getConnection()) {
             Statement statementAvailability = connection.createStatement();
-            ResultSet resultSet = statementAvailability.executeQuery("SELECT ItemId,OrderQuantity FROM log_availability");
+            ResultSet resultSet = statementAvailability.executeQuery("SELECT ItemId,OrderQuantity,CellId FROM log_availability");
 
             while (resultSet.next()){
                 itemId = resultSet.getString("ItemId");
                 orderQuantity = resultSet.getString("OrderQuantity");
-                availabilities.add(new Availability(itemId,orderQuantity));
+                cellID = resultSet.getString("CellId");
+                availabilities.add(new Availability(itemId,orderQuantity,cellID));
             }
 
         } catch (Exception e){
@@ -484,8 +485,8 @@ public class DataBase {
 
     // Get_products,labelCell labelStorage // Работает
     public ArrayList getCellAndStorage(String itemId) throws Exception{
-        String CellId = "",Type =  "",StorageId = "",Address = "";ArrayList storageCell = new ArrayList();
-
+        String CellId = "",Type =  "",StorageId = "",Address = "",Status = "";ArrayList storageCell = new ArrayList();
+        System.out.println(itemId);
         try (Connection connection = getConnection()){
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT CellId FROM log_availability WHERE ItemId = " + itemId);
@@ -505,15 +506,16 @@ public class DataBase {
 
             storageCell.add(new Cell(CellId,Type));
 
-            String queryStorage = "SELECT Address FROM log_storage WHERE StorageId = " + StorageId;
+            String queryStorage = "SELECT Address,Status FROM log_storage WHERE StorageId = " + StorageId;
             PreparedStatement preparedStatementStorage = connection.prepareStatement(queryStorage);
             ResultSet resultSetStorage = preparedStatementStorage.executeQuery();
 
             while (resultSetStorage.next()){
                 Address = resultSetStorage.getString("Address");
+                Status = resultSetStorage.getString("Status");
             }
-
-            storageCell.add(new Storage(StorageId,Address));
+            System.out.println(Address);
+            storageCell.add(new Storage(StorageId,Address,Status));
 
         } catch (Exception e){
             System.out.println("Ошибка выборки ящиков и складов");

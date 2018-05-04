@@ -196,4 +196,52 @@ public class Client {
         String quantity = (String) cois.readObject();
         return quantity;
     }
+
+
+    // Получение первого элемента в строке
+    public static String IdCharToString(String Id) {
+        char first = Id.charAt(7);
+        Id = String.valueOf(first);
+        return Id;
+    }
+
+    // Получение текущей даты
+    public static String addDate(){
+        java.util.Date dt = new java.util.Date();
+
+        java.text.SimpleDateFormat sdf =
+                new java.text.SimpleDateFormat("yyyy-MM-dd");
+
+        return sdf.format(dt);
+    }
+
+    // Проверка ввода кол-ва
+    public static boolean notStringQuantity(String Quantity){
+        try {
+            Integer.parseInt(Quantity);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // Проверка на разность введенного кол-ва с наличием
+    public static boolean minusQuantity(String Quantity,String ItemId){
+        int quantityFiled; int quantityAvailability;
+
+        try {
+            quantityAvailability = Integer.parseInt(quantityAvailability(ItemId));
+            quantityFiled = Integer.parseInt(Quantity);
+
+            int quantityMinus = quantityAvailability - quantityFiled;
+
+            if(quantityMinus < 0){
+                return false;
+            }
+
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
