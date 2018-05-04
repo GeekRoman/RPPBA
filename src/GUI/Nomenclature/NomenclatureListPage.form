@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="724" height="508"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-1051947"/>
+    </properties>
     <border type="none"/>
     <children>
       <toolbar id="91416">
@@ -20,6 +22,7 @@
           <component id="9c70c" class="javax.swing.JButton" binding="addButton">
             <constraints/>
             <properties>
+              <font size="16" style="1"/>
               <text value="Добавить"/>
             </properties>
           </component>
@@ -30,6 +33,7 @@
           <component id="321af" class="javax.swing.JButton" binding="deleteButton">
             <constraints/>
             <properties>
+              <font size="16" style="1"/>
               <text value="Удалить"/>
             </properties>
           </component>

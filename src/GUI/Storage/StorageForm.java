@@ -144,7 +144,7 @@ public class StorageForm extends JFrame implements ActionListener {
 
         switch(str){
             case "Добавить": {
-                this.dispose();
+
                 StorageAdd addstorage = null;
                 try {
                     addstorage = new StorageAdd();

@@ -17,6 +17,7 @@ public class NomenclatureListPage extends JFrame {
         setSize(900, 600);
         setContentPane(formListPage);
         setLocationRelativeTo(null);
+        this.setVisible(true);
         setResizable(true);
         initForm();
     }

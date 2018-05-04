@@ -22,7 +22,7 @@ public class Product_Information_Management extends JFrame{
     private JButton listTasksButton;
     private JComboBox comboBox1;
     private JButton buttonTransfer;
-    private String []columnsHeader = {"ID", "Название", "Длина", "Высота",
+    private String []columnsHeader = {"ID", "Длина", "Высота",
             "Ширина", "Цвет", "Постовщик", "В наличии", "Заказанно", "Склад","Ячейка"};
     DefaultTableModel tableModel = new DefaultTableModel() {
         public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -48,15 +48,19 @@ public class Product_Information_Management extends JFrame{
         /*ArrayList<Availability> list;
        list = new ArrayList<server.Availability>(getAllAvailabilityInList())*/;
 
-
         ExitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
-
+            dispose();
+                Menu menuform = null;
+                try {
+                    menuform = new Menu();
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
             }
         });
+
         nomenclatureListButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

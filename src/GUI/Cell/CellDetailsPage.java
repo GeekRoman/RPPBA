@@ -16,13 +16,14 @@ public class CellDetailsPage extends JFrame {
     private JComboBox comboBox3;
     private JButton enterButton;
     private JPanel detailsForm;
+    private JButton exitButton;
 
     public CellDetailsPage(String CellId, String Lenght,
                            String Height, String Width, String Type,
                            String Status) throws Exception {
         super("Форма детализации");
 
-        setSize(550, 250);
+        setSize(550, 300);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setContentPane(detailsForm);
         this.setResizable(false);
@@ -38,6 +39,12 @@ public class CellDetailsPage extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
             }
         });
     }

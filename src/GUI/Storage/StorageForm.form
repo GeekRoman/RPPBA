@@ -42,6 +42,10 @@
         <properties/>
         <border type="none"/>
         <children>
+          <component id="f5ed7" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
           <component id="ab9d" class="javax.swing.JButton" binding="AddButton">
             <constraints/>
             <properties>
@@ -49,6 +53,10 @@
               <font size="16" style="1"/>
               <text value="Добавить"/>
             </properties>
+          </component>
+          <component id="64149" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
           </component>
           <component id="7181e" class="javax.swing.JButton" binding="DeleteButton">
             <constraints/>
@@ -58,6 +66,10 @@
               <font size="16" style="1"/>
               <text value="Удалить"/>
             </properties>
+          </component>
+          <component id="81a02" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
           </component>
           <component id="cb072" class="javax.swing.JButton" binding="CellButton">
             <constraints/>
@@ -81,6 +93,10 @@
               <font size="16" style="1"/>
               <text value="Назад"/>
             </properties>
+          </component>
+          <component id="766c3" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
           </component>
         </children>
       </toolbar>

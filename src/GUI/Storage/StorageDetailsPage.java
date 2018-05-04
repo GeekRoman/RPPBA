@@ -31,6 +31,12 @@ public class StorageDetailsPage extends JFrame {
 
             }
         });
+        ExitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
     }
 
 
