@@ -11,6 +11,7 @@ public class StorageDetailsPage extends JFrame {
     private JButton ExitButton;
     private JButton EnterButton;
     private JPanel Form;
+    private JComboBox comboBox1;
 
     public StorageDetailsPage(String storageId, String Address, String Status) throws Exception {
         super("Форма детализации");
@@ -23,7 +24,11 @@ public class StorageDetailsPage extends JFrame {
 
         textField1.setText(storageId);
         textField2.setText(Address);
-        textField3.setText(Status);
+
+        String[] statusBox = {"Действующий", "Резервный"};
+        for (int j = 0; j<statusBox.length; j++){
+            comboBox1.addItem(statusBox[j]);
+        }
 
         EnterButton.addActionListener(new ActionListener() {
             @Override

@@ -15,11 +15,15 @@ public class StorageAdd extends JFrame implements ActionListener{
     private JPanel storageAdd;
     private JButton button1;
     private JTextField textField;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JTextField textField4;
 
 
     public StorageAdd() throws Exception {
         super("Добавление склада");
-        setSize(650, 300);
+        setSize(650, 450);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setContentPane(storageAdd);
@@ -59,27 +63,59 @@ public class StorageAdd extends JFrame implements ActionListener{
 
 
                             String volume  = this.textField.getText().trim();
-
+                            String along  = this.textField1.getText().trim();
+                            String across  = this.textField2.getText().trim();
+                            String levels  = this.textField3.getText().trim();
+                            String lengthP  = this.textField4.getText().trim();
 
                             String[] typeBox = {"Верхняя", "Средняя", "Нижняя"};
-                            int j = 0;
+                            int q = 0, w =0;
                             int volume2int = Integer.parseInt(volume);
-                            for (int i = 0; i < volume2int; i++){
-                                String cellId = this.idField.getText().trim();
+                            int along2int = Integer.parseInt(along);
+                            int across2int = Integer.parseInt(across);
+                            int levels2int = Integer.parseInt(levels);
+                            int length2int = Integer.parseInt(lengthP);
+
+                            int sectionCount, cellCountInSection, cellAll;
+
+                            if (along2int == across2int){
+                                sectionCount = (across2int + 1) * (across2int + 1);
+                            } else  sectionCount = along2int *across2int * 2;
+
+                            int lhw = volume2int/3;
+                            cellCountInSection = (length2int /lhw)* levels2int;
+
+                            cellAll = sectionCount*cellCountInSection;
+                            String cellId = "";
+
+
+                            for(int i = 0; i < cellAll; i++){
+                                cellId = this.idField.getText().trim();
+
                                 cellId += "-";
-                                cellId += Integer.toString(i);
+                                cellId += (i);
+                                cellId += "-";
+
+
+                                if (i > cellCountInSection) {
+                                    w++;
+                                }
+                                cellId += (w);
+
                                 String IdStorage = this.idField.getText().trim();
-                                String length = "10";
-                                String height = "10";
-                                String width = "10";
-                                String type = typeBox[j];
+                                String length = Integer.toString(lhw);
+                                String height = Integer.toString(lhw);
+                                String width = Integer.toString(lhw);
+                                String type = typeBox[q];
                                 String statusCell = "Пустая";
                                 addCell(cellId,IdStorage, length, height, width, type, statusCell);
-                                j++;
-                                if (j>=3) j = 0;
+                                q++;
+                                if (q>=3) q = 0;
+
+
+
 
                             }
-
                         }
                     } catch (Exception e1) {
                         e1.printStackTrace();

@@ -93,6 +93,16 @@ public class Client {
         answer = (String) cois.readObject();
         return answer;
     }
+    //UPDATE
+    public static String NomenclatureUpdate(String ItemId,String Type, String Length,String Height,
+                                         String Width,String Color,String Config,String Provider) throws Exception{
+        String str = "NomenclatureUpdate " + ItemId + " "+ Type + " " + Length + " " +
+                Height + " " + Width + " " + Color + " " + Config + " " +Provider;
+        System.out.println(str);
+        coos.writeObject(str);
+        answer = (String) cois.readObject();
+        return answer;
+    }
 
     //DELETE
     public static String delStorage (String storageId) throws Exception{

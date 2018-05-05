@@ -7,6 +7,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 import static client.Client.delNomenclature;
@@ -47,6 +49,39 @@ public class NomenclatureListPage extends JFrame {
                     addnomenclature = new NomenclatureAdd();
                 } catch (Exception e1) {
                     e1.printStackTrace();
+                }
+            }
+        });
+
+        table1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mousePressed(e);
+                if (e.getClickCount() == 2){
+                    try {
+                        int column0 = 0;
+                        int column1 = 1;
+                        int column2 = 2;
+                        int column3 = 3;
+                        int column4 = 4;
+                        int column5 = 5;
+                        int column6 = 6;
+                        int column7 = 7;
+
+                        int row = table1.getSelectedRow();
+                        String itemId = table1.getModel().getValueAt(row, column0).toString();
+                        String mytype = table1.getModel().getValueAt(row, column1).toString();
+                        String length = table1.getModel().getValueAt(row, column2).toString();
+                        String height = table1.getModel().getValueAt(row, column3).toString();
+                        String width = table1.getModel().getValueAt(row, column4).toString();
+                        String color = table1.getModel().getValueAt(row, column5).toString();
+                        String config = table1.getModel().getValueAt(row, column6).toString();
+                        String provider = table1.getModel().getValueAt(row, column7).toString();
+                        new NomenclatureDetailsPage(itemId, mytype, length,
+                                height, width, color, config, provider).setVisible(true);
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
                 }
             }
         });

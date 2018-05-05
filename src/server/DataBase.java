@@ -332,7 +332,7 @@ public class DataBase {
     }
 
     public boolean addNomenclature (String itemId,String mytype, String length,String height,
-                                    String width,String color,String config,String provide) throws Exception {
+                                    String width,String color,String config,String provider) throws Exception {
 
         boolean addstatus = false;
         try (Connection connection = getConnection()) {
@@ -348,7 +348,7 @@ public class DataBase {
             }
 
             String sql = "INSERT INTO log_nomenclature(ItemId, Type, Length, Height, Width, Config, Color, Provider)" +
-                    " VALUES (\"" + itemId + "\",\"" + mytype + "\", \"" + length + "\", \"" + height + "\", \"" + width + "\", \"" + config + "\", \"" + color + "\", \"" + provide + "\");";
+                    " VALUES (\"" + itemId + "\",\"" + mytype + "\", \"" + length + "\", \"" + height + "\", \"" + width + "\", \"" + config + "\", \"" + color + "\", \"" + provider + "\");";
             System.out.println(sql);
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate(sql);
@@ -361,6 +361,29 @@ public class DataBase {
         return addstatus;
     }
 
+    //UPDATE
+
+    public boolean NomenclatureUpdate (String itemId,String mytype, String length,String height,
+                                    String width,String color,String config,String provider) throws Exception {
+
+        boolean addstatus = false;
+        try (Connection connection = getConnection()) {
+            Statement st = connection.createStatement();
+            String sql = "UPDATE log_nomenclature SET ItemId = \""+ itemId +"\"," +
+                   " Type = \"" + mytype + "\", Length = \"" + length + "\"," +
+                    " Height = \"" + height + "\", Width = \"" + width + "\", Config = \"" + config + "\"," +
+                   " Color = \"" + color + "\", Provider = \"" + provider + "\";";
+            System.out.println(sql);
+
+            st.executeUpdate(sql);
+            return true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка обновления");
+        }
+
+        return addstatus;
+    }
     ////////////////////////////////////////////////////////////////////////
     // Set_products,Get_products
 

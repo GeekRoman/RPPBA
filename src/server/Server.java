@@ -112,7 +112,7 @@ public class Server extends Thread {
                         String width = mas[5];
                         String color = mas[6];
                         String config = mas[7];
-                        String provider = mas[7];
+                        String provider = mas[8];
 
                         if (db.addNomenclature(itemId, mytype, length,
                                 height, width, color, config, provider)==false){
@@ -120,11 +120,30 @@ public class Server extends Thread {
                         } else {
                             answer = "true";
                         }
-
                         soos.writeObject(answer);
-
                         break;
                     }
+
+                    case "NomenclatureUpdate": {
+                        String itemId = mas[1];
+                        String mytype = mas[2];
+                        String length = mas[3];
+                        String height = mas[4];
+                        String width = mas[5];
+                        String color = mas[6];
+                        String config = mas[7];
+                        String provider = mas[8];
+
+                        if (db.NomenclatureUpdate(itemId, mytype, length,
+                                height, width, color, config, provider)==false){
+                            answer = "false";
+                        } else {
+                            answer = "true";
+                        }
+                        soos.writeObject(answer);
+                        break;
+                    }
+
                     //DELETE
                     case "delStorage": {
                         String storageId = mas[1];

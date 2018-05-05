@@ -88,7 +88,4 @@ public class NomenclatureAdd extends JFrame {
             }
         });
     }
-
-
-
     }
