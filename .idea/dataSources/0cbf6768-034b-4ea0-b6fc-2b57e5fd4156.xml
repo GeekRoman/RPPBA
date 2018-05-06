@@ -240,6 +240,7 @@
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="68" parent="20" name="Move_Quantity">
       <Position>3</Position>

@@ -1,0 +1,7 @@
+Server
+Client
+DataBase
+Set_products
+Get_products
+Inventory_products
+Transfer_products

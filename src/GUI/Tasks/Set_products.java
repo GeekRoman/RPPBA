@@ -18,13 +18,13 @@ public class Set_products extends JFrame{
     private JTextField textFieldQuantity;
     private JComboBox comboBoxStorage;
     private JComboBox comboBoxCell;
-    private JTextField textFieldDate;
     private JButton buttonBack;
     private JButton buttonAdd;
     private JComboBox comboBoxNameProduct;
     private JPanel PanelSetProduct;
     private JLabel labelAvailability;
     private JButton buttonInfo;
+    private JLabel labelDate;
 
     public Set_products() throws Exception{
         super("Получение продукции");
@@ -50,14 +50,13 @@ public class Set_products extends JFrame{
         }
 
         for(int i=0;i<storage.length;i++){
-            storage[i] = storages.get(i).getStorageId() + " " + storages.get(i).getStatus();
+            storage[i] = "Номер: " + storages.get(i).getStorageId() + " Тип: " + storages.get(i).getStatus();
         }
 
         comboBoxStorage.setModel(new DefaultComboBoxModel(storage));
         comboBoxNameProduct.setModel(new DefaultComboBoxModel(product));
 
-        textFieldDate.setText(addDate());
-        textFieldDate.setEditable(false);
+        labelDate.setText(addDate());
 
         comboBoxNameProduct.addActionListener(new ActionListener() {
             @Override
@@ -120,22 +119,20 @@ public class Set_products extends JFrame{
 
     // Список ящиков в зависимости от выбора склада
     private void addActionListenerComboBoxStorage() throws Exception{
-        String itemId = IdCharToString((String) comboBoxNameProduct.getSelectedItem());
-        String storage = (String) comboBoxStorage.getSelectedItem();
-        char first = storage.charAt(0);
-        String firsrId = String.valueOf(first);
-        ArrayList<Cell> cells = new ArrayList<>(getCellComboBoxCell(firsrId,itemId));
+        String nomenclatureId = IdCharToString((String) comboBoxNameProduct.getSelectedItem());
+        String storageFirstId = IdCharToString((String) comboBoxStorage.getSelectedItem());
+        ArrayList<Cell> cells = new ArrayList<>(getCellComboBoxCell(storageFirstId,nomenclatureId));
         String cell[] = new String[cells.size()];
 
         for(int i=0;i<cell.length;i++){
-            cell[i] = cells.get(i).getCellId() + " " + cells.get(i).getType()+ " " + cells.get(i).getStatus();
+            cell[i] = "Номер: " + cells.get(i).getCellId() + " Тип: " + cells.get(i).getType()+ " Статус: " + cells.get(i).getStatus();
         }
 
         comboBoxCell.setModel(new DefaultComboBoxModel(cell));
     }
 
     // Нажатие кнопки "Назад"
-    private void addActionListenerButtonBack() throws Exception{
+    private void addActionListenerButtonBack(){
         setVisible(false);
     }
 
@@ -153,7 +150,7 @@ public class Set_products extends JFrame{
         String answerAvailability = "";
         String answerTask = "";
         String answerTransit = "";
-        String Cell = "";
+        String Cell;
         String ItemId = IdCharToString((String) comboBoxNameProduct.getSelectedItem());
 
         if(comboBoxCell.isVisible() == false) {
@@ -165,28 +162,30 @@ public class Set_products extends JFrame{
         String Quantity = textFieldQuantity.getText();
 
         // Для log_task,log_transit
-        String Storage = IdCharToString((String) comboBoxStorage.getSelectedItem());
-        String Date = textFieldDate.getText();
+        String StorageIn = IdCharToString((String) comboBoxStorage.getSelectedItem());
         String Type = "Получение";
 
         if(notStringQuantity(Quantity) == false){
             JOptionPane.showMessageDialog(null,"Некорректная запись в поле 'Количество'");
         } else {
             answerAvailability = addItemAvailability(ItemId,Cell,Quantity);
-            answerTransit = addTransit(Storage,Type);
-            answerTask = addTask(Date);
+            answerTransit = addTransit(StorageIn,Type);
+            answerTask = addTask(labelDate.getText());
         }
 
         // 1 transit 2 task
-        System.out.println("Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
+        System.out.println("Получение: " + "Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
         String message = "";
         if(answerAvailability.equals("Ошибка") || answerTask.equals("Ошибка") || answerTransit.equals("Ошибка")) {
             message = "Ошибка в добавлении!";
-        } else {
+        } else if(answerAvailability.equals("Добавлены") || answerTask.equals("Добавлены") || answerTransit.equals("Добавлены")){
             message = "Данные добавлены!";
         }
 
-        JOptionPane.showMessageDialog(null,message);
+        if(message.equals("")){
+            JOptionPane.showMessageDialog(null,"Ошибка в добавлении!");
+        } else
+            JOptionPane.showMessageDialog(null,message);
     }
 
     // Нажатие списка продукции
@@ -204,33 +203,6 @@ public class Set_products extends JFrame{
             comboBoxCell.setVisible(true);
             comboBoxStorage.setVisible(true);
             labelAvailability.setVisible(false);
-        }
-    }
-
-    // Получение первого элемента в строке
-    private String IdCharToString(String Id){
-        char first = Id.charAt(7);
-        Id = String.valueOf(first);
-        return Id;
-    }
-
-    // Получение текущей даты
-    private String addDate(){
-        java.util.Date dt = new java.util.Date();
-
-        java.text.SimpleDateFormat sdf =
-                new java.text.SimpleDateFormat("yyyy-MM-dd");
-
-        return sdf.format(dt);
-    }
-
-    // Проверка ввода кол-ва
-    private boolean notStringQuantity(String Quantity){
-        try {
-            Integer.parseInt(Quantity);
-            return true;
-        } catch (Exception e) {
-            return false;
         }
     }
 }

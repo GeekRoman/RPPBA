@@ -289,6 +289,24 @@ public class Server extends Thread {
                         break;
                     }
 
+                    // Set_products,ButtonAdd
+                    case "addTransitTransfer" :{
+                        String StorageOut = mas[1];
+                        String StorageIn = mas[2];
+                        String Storage = StorageOut + " " + StorageIn;
+                        String Type = mas[3];
+
+                        String status = "";
+                        if(db.addTransit(Storage,Type) == false) {
+                            status = "Ошибка";
+                            soos.writeObject(status);
+                        } else {
+                            status = "Добавлены";
+                            soos.writeObject(status);
+                        }
+                        break;
+                    }
+
                     // Get_products,ButtonGet
                     case  "getQuantityAvailability" : {
                         String ItemId = mas[1];
@@ -335,6 +353,30 @@ public class Server extends Thread {
                         soos.writeObject(storageCell);
                         break;
                     }
+
+                    // Transfer_products,
+                    case  "transferCellAvailability" : {
+                        String itemId = mas[1];
+                        String quantity = mas[2];
+                        String cellIn = mas[3];
+                        String status;
+                        if (db.transferCellAvailability(itemId,quantity,cellIn) == false) {
+                            status = "Ошибка";
+                            soos.writeObject(status);
+                        } else {
+                            status = "Добавлены";
+                            soos.writeObject(status);
+                        }
+                        break;
+                    }
+
+                    // Inventory_products,
+                    case  "totalQuantityAvailability" : {
+                        String totalQuantity = db.getQuantityAvailability();
+                        soos.writeObject(totalQuantity);
+                        break;
+                    }
+
                     default: {
                         System.out.println("Команда не определена");
                     }

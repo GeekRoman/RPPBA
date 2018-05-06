@@ -208,6 +208,12 @@ public class Client {
         return answer;
     }
 
+    public static String addTransit(String StorageOut,String StorageIn,String Type) throws Exception{
+        coos.writeObject("addTransitTransfer "+StorageOut + " " + StorageIn + " " + Type);
+        String answer = (String) cois.readObject();
+        return answer;
+    }
+
     // Get_products, Получение продуктов с табл log_availability
     public static ArrayList<Availability> getProductsForAvailability() throws Exception{
         coos.writeObject("getProductsForAvailability");
@@ -241,5 +247,66 @@ public class Client {
         coos.writeObject("quantityAvailability " + ItemId);
         String quantity = (String) cois.readObject();
         return quantity;
+    }
+
+    // Transfer_products, Перемещение с одного ящика в другой
+    public static String transferCellAvailability(String ItemId,String Quantity,String CellIn) throws Exception{
+        coos.writeObject("transferCellAvailability " + ItemId + " " + Quantity + " " + CellIn);
+        String quantity = (String) cois.readObject();
+        return quantity;
+    }
+
+    // Inventory_products, Получение кол-ва наличия
+    public static String totalQuantityAvailability() throws Exception{
+        coos.writeObject("totalQuantityAvailability");
+        String quantity = (String) cois.readObject();
+        return quantity;
+    }
+
+    // Получение первого элемента в строке
+    public static String IdCharToString(String Id) {
+        char first = Id.charAt(7);
+        Id = String.valueOf(first);
+        return Id;
+    }
+
+    // Получение текущей даты
+    public static String addDate(){
+        java.util.Date dt = new java.util.Date();
+
+        java.text.SimpleDateFormat sdf =
+                new java.text.SimpleDateFormat("yyyy-MM-dd");
+
+        return sdf.format(dt);
+    }
+
+    // Проверка ввода кол-ва
+    public static boolean notStringQuantity(String Quantity){
+        try {
+            Integer.parseInt(Quantity);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // Проверка на разность введенного кол-ва с наличием
+    public static boolean minusQuantity(String Quantity,String ItemId){
+        int quantityFiled; int quantityAvailability;
+
+        try {
+            quantityAvailability = Integer.parseInt(quantityAvailability(ItemId));
+            quantityFiled = Integer.parseInt(Quantity);
+
+            int quantityMinus = quantityAvailability - quantityFiled;
+
+            if(quantityMinus < 0){
+                return false;
+            }
+
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
