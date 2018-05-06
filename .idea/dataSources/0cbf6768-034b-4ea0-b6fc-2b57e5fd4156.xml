@@ -1197,7 +1197,6 @@
     <column id="287" parent="238" name="AvailabilityId">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="288" parent="238" name="Move_Quantity">

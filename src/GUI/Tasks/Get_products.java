@@ -93,7 +93,7 @@ public class Get_products extends JFrame{
     }
 
     // Нажатие кнопки "Назад"
-    private void addActionListenerButtonBack() throws Exception{
+    private void addActionListenerButtonBack(){
         setVisible(false);
     }
 
@@ -106,17 +106,17 @@ public class Get_products extends JFrame{
         String ItemId = IdCharToString((String) comboBoxProductAvailability.getSelectedItem());
         String Quantity = textFieldQuantity.getText();
         String Type = "Отгрузка";
-        String Storage = IdCharToString(labelStorage.getText());
+        String StorageOut = IdCharToString(labelStorage.getText());
 
         if(notStringQuantity(Quantity) == false || minusQuantity(Quantity,ItemId) == false){
             JOptionPane.showMessageDialog(null,"Некорректная запись в поле 'Количество'");
         } else {
             answerAvailability = getQuantityAvailability(ItemId,Quantity);
-            answerTransit = addTransit(Storage,Type);
+            answerTransit = addTransit(StorageOut,Type);
             answerTask = addTask(labelDate.getText());
         }
 
-        System.out.println("Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
+        System.out.println("Отгрузка: " + "Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
         String message = "";
         if(answerAvailability.equals("Ошибка") || answerTask.equals("Ошибка") || answerTransit.equals("Ошибка")) {
             message = "Ошибка в добавлении!";

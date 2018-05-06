@@ -11,6 +11,8 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import static client.Client.*;
+import static client.Client.IdCharToString;
+import static client.Client.notStringQuantity;
 
 public class Transfer_products extends JFrame{
 
@@ -45,7 +47,7 @@ public class Transfer_products extends JFrame{
         String product[] = new String[availabilities.size()];
 
         for(int i=0;i<product.length;i++){
-            product[i] = "Номер: " + availabilities.get(i).getItemId() + "Ящик: " + availabilities.get(i).getCellId();
+            product[i] = "Номер: " + availabilities.get(i).getItemId() + " Кол-во: " + availabilities.get(i).getOrderQuantity() +  "Ящик: " + availabilities.get(i).getCellId();
         }
 
         for(int i=0;i<storage.length;i++){
@@ -125,7 +127,37 @@ public class Transfer_products extends JFrame{
     // Нажатие кнопки "Переместить" // Перемещение продукта в другой ящмик
     private void addActionListenerButtonTransfer() throws Exception{
 
-//        System.out.println("Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
+        String answerAvailability = "";
+        String answerTask = "";
+        String answerTransit = "";
+
+        String ItemId = IdCharToString((String) comboBoxNameProduct.getSelectedItem());
+        String Quantity = textFieldQuantity.getText();
+        String Type = "Перемещение";
+        String StorageIn = IdCharToString((String) comboBoxStorageIn.getSelectedItem());
+        String StorageOut = IdCharToString(labelStorageOut.getText());
+        String CellIn = IdCharToString((String) comboBoxCellIn.getSelectedItem());
+
+        if(notStringQuantity(Quantity) == false || minusQuantity(Quantity,ItemId) == false){
+            JOptionPane.showMessageDialog(null,"Некорректная запись в поле 'Количество'");
+        } else {
+            answerAvailability = transferCellAvailability(ItemId,Quantity,CellIn);
+            answerTransit = addTransit(StorageOut,StorageIn,Type);
+            answerTask = addTask(labelDate.getText());
+        }
+
+        System.out.println("Перемещение: " + "Ответ наличия: " + answerAvailability +";" + " " + "Ответ перемещения: " + answerTransit + ";" + " " + "Ответ задачи: " +answerTask + ";");
+        String message = "";
+        if(answerAvailability.equals("Ошибка") || answerTask.equals("Ошибка") || answerTransit.equals("Ошибка")) {
+            message = "Ошибка в добавлении!";
+        } else if(answerAvailability.equals("Добавлены") || answerTask.equals("Добавлены") || answerTransit.equals("Добавлены")){
+            message = "Данные добавлены!";
+        }
+
+        if(message.equals("")){
+            JOptionPane.showMessageDialog(null,"Ошибка в добавлении!");
+        } else
+            JOptionPane.showMessageDialog(null,message);
     }
 
     // Нажатие по комбинированному списку продуктов
@@ -137,8 +169,8 @@ public class Transfer_products extends JFrame{
         Cell cellOb = (Cell) storageCell.get(0);
         Storage storageOb = (Storage) storageCell.get(1);
 
-        labelStorageOut.setText("Адрес: " + storageOb.getAddress());
-        labelCellOut.setText("Номер: " + cellOb.getCellId() + "Тип: " + cellOb.getType());
+        labelStorageOut.setText("Номер: " + storageOb.getStorageId() + " Адрес: " + storageOb.getAddress());
+        labelCellOut.setText("Номер: " + cellOb.getCellId() + " Тип: " + cellOb.getType());
     }
 
     private void addActionListenerComboBoxStorageIn() throws Exception{
@@ -157,32 +189,5 @@ public class Transfer_products extends JFrame{
     // Нажатие кнопки "Назад"
     private void addActionListenerButtonBack(){
         setVisible(false);
-    }
-
-    // Получение номера из строки // Работает
-    private String IdCharToString(String Id){
-        char first = Id.charAt(7);
-        Id = String.valueOf(first);
-        return Id;
-    }
-
-    // Получение текущей даты // Работает
-    private String addDate(){
-        java.util.Date dt = new java.util.Date();
-
-        java.text.SimpleDateFormat sdf =
-                new java.text.SimpleDateFormat("yyyy-MM-dd");
-
-        return sdf.format(dt);
-    }
-
-    // Проверка на ввод кол-ва // Работает
-    private boolean notStringQuantity(String Quantity){
-        try {
-            Integer.parseInt(Quantity);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
     }
 }

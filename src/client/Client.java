@@ -162,6 +162,12 @@ public class Client {
         return answer;
     }
 
+    public static String addTransit(String StorageOut,String StorageIn,String Type) throws Exception{
+        coos.writeObject("addTransitTransfer "+StorageOut + " " + StorageIn + " " + Type);
+        String answer = (String) cois.readObject();
+        return answer;
+    }
+
     // Get_products, Получение продуктов с табл log_availability
     public static ArrayList<Availability> getProductsForAvailability() throws Exception{
         coos.writeObject("getProductsForAvailability");
@@ -197,6 +203,19 @@ public class Client {
         return quantity;
     }
 
+    // Transfer_products, Перемещение с одного ящика в другой
+    public static String transferCellAvailability(String ItemId,String Quantity,String CellIn) throws Exception{
+        coos.writeObject("transferCellAvailability " + ItemId + " " + Quantity + " " + CellIn);
+        String quantity = (String) cois.readObject();
+        return quantity;
+    }
+
+    // Inventory_products, Получение кол-ва наличия
+    public static String totalQuantityAvailability() throws Exception{
+        coos.writeObject("totalQuantityAvailability");
+        String quantity = (String) cois.readObject();
+        return quantity;
+    }
 
     // Получение первого элемента в строке
     public static String IdCharToString(String Id) {
