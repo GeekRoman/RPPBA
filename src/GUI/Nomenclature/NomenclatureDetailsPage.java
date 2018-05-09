@@ -37,13 +37,11 @@ public class NomenclatureDetailsPage extends JFrame{
         providerField.setText(Provider);
 
         String[] typeBox = {"Ручки", "Карандаши"};
-        String[] configBox = {"10x2.3", "10x2.5"};
+        String[] configBoxForPen = {"Пластмассовые","Алюминиевые", "Латунные"};
+        String[] configBoxForRencil = {"Цанговые","Механические"};
+
         for (int j = 0; j < typeBox.length; j++){
             typeComboBox.addItem(typeBox[j]);
-        }
-
-        for (int j = 0; j < configBox.length; j++){
-            configComboBox.addItem(configBox[j]);
         }
 
         changeButton.addActionListener(new ActionListener() {
@@ -83,6 +81,24 @@ public class NomenclatureDetailsPage extends JFrame{
                     }
                     dispose();
 
+                }
+            }
+        });
+        typeComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int selectedIndex = typeComboBox.getSelectedIndex();
+                configComboBox.removeAllItems();
+                if (selectedIndex == 0)
+                {
+                    for (int j = 0; j < configBoxForPen.length; j++){
+                        configComboBox.addItem(configBoxForPen[j]);
+                    }
+                } else
+                {
+                    for (int j = 0; j < configBoxForRencil.length; j++){
+                        configComboBox.addItem(configBoxForRencil[j]);
+                    }
                 }
             }
         });

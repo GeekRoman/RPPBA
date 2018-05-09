@@ -5,11 +5,17 @@ import GUI.Tasks.Get_products;
 import GUI.Tasks.Inventory_products;
 import GUI.Tasks.Set_products;
 import GUI.Tasks.Transfer_products;
+import server.Availability;
+import server.Nomenclature;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import static client.Client.getAllAvailabilityInList;
+import static client.Client.getAllNomenclatureInList;
 
 public class Product_Information_Management extends JFrame{
     private JTable table1;
@@ -23,8 +29,8 @@ public class Product_Information_Management extends JFrame{
     private JComboBox comboBox1;
     private JButton buttonTransfer;
 
-    private String []columnsHeader = {"ID", "Длина", "Высота",
-            "Ширина", "Цвет", "Постовщик", "В наличии", "Заказанно", "Склад","Ячейка"};
+    private String []columnsHeader = {"ID", "Тип","Длина", "Высота",
+            "Ширина","Конфигурация", "Цвет", "Постовщик", "В наличии", "Заказанно"};
     DefaultTableModel tableModel = new DefaultTableModel() {
         public boolean isCellEditable(int rowIndex, int columnIndex) {
             return false;
@@ -39,10 +45,6 @@ public class Product_Information_Management extends JFrame{
         setContentPane(InventManagementForm);
         setResizable(false);
 
-        for (String col: columnsHeader){
-            tableModel.addColumn(col);
-        }
-        table1.setModel(tableModel);
 
         initForm();
 
@@ -76,7 +78,28 @@ public class Product_Information_Management extends JFrame{
     }
 
     // Обработка кнопок с заданиями
-    private void initForm(){
+    private void initForm() throws Exception{
+        ArrayList<Availability> list = new ArrayList<Availability>(getAllAvailabilityInList());
+        for (String col: columnsHeader){
+            tableModel.addColumn(col);
+        }
+        table1.setModel(tableModel);
+
+        for (int i = 0; i < list.size(); i++) {
+            tableModel.addRow(new String[]{
+                    list.get(i).getItemId(),
+                    list.get(i).getType(),
+                    list.get(i).getLength(),
+                    list.get(i).getHeight(),
+                    list.get(i).getWigth(),
+                    list.get(i).getColor(),
+                    list.get(i).getConfig(),
+                    list.get(i).getProvider(),
+                    list.get(i).getQuantity(),
+                    list.get(i).getOrderQuantity(),
+            });
+        };
+
         buttonSetProduct.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){

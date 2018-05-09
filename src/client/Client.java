@@ -103,7 +103,13 @@ public class Client {
         answer = (String) cois.readObject();
         return answer;
     }
-
+    public static String StorageUpdate(String StorageId,String Address, String Status) throws Exception{
+        String str = "StorageUpdate " + StorageId + " "+ Address + " " + Status;
+        System.out.println(str);
+        coos.writeObject(str);
+        answer = (String) cois.readObject();
+        return answer;
+    }
     //DELETE
     public static String delStorage (String storageId) throws Exception{
         coos.writeObject("delStorage " + storageId);
@@ -152,10 +158,12 @@ public class Client {
     }
 
     public static ArrayList<server.Availability> getAllAvailabilityInList() throws Exception {
-        coos.writeObject("getAllAvailabilityStorageInList");
-        ArrayList<server.Availability> Availability = (ArrayList<server.Availability>) cois.readObject();
-        return Availability;
+        coos.writeObject("getAllAvailabilityInList");
+        ArrayList<server.Availability> availability = (ArrayList<server.Availability>) cois.readObject();
+        return availability;
     }
+
+
 
     /////////////////////////////////////////////////////////////////////
     // Set_products, Get_products

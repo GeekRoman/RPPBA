@@ -23,10 +23,11 @@ public class DataBase {
         try (Connection connection = getConnection()) {
 
             ArrayList<Availability> list3 = new ArrayList<Availability>();
-            String  ItemId, Name, Length,
-                    Height, Wight, Config,
+            String  ItemId, Type, Length,
+                    Height, Wigth, Config,
                     Color, Provider, Quantity,
-                    OrderQuantity, StorageId, CellId;
+                    OrderQuantity, StorageId = "", CellId = "";
+
 
             Statement statement = connection.createStatement();
             ResultSet rs;
@@ -34,22 +35,18 @@ public class DataBase {
 
             while (rs.next()) {
                 ItemId = rs.getString("ItemId");
-                Name = rs.getString("Name");
+                Type = rs.getString("Type");
                 Length = rs.getString("Length");
                 Height = rs.getString("Height");
-                Wight = rs.getString("Wight");
+                Wigth = rs.getString("Width");
                 Config = rs.getString("Config");
                 Color = rs.getString("Color");
                 Provider = rs.getString("Provider");
-                Quantity = rs.getString("Quantity");
-                OrderQuantity = rs.getString("OrderQuantity");
-                StorageId = rs.getString("StorageId");
-                CellId = rs.getString("CellId");
 
-                Availability myavailability = new Availability(ItemId, Name, Length,
-                        Height, Wight, Config,
-                        Color, Provider, Quantity,
-                        OrderQuantity, StorageId, CellId);
+                Availability myavailability = new Availability(ItemId, Type, Length,
+                        Height, Wigth, Config,
+                        Color, Provider, getSumQuantity(ItemId),
+                        getSumOrderQuantity(ItemId));
 
                 list3.add(myavailability);
 
@@ -58,10 +55,54 @@ public class DataBase {
             return list3;
 
         } catch (Exception e){
-            System.out.println("Ошибка получения всех сотрудников");
+            System.out.println("Ошибка получения наличия");
             return null;
         }
     }
+    public String getSumQuantity(String ItemId) throws ClassNotFoundException {
+
+        try (Connection connection = getConnection()) {
+            int i = 0;
+            String Quantity ="";
+
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT SUM(QuantityOnHand)  AS 'Quantity' FROM log_availability WHERE ItemId = "+ItemId+";");
+            System.out.println();
+            while (rs.next()) {
+                Quantity = rs.getString("Quantity");
+            }
+            return Quantity;
+
+        } catch (Exception e){
+            System.out.println("Ошибка получения Quantity");
+            return null;
+        }
+
+    }
+    public String getSumOrderQuantity(String ItemId) throws ClassNotFoundException {
+
+        try (Connection connection = getConnection()) {
+            int i = 0;
+            String OrderQuantity ="";
+
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT SUM(OrderQuantity)  AS 'OrderQuantity' FROM log_availability WHERE ItemId = "+ItemId+";");
+            System.out.println();
+            while (rs.next()) {
+                OrderQuantity = rs.getString("OrderQuantity");
+            }
+            return OrderQuantity;
+
+        } catch (Exception e){
+            System.out.println("Ошибка получения OrderQuantity");
+            return null;
+        }
+
+    }
+
+
 
     public ArrayList<Storage> getAllStoragesInList() throws ClassNotFoundException {
         try (Connection connection = getConnection()) {
@@ -105,7 +146,7 @@ public class DataBase {
 
             while (rs.next()) {
                 itemId = rs.getString("ItemId");
-                mytype = rs.getString("ItemId");
+                mytype = rs.getString("Type");
                 length = rs.getString("Length");
                 height = rs.getString("Height");
                 width = rs.getString("Width");
@@ -369,17 +410,33 @@ public class DataBase {
         boolean addstatus = false;
         try (Connection connection = getConnection()) {
             Statement st = connection.createStatement();
-            String sql = "UPDATE log_nomenclature SET ItemId = \""+ itemId +"\"," +
-                   " Type = \"" + mytype + "\", Length = \"" + length + "\"," +
+            String sql = "UPDATE log_nomenclature SET Type = \"" + mytype + "\", Length = \"" + length + "\"," +
                     " Height = \"" + height + "\", Width = \"" + width + "\", Config = \"" + config + "\"," +
-                   " Color = \"" + color + "\", Provider = \"" + provider + "\";";
+                   " Color = \"" + color + "\", Provider = \"" + provider + "\" WHERE ItemId = \""+itemId+"\";";
             System.out.println(sql);
 
             st.executeUpdate(sql);
             return true;
 
         } catch (Exception e){
-            System.out.println("Ошибка обновления");
+            System.out.println("Ошибка обновления(номенклатура)");
+        }
+
+        return addstatus;
+    }
+    public boolean StorageUpdate (String storageId,String address, String status) throws Exception {
+
+        boolean addstatus = false;
+        try (Connection connection = getConnection()) {
+            Statement st = connection.createStatement();
+            String sql = "UPDATE log_storage SET Address = \"" + address + "\", Status = \"" + status + "\" WHERE StorageId = \""+storageId+"\";";
+            System.out.println(sql);
+
+            st.executeUpdate(sql);
+            return true;
+
+        } catch (Exception e){
+            System.out.println("Ошибка обновления(склад)");
         }
 
         return addstatus;

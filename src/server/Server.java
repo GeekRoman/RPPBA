@@ -124,6 +124,7 @@ public class Server extends Thread {
                         break;
                     }
 
+                    //UpDate
                     case "NomenclatureUpdate": {
                         String itemId = mas[1];
                         String mytype = mas[2];
@@ -143,6 +144,21 @@ public class Server extends Thread {
                         soos.writeObject(answer);
                         break;
                     }
+                    case "StorageUpdate": {
+                        String storageId = mas[1];
+                        String adsress = mas[2];
+                        String status = mas[3];
+
+                        if (db.StorageUpdate(storageId, adsress, status)==false){
+                            answer = "false";
+                        } else {
+                            answer = "true";
+                        }
+                        soos.writeObject(answer);
+                        break;
+                    }
+
+
 
                     //DELETE
                     case "delStorage": {

@@ -5,6 +5,8 @@ import static client.Client.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ContainerAdapter;
+import java.awt.event.ContainerEvent;
 
 public class NomenclatureAdd extends JFrame {
     private JButton addButton;
@@ -29,14 +31,14 @@ public class NomenclatureAdd extends JFrame {
         this.setVisible(true);
 
         String[] typeBox = {"Ручки", "Карандаши"};
-        String[] configBox = {"10x2.3", "10x2.5"};
+        String[] configBoxForPen = {"Пластмассовые","Алюминиевые", "Латунные"};
+        String[] configBoxForRencil = {"Цанговые","Механические"};
+
         for (int j = 0; j < typeBox.length; j++){
             typeComboBox.addItem(typeBox[j]);
         }
 
-        for (int j = 0; j < configBox.length; j++){
-            configComboBox.addItem(configBox[j]);
-        }
+
 
         addButton.addActionListener(new ActionListener() {
             @Override
@@ -83,6 +85,25 @@ public class NomenclatureAdd extends JFrame {
 
                     } catch (Exception e1) {
                         e1.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        typeComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int selectedIndex = typeComboBox.getSelectedIndex();
+                configComboBox.removeAllItems();
+                if (selectedIndex == 0)
+                {
+                    for (int j = 0; j < configBoxForPen.length; j++){
+                        configComboBox.addItem(configBoxForPen[j]);
+                    }
+                } else
+                {
+                    for (int j = 0; j < configBoxForRencil.length; j++){
+                        configComboBox.addItem(configBoxForRencil[j]);
                     }
                 }
             }
