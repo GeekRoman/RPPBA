@@ -1,6 +1,7 @@
 package GUI;
 
 import GUI.Nomenclature.NomenclatureListPage;
+import GUI.TaskLists.ListsTaskListPage;
 import GUI.Tasks.Get_products;
 import GUI.Tasks.Inventory_products;
 import GUI.Tasks.Set_products;
@@ -73,6 +74,16 @@ public class Product_Information_Management extends JFrame{
 
                 }
 
+            }
+        });
+        listTasksButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openTaskList();
+                } catch (Exception e1){
+
+                }
             }
         });
     }
@@ -170,5 +181,8 @@ public class Product_Information_Management extends JFrame{
 
     private void openNomenclature() throws Exception{
         new NomenclatureListPage().setVisible(true);
+    }
+    private void openTaskList() throws Exception{
+        new ListsTaskListPage().setVisible(true);
     }
 }

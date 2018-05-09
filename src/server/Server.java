@@ -225,6 +225,11 @@ public class Server extends Thread {
                         soos.writeObject(cells);
                         break;
                     }
+                    case "getAllTaskLiatInList": {
+                        ArrayList<TaskList> taskLists = new ArrayList<>(db.getAllTaskLiatInList());
+                        soos.writeObject(taskLists);
+                        break;
+                    }
 
                     // Set_products,comboBoxProductName
                     case "getNomenclatureComboBoxProductName" : {

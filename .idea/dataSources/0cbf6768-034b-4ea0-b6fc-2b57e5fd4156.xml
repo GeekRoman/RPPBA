@@ -198,102 +198,105 @@
       <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <index id="59" parent="18" name="TransitId_idx">
+    <column id="59" parent="18" name="TaskListId">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="60" parent="18" name="TransitId_idx">
       <ColNames>TransitId</ColNames>
     </index>
-    <key id="60" parent="18" name="PRIMARY">
+    <index id="61" parent="18" name="TaskListId_idx">
+      <ColNames>TaskListId</ColNames>
+    </index>
+    <key id="62" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>TaskId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="61" parent="18" name="TransitId">
+    <foreign-key id="63" parent="18" name="TransitId">
       <ColNames>TransitId</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_transit</RefTableName>
       <RefColNames>TransitId</RefColNames>
     </foreign-key>
-    <column id="62" parent="19" name="TaskListId">
+    <foreign-key id="64" parent="18" name="TaskListId">
+      <ColNames>TaskListId</ColNames>
+      <RefSchemaName>logistics</RefSchemaName>
+      <RefTableName>log_tasklist</RefTableName>
+      <RefColNames>TaskListId</RefColNames>
+    </foreign-key>
+    <column id="65" parent="19" name="TaskListId">
       <Position>1</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="63" parent="19" name="TaskId">
+    <column id="66" parent="19" name="Name">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="64" parent="19" name="Name">
+    <column id="67" parent="19" name="Status">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <index id="65" parent="19" name="TaskId_idx">
-      <ColNames>TaskId</ColNames>
-    </index>
-    <key id="66" parent="19" name="PRIMARY">
+    <key id="68" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>TaskListId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="67" parent="19" name="TaskId">
-      <ColNames>TaskId</ColNames>
-      <RefSchemaName>logistics</RefSchemaName>
-      <RefTableName>log_task</RefTableName>
-      <RefColNames>TaskId</RefColNames>
-    </foreign-key>
-    <column id="68" parent="20" name="TransitId">
+    <column id="69" parent="20" name="TransitId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="69" parent="20" name="AvailabilityId">
+    <column id="70" parent="20" name="AvailabilityId">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="70" parent="20" name="Move_Quantity">
+    <column id="71" parent="20" name="Move_Quantity">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="71" parent="20" name="Out_Storage">
+    <column id="72" parent="20" name="Out_Storage">
       <Position>4</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="72" parent="20" name="In_Storage">
+    <column id="73" parent="20" name="In_Storage">
       <Position>5</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="73" parent="20" name="Status">
+    <column id="74" parent="20" name="Status">
       <Position>6</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="74" parent="20" name="AvailabilityId_idx">
+    <index id="75" parent="20" name="AvailabilityId_idx">
       <ColNames>AvailabilityId</ColNames>
     </index>
-    <index id="75" parent="20" name="In_Storage_idx">
+    <index id="76" parent="20" name="In_Storage_idx">
       <ColNames>In_Storage</ColNames>
     </index>
-    <index id="76" parent="20" name="Out_Storage_idx">
+    <index id="77" parent="20" name="Out_Storage_idx">
       <ColNames>Out_Storage</ColNames>
     </index>
-    <key id="77" parent="20" name="PRIMARY">
+    <key id="78" parent="20" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>TransitId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="78" parent="20" name="AvailabilityId">
+    <foreign-key id="79" parent="20" name="AvailabilityId">
       <ColNames>AvailabilityId</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_availability</RefTableName>
       <RefColNames>AvailabilityId</RefColNames>
     </foreign-key>
-    <foreign-key id="79" parent="20" name="Out_Storage">
+    <foreign-key id="80" parent="20" name="Out_Storage">
       <ColNames>Out_Storage</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_cell</RefTableName>
       <RefColNames>CellId</RefColNames>
     </foreign-key>
-    <foreign-key id="80" parent="20" name="In_Storage">
+    <foreign-key id="81" parent="20" name="In_Storage">
       <ColNames>In_Storage</ColNames>
       <RefSchemaName>logistics</RefSchemaName>
       <RefTableName>log_cell</RefTableName>

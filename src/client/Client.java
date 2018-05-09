@@ -162,6 +162,11 @@ public class Client {
         ArrayList<server.Availability> availability = (ArrayList<server.Availability>) cois.readObject();
         return availability;
     }
+    public static ArrayList<server.TaskList> getAllTaskLiatInList() throws Exception {
+        coos.writeObject("getAllTaskLiatInList");
+        ArrayList<server.TaskList> taskLists = (ArrayList<server.TaskList>) cois.readObject();
+        return taskLists;
+    }
 
 
 

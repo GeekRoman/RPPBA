@@ -102,8 +102,6 @@ public class DataBase {
 
     }
 
-
-
     public ArrayList<Storage> getAllStoragesInList() throws ClassNotFoundException {
         try (Connection connection = getConnection()) {
 
@@ -231,6 +229,36 @@ public class DataBase {
 
         } catch (Exception e){
             System.out.println("Ошибка получения всех ячеек");
+            return null;
+        }
+    }
+
+    public ArrayList<TaskList> getAllTaskLiatInList() throws ClassNotFoundException {
+        try (Connection connection = getConnection()) {
+
+            ArrayList<TaskList> list = new ArrayList<TaskList>();
+
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_tasklist;");
+
+            String tasklistId, name,status;
+
+            while (rs.next()) {
+                tasklistId = rs.getString("TaskListId");
+                name = rs.getString("Name");
+                status = rs.getString("Status");
+
+                TaskList taskList = new TaskList(tasklistId, name, status);
+
+                list.add(taskList);
+
+            }
+
+            return list;
+
+        } catch (Exception e){
+            System.out.println("Ошибка получения всех списков заданий");
             return null;
         }
     }
