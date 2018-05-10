@@ -233,16 +233,16 @@ public class DataBase {
         }
     }
 
-    public ArrayList<TaskList> getAllTaskLiatInList() throws ClassNotFoundException {
+    public ArrayList<TaskList> getAllTaskListInList() throws ClassNotFoundException {
         try (Connection connection = getConnection()) {
 
-            ArrayList<TaskList> list = new ArrayList<TaskList>();
+            ArrayList<TaskList> mylist = new ArrayList<TaskList>();
 
             Statement statement = connection.createStatement();
             ResultSet rs;
             rs = statement.executeQuery("SELECT * FROM log_tasklist;");
 
-            String tasklistId, name,status;
+            String tasklistId = "", name = "",status = "";
 
             while (rs.next()) {
                 tasklistId = rs.getString("TaskListId");
@@ -250,12 +250,9 @@ public class DataBase {
                 status = rs.getString("Status");
 
                 TaskList taskList = new TaskList(tasklistId, name, status);
-
-                list.add(taskList);
-
+                mylist.add(taskList);
             }
-
-            return list;
+            return mylist;
 
         } catch (Exception e){
             System.out.println("Ошибка получения всех списков заданий");
@@ -284,6 +281,29 @@ public class DataBase {
 
         } catch (Exception e){
             System.out.println("Ошибка получения StorageId");
+            return null;
+        }
+
+    }
+
+    public String getAllTaskListId() throws ClassNotFoundException {
+
+        try (Connection connection = getConnection()) {
+            int i = 0;
+            String str ="";
+
+            Statement statement = connection.createStatement();
+            ResultSet rs;
+            rs = statement.executeQuery("SELECT * FROM log_tasklist;");
+            while (rs.next()) {
+                str += rs.getString("TaskListId");
+                str += " ";
+                i++;
+            }
+            return str;
+
+        } catch (Exception e){
+            System.out.println("Ошибка получения TaskListId");
             return null;
         }
 

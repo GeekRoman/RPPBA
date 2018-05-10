@@ -9,6 +9,7 @@ import server.Availability;
 import server.Cell;
 import server.Nomenclature;
 import server.Storage;
+import server.TaskList;
 
 public class Client {
     private static ObjectInputStream cois;
@@ -133,6 +134,13 @@ public class Client {
         answer = (String) cois.readObject();
         return answer;
     }
+
+    public static String getAllTaskListId() throws Exception {
+        coos.writeObject("getAllTaskListId");
+        answer = (String) cois.readObject();
+        return answer;
+    }
+
     public static ArrayList<server.Storage> getAllStorageInList() throws Exception {
         coos.writeObject("getAllStorageInList");
         ArrayList<server.Storage> storages = (ArrayList<server.Storage>) cois.readObject();
@@ -156,17 +164,18 @@ public class Client {
         ArrayList<server.Cell> Cells = (ArrayList<server.Cell>) cois.readObject();
         return Cells;
     }
+    public static ArrayList<server.TaskList> getAllTaskListInList() throws Exception {
+        coos.writeObject("getAllTaskListInList");
+        ArrayList<TaskList> taskLists = (ArrayList<TaskList>) cois.readObject();
+        return taskLists;
+    }
 
     public static ArrayList<server.Availability> getAllAvailabilityInList() throws Exception {
         coos.writeObject("getAllAvailabilityInList");
         ArrayList<server.Availability> availability = (ArrayList<server.Availability>) cois.readObject();
         return availability;
     }
-    public static ArrayList<server.TaskList> getAllTaskLiatInList() throws Exception {
-        coos.writeObject("getAllTaskLiatInList");
-        ArrayList<server.TaskList> taskLists = (ArrayList<server.TaskList>) cois.readObject();
-        return taskLists;
-    }
+
 
 
 

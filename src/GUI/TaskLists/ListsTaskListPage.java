@@ -1,6 +1,6 @@
 package GUI.TaskLists;
 
-import server.Storage;
+
 import server.TaskList;
 
 import javax.swing.*;
@@ -9,15 +9,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import static client.Client.getAllStorageInList;
-import static client.Client.getAllTaskLiatInList;
+import static client.Client.*;
 
 public class ListsTaskListPage extends JFrame{
     private JTable table1;
     private JButton exitButton;
     private JPanel ListsTaskListPage;
-    private String []columnsHeader = {"Идентификатор", "Название", "Статус"};
-    DefaultTableModel tableModel = new DefaultTableModel() {
+
+    private String []columnsHeader = {"Идентификатор", "Название", "Статус"," "};
+    DefaultTableModel tableModel2 = new DefaultTableModel() {
         public boolean isCellEditable(int rowIndex, int columnIndex) {
             return false;
         }
@@ -32,6 +32,24 @@ public class ListsTaskListPage extends JFrame{
         this.setVisible(true);
         setResizable(true);
 
+        ArrayList<TaskList> mylist = new ArrayList<>(getAllTaskListInList());
+
+        for (int i = 0; i < mylist.size(); i++) {
+            System.out.println(mylist.get(i).getTaskListId());
+
+        };
+        for (String col: columnsHeader){
+            tableModel2.addColumn(col);
+        }
+        table1.setModel(tableModel2);
+
+        for (int i = 0; i < mylist.size(); i++) {
+            tableModel2.addRow(new String[]{
+                    mylist.get(i).getTaskListId(),
+                    mylist.get(i).getName(),
+                    mylist.get(i).getStatus(),
+            });
+        };
 
         exitButton.addActionListener(new ActionListener() {
             @Override
@@ -39,24 +57,7 @@ public class ListsTaskListPage extends JFrame{
                 dispose();
             }
         });
-        initForm();
-    }
-    public void initForm() throws Exception{
-        ArrayList<TaskList> list = new ArrayList<TaskList>(getAllTaskLiatInList());
-        System.out.println(list.get(0).getName());
-
-        for (String col: columnsHeader){
-            tableModel.addColumn(col);
-        }
-        table1.setModel(tableModel);
-
-        for (int i = 0; i < list.size(); i++) {
-            tableModel.addRow(new String[]{
-                    list.get(i).getTaskListId(),
-                    list.get(i).getName(),
-                    list.get(i).getStatus(),
-            });
-        };
 
     }
+
 }

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b554b-d693-42a4-a37c-1e31b677893e" name="Default" comment="1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0cbf6768-034b-4ea0-b6fc-2b57e5fd4156.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" afterPath="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.form" afterPath="$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.java" afterPath="$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/TaskLists/TransitListPage.form" afterPath="$PROJECT_DIR$/src/GUI/TaskLists/TransitListPage.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/TaskLists/TransitListPage.java" afterPath="$PROJECT_DIR$/src/GUI/TaskLists/TransitListPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/Client.java" afterPath="$PROJECT_DIR$/src/client/Client.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/DataBase.java" afterPath="$PROJECT_DIR$/src/server/DataBase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/Server.java" afterPath="$PROJECT_DIR$/src/server/Server.java" />
@@ -58,8 +55,8 @@
       <file leaf-file-name="NomenclatureListPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Nomenclature/NomenclatureListPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+            <state relative-caret-position="143">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#808#946#0" expanded="true" />
@@ -71,132 +68,154 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Nomenclature.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/Nomenclature.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="24" column="78" lean-forward="false" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ListsTaskListPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+            <state relative-caret-position="17">
+              <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#597#735#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-                <element signature="e#1168#1169#0" expanded="true" />
-                <element signature="e#1301#1311#0" expanded="true" />
+                <element signature="e#513#651#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#1642#1643#0" expanded="true" />
+                <element signature="e#1683#1684#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataBase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="238" column="60" lean-forward="false" selection-start-line="238" selection-start-column="53" selection-end-line="238" selection-end-column="61" />
+            <state relative-caret-position="46">
+              <caret line="171" column="49" lean-forward="true" selection-start-line="171" selection-start-column="49" selection-end-line="171" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1525886107588" expanded="true" signature="1069:1099" ph="SELECT * FRO... log_nomenclature" />
-                <marker date="1525886107588" expanded="true" signature="2321:2399" ph="SELECT SUM(Q... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="2321:2400" ph="SELECT SUM(Q... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="2321:2413" ph="SELECT SUM (... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="3047:3130" ph="SELECT SUM(O... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="3801:3826" ph="SELECT * FRO... log_storage" />
-                <marker date="1525886107588" expanded="true" signature="4718:4736" ph="SELECT * FRO... log_storage" />
-                <marker date="1525886107588" expanded="true" signature="4718:4748" ph="SELECT * FRO... log_nomenclature" />
-                <marker date="1525886107588" expanded="true" signature="5968:5990" ph="SELECT * FRO... log_cell" />
-                <marker date="1525886107588" expanded="true" signature="7081:7142" ph="SELECT * FRO... log_cell" />
-                <marker date="1525886107588" expanded="true" signature="8288:8314" ph="SELECT * FRO... log_tasklist" />
-                <marker date="1525886107588" expanded="true" signature="9158:9183" ph="SELECT * FRO... log_storage" />
-                <marker date="1525886107588" expanded="true" signature="9695:9758" ph="DELETE FROM " />
-                <marker date="1525886107588" expanded="true" signature="10329:10391" ph="DELETE FROM " />
-                <marker date="1525886107588" expanded="true" signature="10965:11019" ph="DELETE FROM " />
-                <marker date="1525886107588" expanded="true" signature="11866:11891" ph="SELECT * FRO... log_storage" />
-                <marker date="1525886107588" expanded="true" signature="12098:12224" ph="INSERT INTO log_storage... " />
-                <marker date="1525886107588" expanded="true" signature="13168:13190" ph="SELECT * FRO... log_cell" />
-                <marker date="1525886107588" expanded="true" signature="13389:13631" ph="INSERT INTO log_cell... " />
-                <marker date="1525886107588" expanded="true" signature="14444:14462" ph="SELECT * FRO... log_cell" />
-                <marker date="1525886107588" expanded="true" signature="14444:14474" ph="SELECT * FRO... log_nomenclature" />
-                <marker date="1525886107588" expanded="true" signature="14673:14933" ph="INSERT INTO log_nomenclature... " />
-                <marker date="1525886107588" expanded="true" signature="14673:14936" ph="INSERT INTO log_nomenclature... " />
-                <marker date="1525886107588" expanded="true" signature="14673:14955" ph="INSERT INTO log_cell... " />
-                <marker date="1525886107588" expanded="true" signature="14673:14956" ph="INSERT INTO log_nomenclature... " />
-                <marker date="1525886107588" expanded="true" signature="15662:15938" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15662:15953" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15662:15954" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15662:15956" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15662:15965" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15662:15968" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15662:15969" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15690" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15699" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15712" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15741" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15795" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15822" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15851" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15890" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15900" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15935" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="15668:15938" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="16488:16569" ph="UPDATE log_s... " />
-                <marker date="1525886107588" expanded="true" signature="16488:16605" ph="UPDATE log_s... " />
-                <marker date="1525886107588" expanded="true" signature="16569:16605" ph="UPDATE log_n... " />
-                <marker date="1525886107588" expanded="true" signature="17736:17776" ph="SELECT ItemI... log_nomenclature" />
-                <marker date="1525886107588" expanded="true" signature="18541:18581" ph="SELECT Stora... log_storage" />
-                <marker date="1525886107588" expanded="true" signature="19403:19452" ph="SELECT Type log_nomenclature" />
-                <marker date="1525886107588" expanded="true" signature="19694:19818" ph="SELECT CellI... log_cell" />
-                <marker date="1525886107588" expanded="true" signature="20604:20655" ph="SELECT ItemI... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="21525:21612" ph="SELECT Avail... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="21861:21941" ph="select Avail... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="22348:22531" ph="INSERT INTO log_availability... " />
-                <marker date="1525886107588" expanded="true" signature="22698:22788" ph="update log_a... " />
-                <marker date="1525886107588" expanded="true" signature="23535:23600" ph="select Trans... log_transit" />
-                <marker date="1525886107588" expanded="true" signature="23996:24229" ph="INSERT INTO log_transit... " />
-                <marker date="1525886107588" expanded="true" signature="24527:24592" ph="select Trans... log_transit" />
-                <marker date="1525886107588" expanded="true" signature="24988:25222" ph="INSERT INTO log_transit... " />
-                <marker date="1525886107588" expanded="true" signature="25574:25639" ph="select Trans... log_transit" />
-                <marker date="1525886107588" expanded="true" signature="26438:26710" ph="INSERT INTO log_transit... " />
-                <marker date="1525886107588" expanded="true" signature="27181:27246" ph="select Trans... log_transit" />
-                <marker date="1525886107588" expanded="true" signature="27648:27774" ph="INSERT INTO log_transit... " />
-                <marker date="1525886107588" expanded="true" signature="28546:28602" ph="select TaskI... log_task" />
-                <marker date="1525886107588" expanded="true" signature="28819:29028" ph="INSERT INTO log_task... " />
-                <marker date="1525886107588" expanded="true" signature="29798:29854" ph="SELECT ItemI... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="30747:30798" ph="SELECT CellI... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="30953:31003" ph="SELECT Stora... log_cell" />
-                <marker date="1525886107588" expanded="true" signature="31446:31502" ph="SELECT Addre... log_storage" />
-                <marker date="1525886107588" expanded="true" signature="32532:32591" ph="SELECT Avail... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="32764:32861" ph="update log_a... " />
-                <marker date="1525886107588" expanded="true" signature="33494:33552" ph="SELECT Order... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="34256:34348" ph="SELECT ItemI... log_nomenclature" />
-                <marker date="1525886107588" expanded="true" signature="35528:35639" ph="UPDATE log_a... " />
-                <marker date="1525886107588" expanded="true" signature="35797:35877" ph="select Avail... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="36270:36451" ph="INSERT INTO log_availability... " />
-                <marker date="1525886107588" expanded="true" signature="36987:37045" ph="SELECT sum(O... log_availability" />
-                <marker date="1525886107588" expanded="true" signature="37288:37295" ph="{...}" />
+                <element signature="e#5826#5832#0" expanded="true" />
+                <element signature="e#6954#6960#0" expanded="true" />
+                <element signature="e#8144#8154#0" expanded="true" />
+                <marker date="1525969496576" expanded="true" signature="1069:1099" ph="SELECT * FRO... log_nomenclature" />
+                <marker date="1525969496576" expanded="true" signature="2321:2399" ph="SELECT SUM(Q... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="2321:2400" ph="SELECT SUM(Q... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="2321:2413" ph="SELECT SUM (... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="3047:3130" ph="SELECT SUM(O... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="3801:3826" ph="SELECT * FRO... log_storage" />
+                <marker date="1525969496576" expanded="true" signature="4718:4736" ph="SELECT * FRO... log_storage" />
+                <marker date="1525969496576" expanded="true" signature="4718:4748" ph="SELECT * FRO... log_nomenclature" />
+                <marker date="1525969496576" expanded="true" signature="5968:5990" ph="SELECT * FRO... log_cell" />
+                <marker date="1525969496576" expanded="true" signature="7081:7142" ph="SELECT * FRO... log_cell" />
+                <marker date="1525969496576" expanded="true" signature="8290:8316" ph="SELECT * FRO... log_tasklist" />
+                <marker date="1525969496576" expanded="true" signature="9176:9201" ph="SELECT * FRO... log_storage" />
+                <marker date="1525969496576" expanded="true" signature="9878:9904" ph="SELECT * FRO... log_tasklist" />
+                <marker date="1525969496576" expanded="true" signature="10361:10424" ph="DELETE FROM " />
+                <marker date="1525969496576" expanded="true" signature="10995:11057" ph="DELETE FROM " />
+                <marker date="1525969496576" expanded="true" signature="11631:11685" ph="DELETE FROM " />
+                <marker date="1525969496576" expanded="true" signature="12532:12557" ph="SELECT * FRO... log_storage" />
+                <marker date="1525969496576" expanded="true" signature="12764:12890" ph="INSERT INTO log_storage... " />
+                <marker date="1525969496576" expanded="true" signature="13834:13856" ph="SELECT * FRO... log_cell" />
+                <marker date="1525969496576" expanded="true" signature="14055:14297" ph="INSERT INTO log_cell... " />
+                <marker date="1525969496576" expanded="true" signature="15110:15128" ph="SELECT * FRO... log_cell" />
+                <marker date="1525969496576" expanded="true" signature="15110:15140" ph="SELECT * FRO... log_nomenclature" />
+                <marker date="1525969496576" expanded="true" signature="15339:15599" ph="INSERT INTO log_nomenclature... " />
+                <marker date="1525969496576" expanded="true" signature="15339:15602" ph="INSERT INTO log_nomenclature... " />
+                <marker date="1525969496576" expanded="true" signature="15339:15621" ph="INSERT INTO log_cell... " />
+                <marker date="1525969496576" expanded="true" signature="15339:15622" ph="INSERT INTO log_nomenclature... " />
+                <marker date="1525969496576" expanded="true" signature="16328:16604" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16328:16619" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16328:16620" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16328:16622" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16328:16631" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16328:16634" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16328:16635" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16356" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16365" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16378" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16407" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16461" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16488" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16517" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16556" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16566" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16601" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="16334:16604" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="17154:17235" ph="UPDATE log_s... " />
+                <marker date="1525969496576" expanded="true" signature="17154:17271" ph="UPDATE log_s... " />
+                <marker date="1525969496576" expanded="true" signature="17235:17271" ph="UPDATE log_n... " />
+                <marker date="1525969496576" expanded="true" signature="18402:18442" ph="SELECT ItemI... log_nomenclature" />
+                <marker date="1525969496576" expanded="true" signature="19207:19247" ph="SELECT Stora... log_storage" />
+                <marker date="1525969496576" expanded="true" signature="20069:20118" ph="SELECT Type log_nomenclature" />
+                <marker date="1525969496576" expanded="true" signature="20360:20484" ph="SELECT CellI... log_cell" />
+                <marker date="1525969496576" expanded="true" signature="21270:21321" ph="SELECT ItemI... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="22191:22278" ph="SELECT Avail... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="22527:22607" ph="select Avail... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="23014:23197" ph="INSERT INTO log_availability... " />
+                <marker date="1525969496576" expanded="true" signature="23364:23454" ph="update log_a... " />
+                <marker date="1525969496576" expanded="true" signature="24201:24266" ph="select Trans... log_transit" />
+                <marker date="1525969496576" expanded="true" signature="24662:24895" ph="INSERT INTO log_transit... " />
+                <marker date="1525969496576" expanded="true" signature="25193:25258" ph="select Trans... log_transit" />
+                <marker date="1525969496576" expanded="true" signature="25654:25888" ph="INSERT INTO log_transit... " />
+                <marker date="1525969496576" expanded="true" signature="26240:26305" ph="select Trans... log_transit" />
+                <marker date="1525969496576" expanded="true" signature="27104:27376" ph="INSERT INTO log_transit... " />
+                <marker date="1525969496576" expanded="true" signature="27847:27912" ph="select Trans... log_transit" />
+                <marker date="1525969496576" expanded="true" signature="28314:28440" ph="INSERT INTO log_transit... " />
+                <marker date="1525969496576" expanded="true" signature="29212:29268" ph="select TaskI... log_task" />
+                <marker date="1525969496576" expanded="true" signature="29485:29694" ph="INSERT INTO log_task... " />
+                <marker date="1525969496576" expanded="true" signature="30464:30520" ph="SELECT ItemI... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="31413:31464" ph="SELECT CellI... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="31619:31669" ph="SELECT Stora... log_cell" />
+                <marker date="1525969496576" expanded="true" signature="32112:32168" ph="SELECT Addre... log_storage" />
+                <marker date="1525969496576" expanded="true" signature="33198:33257" ph="SELECT Avail... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="33430:33527" ph="update log_a... " />
+                <marker date="1525969496576" expanded="true" signature="34160:34218" ph="SELECT Order... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="34922:35014" ph="SELECT ItemI... log_nomenclature" />
+                <marker date="1525969496576" expanded="true" signature="36194:36305" ph="UPDATE log_a... " />
+                <marker date="1525969496576" expanded="true" signature="36463:36543" ph="select Avail... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="36936:37117" ph="INSERT INTO log_availability... " />
+                <marker date="1525969496576" expanded="true" signature="37653:37711" ph="SELECT sum(O... log_availability" />
+                <marker date="1525969496576" expanded="true" signature="37954:37961" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="164" column="64" lean-forward="false" selection-start-line="164" selection-start-column="64" selection-end-line="164" selection-end-column="64" />
+            <state relative-caret-position="-2782">
+              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1525886107451" expanded="true" signature="12023:12029" ph="{...}" />
+                <marker date="1525969826240" expanded="true" signature="12219:12225" ph="{...}" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product_Information_Management.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Product_Information_Management.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="504">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,42 +230,26 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="229" column="49" lean-forward="false" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
+            <state relative-caret-position="423">
+              <caret line="238" column="21" lean-forward="true" selection-start-line="238" selection-start-column="21" selection-end-line="238" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#8602#8612#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
+      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-424">
-              <caret line="66" column="10" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+            <state relative-caret-position="504">
+              <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1470#1479#0" expanded="true" />
+                <element signature="e#655#656#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NomenclatureDetailsPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Nomenclature/NomenclatureDetailsPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1550">
-              <caret line="103" column="11" lean-forward="false" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NomenclatureListPage.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Nomenclature/NomenclatureListPage.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -317,11 +320,11 @@
         <option value="$PROJECT_DIR$/src/GUI/TaskLists/TransitListPage.form" />
         <option value="$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.form" />
         <option value="$PROJECT_DIR$/src/server/TaskList.java" />
-        <option value="$PROJECT_DIR$/src/client/Client.java" />
-        <option value="$PROJECT_DIR$/src/server/Server.java" />
-        <option value="$PROJECT_DIR$/src/server/DataBase.java" />
         <option value="$PROJECT_DIR$/src/GUI/Product_Information_Management.java" />
         <option value="$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.java" />
+        <option value="$PROJECT_DIR$/src/server/Server.java" />
+        <option value="$PROJECT_DIR$/src/server/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/client/Client.java" />
       </list>
     </option>
   </component>
@@ -415,7 +418,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="Nomenclature" type="462c0819:PsiDirectoryNode" />
-              <item name="NomenclatureDetailsPage" type="e9f4de52:FormNode" />
+              <item name="NomenclatureAdd" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="RPPBA" type="b2602c69:ProjectViewProjectNode" />
@@ -424,13 +427,6 @@
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="Nomenclature" type="462c0819:PsiDirectoryNode" />
               <item name="NomenclatureListPage" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="RPPBA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RPPBA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="Storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RPPBA" type="b2602c69:ProjectViewProjectNode" />
@@ -446,13 +442,6 @@
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="TaskLists" type="462c0819:PsiDirectoryNode" />
               <item name="ListsTaskListPage" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="RPPBA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RPPBA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="Product_Information_Management" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="RPPBA" type="b2602c69:ProjectViewProjectNode" />
@@ -679,7 +668,7 @@
       <workItem from="1525441364494" duration="6741000" />
       <workItem from="1525452233459" duration="23036000" />
       <workItem from="1525624640707" duration="9396000" />
-      <workItem from="1525880497856" duration="6841000" />
+      <workItem from="1525880497856" duration="10262000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1521934423252</created>
@@ -692,7 +681,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216177000" />
+    <option name="totallyTimeSpent" value="219598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,6 +939,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding>
+            <element signature="e#1221#1222#0" expanded="false" />
+            <element signature="e#1250#1251#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,14 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Nomenclature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="78" lean-forward="false" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -1074,14 +1059,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Nomenclature/NomenclatureAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/TaskLists/TaskListPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1091,11 +1068,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/TaskLists/TaskListPage.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
@@ -1113,19 +1085,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/TaskList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1135,30 +1094,6 @@
             <element signature="e#373#374#0" expanded="true" />
             <element signature="e#404#405#0" expanded="true" />
             <element signature="e#431#432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-424">
-          <caret line="66" column="10" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1470#1479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1176,10 +1111,54 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Storage/StorageForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1155">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1470#1479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Nomenclature/NomenclatureAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="106" column="21" lean-forward="false" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Product_Information_Management.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Nomenclature/NomenclatureListPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+        <state relative-caret-position="143">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#808#946#0" expanded="true" />
@@ -1192,124 +1171,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/TaskLists/ListsTaskListPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        <state relative-caret-position="17">
+          <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#597#735#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1168#1169#0" expanded="true" />
-            <element signature="e#1301#1311#0" expanded="true" />
+            <element signature="e#513#651#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/server/Nomenclature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="164" column="64" lean-forward="false" selection-start-line="164" selection-start-column="64" selection-end-line="164" selection-end-column="64" />
+        <state relative-caret-position="504">
+          <caret line="24" column="78" lean-forward="false" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1525886107451" expanded="true" signature="12023:12029" ph="{...}" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="229" column="49" lean-forward="false" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
+        <state relative-caret-position="423">
+          <caret line="238" column="21" lean-forward="true" selection-start-line="238" selection-start-column="21" selection-end-line="238" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8602#8612#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="238" column="60" lean-forward="false" selection-start-line="238" selection-start-column="53" selection-end-line="238" selection-end-column="61" />
+        <state relative-caret-position="46">
+          <caret line="171" column="49" lean-forward="true" selection-start-line="171" selection-start-column="49" selection-end-line="171" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1525886107588" expanded="true" signature="1069:1099" ph="SELECT * FRO... log_nomenclature" />
-            <marker date="1525886107588" expanded="true" signature="2321:2399" ph="SELECT SUM(Q... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="2321:2400" ph="SELECT SUM(Q... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="2321:2413" ph="SELECT SUM (... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="3047:3130" ph="SELECT SUM(O... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="3801:3826" ph="SELECT * FRO... log_storage" />
-            <marker date="1525886107588" expanded="true" signature="4718:4736" ph="SELECT * FRO... log_storage" />
-            <marker date="1525886107588" expanded="true" signature="4718:4748" ph="SELECT * FRO... log_nomenclature" />
-            <marker date="1525886107588" expanded="true" signature="5968:5990" ph="SELECT * FRO... log_cell" />
-            <marker date="1525886107588" expanded="true" signature="7081:7142" ph="SELECT * FRO... log_cell" />
-            <marker date="1525886107588" expanded="true" signature="8288:8314" ph="SELECT * FRO... log_tasklist" />
-            <marker date="1525886107588" expanded="true" signature="9158:9183" ph="SELECT * FRO... log_storage" />
-            <marker date="1525886107588" expanded="true" signature="9695:9758" ph="DELETE FROM " />
-            <marker date="1525886107588" expanded="true" signature="10329:10391" ph="DELETE FROM " />
-            <marker date="1525886107588" expanded="true" signature="10965:11019" ph="DELETE FROM " />
-            <marker date="1525886107588" expanded="true" signature="11866:11891" ph="SELECT * FRO... log_storage" />
-            <marker date="1525886107588" expanded="true" signature="12098:12224" ph="INSERT INTO log_storage... " />
-            <marker date="1525886107588" expanded="true" signature="13168:13190" ph="SELECT * FRO... log_cell" />
-            <marker date="1525886107588" expanded="true" signature="13389:13631" ph="INSERT INTO log_cell... " />
-            <marker date="1525886107588" expanded="true" signature="14444:14462" ph="SELECT * FRO... log_cell" />
-            <marker date="1525886107588" expanded="true" signature="14444:14474" ph="SELECT * FRO... log_nomenclature" />
-            <marker date="1525886107588" expanded="true" signature="14673:14933" ph="INSERT INTO log_nomenclature... " />
-            <marker date="1525886107588" expanded="true" signature="14673:14936" ph="INSERT INTO log_nomenclature... " />
-            <marker date="1525886107588" expanded="true" signature="14673:14955" ph="INSERT INTO log_cell... " />
-            <marker date="1525886107588" expanded="true" signature="14673:14956" ph="INSERT INTO log_nomenclature... " />
-            <marker date="1525886107588" expanded="true" signature="15662:15938" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15662:15953" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15662:15954" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15662:15956" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15662:15965" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15662:15968" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15662:15969" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15690" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15699" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15712" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15741" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15795" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15822" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15851" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15890" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15900" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15935" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="15668:15938" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="16488:16569" ph="UPDATE log_s... " />
-            <marker date="1525886107588" expanded="true" signature="16488:16605" ph="UPDATE log_s... " />
-            <marker date="1525886107588" expanded="true" signature="16569:16605" ph="UPDATE log_n... " />
-            <marker date="1525886107588" expanded="true" signature="17736:17776" ph="SELECT ItemI... log_nomenclature" />
-            <marker date="1525886107588" expanded="true" signature="18541:18581" ph="SELECT Stora... log_storage" />
-            <marker date="1525886107588" expanded="true" signature="19403:19452" ph="SELECT Type log_nomenclature" />
-            <marker date="1525886107588" expanded="true" signature="19694:19818" ph="SELECT CellI... log_cell" />
-            <marker date="1525886107588" expanded="true" signature="20604:20655" ph="SELECT ItemI... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="21525:21612" ph="SELECT Avail... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="21861:21941" ph="select Avail... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="22348:22531" ph="INSERT INTO log_availability... " />
-            <marker date="1525886107588" expanded="true" signature="22698:22788" ph="update log_a... " />
-            <marker date="1525886107588" expanded="true" signature="23535:23600" ph="select Trans... log_transit" />
-            <marker date="1525886107588" expanded="true" signature="23996:24229" ph="INSERT INTO log_transit... " />
-            <marker date="1525886107588" expanded="true" signature="24527:24592" ph="select Trans... log_transit" />
-            <marker date="1525886107588" expanded="true" signature="24988:25222" ph="INSERT INTO log_transit... " />
-            <marker date="1525886107588" expanded="true" signature="25574:25639" ph="select Trans... log_transit" />
-            <marker date="1525886107588" expanded="true" signature="26438:26710" ph="INSERT INTO log_transit... " />
-            <marker date="1525886107588" expanded="true" signature="27181:27246" ph="select Trans... log_transit" />
-            <marker date="1525886107588" expanded="true" signature="27648:27774" ph="INSERT INTO log_transit... " />
-            <marker date="1525886107588" expanded="true" signature="28546:28602" ph="select TaskI... log_task" />
-            <marker date="1525886107588" expanded="true" signature="28819:29028" ph="INSERT INTO log_task... " />
-            <marker date="1525886107588" expanded="true" signature="29798:29854" ph="SELECT ItemI... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="30747:30798" ph="SELECT CellI... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="30953:31003" ph="SELECT Stora... log_cell" />
-            <marker date="1525886107588" expanded="true" signature="31446:31502" ph="SELECT Addre... log_storage" />
-            <marker date="1525886107588" expanded="true" signature="32532:32591" ph="SELECT Avail... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="32764:32861" ph="update log_a... " />
-            <marker date="1525886107588" expanded="true" signature="33494:33552" ph="SELECT Order... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="34256:34348" ph="SELECT ItemI... log_nomenclature" />
-            <marker date="1525886107588" expanded="true" signature="35528:35639" ph="UPDATE log_a... " />
-            <marker date="1525886107588" expanded="true" signature="35797:35877" ph="select Avail... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="36270:36451" ph="INSERT INTO log_availability... " />
-            <marker date="1525886107588" expanded="true" signature="36987:37045" ph="SELECT sum(O... log_availability" />
-            <marker date="1525886107588" expanded="true" signature="37288:37295" ph="{...}" />
+            <element signature="e#5826#5832#0" expanded="true" />
+            <element signature="e#6954#6960#0" expanded="true" />
+            <element signature="e#8144#8154#0" expanded="true" />
+            <marker date="1525969496576" expanded="true" signature="1069:1099" ph="SELECT * FRO... log_nomenclature" />
+            <marker date="1525969496576" expanded="true" signature="2321:2399" ph="SELECT SUM(Q... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="2321:2400" ph="SELECT SUM(Q... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="2321:2413" ph="SELECT SUM (... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="3047:3130" ph="SELECT SUM(O... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="3801:3826" ph="SELECT * FRO... log_storage" />
+            <marker date="1525969496576" expanded="true" signature="4718:4736" ph="SELECT * FRO... log_storage" />
+            <marker date="1525969496576" expanded="true" signature="4718:4748" ph="SELECT * FRO... log_nomenclature" />
+            <marker date="1525969496576" expanded="true" signature="5968:5990" ph="SELECT * FRO... log_cell" />
+            <marker date="1525969496576" expanded="true" signature="7081:7142" ph="SELECT * FRO... log_cell" />
+            <marker date="1525969496576" expanded="true" signature="8290:8316" ph="SELECT * FRO... log_tasklist" />
+            <marker date="1525969496576" expanded="true" signature="9176:9201" ph="SELECT * FRO... log_storage" />
+            <marker date="1525969496576" expanded="true" signature="9878:9904" ph="SELECT * FRO... log_tasklist" />
+            <marker date="1525969496576" expanded="true" signature="10361:10424" ph="DELETE FROM " />
+            <marker date="1525969496576" expanded="true" signature="10995:11057" ph="DELETE FROM " />
+            <marker date="1525969496576" expanded="true" signature="11631:11685" ph="DELETE FROM " />
+            <marker date="1525969496576" expanded="true" signature="12532:12557" ph="SELECT * FRO... log_storage" />
+            <marker date="1525969496576" expanded="true" signature="12764:12890" ph="INSERT INTO log_storage... " />
+            <marker date="1525969496576" expanded="true" signature="13834:13856" ph="SELECT * FRO... log_cell" />
+            <marker date="1525969496576" expanded="true" signature="14055:14297" ph="INSERT INTO log_cell... " />
+            <marker date="1525969496576" expanded="true" signature="15110:15128" ph="SELECT * FRO... log_cell" />
+            <marker date="1525969496576" expanded="true" signature="15110:15140" ph="SELECT * FRO... log_nomenclature" />
+            <marker date="1525969496576" expanded="true" signature="15339:15599" ph="INSERT INTO log_nomenclature... " />
+            <marker date="1525969496576" expanded="true" signature="15339:15602" ph="INSERT INTO log_nomenclature... " />
+            <marker date="1525969496576" expanded="true" signature="15339:15621" ph="INSERT INTO log_cell... " />
+            <marker date="1525969496576" expanded="true" signature="15339:15622" ph="INSERT INTO log_nomenclature... " />
+            <marker date="1525969496576" expanded="true" signature="16328:16604" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16328:16619" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16328:16620" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16328:16622" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16328:16631" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16328:16634" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16328:16635" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16356" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16365" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16378" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16407" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16461" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16488" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16517" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16556" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16566" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16601" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="16334:16604" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="17154:17235" ph="UPDATE log_s... " />
+            <marker date="1525969496576" expanded="true" signature="17154:17271" ph="UPDATE log_s... " />
+            <marker date="1525969496576" expanded="true" signature="17235:17271" ph="UPDATE log_n... " />
+            <marker date="1525969496576" expanded="true" signature="18402:18442" ph="SELECT ItemI... log_nomenclature" />
+            <marker date="1525969496576" expanded="true" signature="19207:19247" ph="SELECT Stora... log_storage" />
+            <marker date="1525969496576" expanded="true" signature="20069:20118" ph="SELECT Type log_nomenclature" />
+            <marker date="1525969496576" expanded="true" signature="20360:20484" ph="SELECT CellI... log_cell" />
+            <marker date="1525969496576" expanded="true" signature="21270:21321" ph="SELECT ItemI... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="22191:22278" ph="SELECT Avail... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="22527:22607" ph="select Avail... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="23014:23197" ph="INSERT INTO log_availability... " />
+            <marker date="1525969496576" expanded="true" signature="23364:23454" ph="update log_a... " />
+            <marker date="1525969496576" expanded="true" signature="24201:24266" ph="select Trans... log_transit" />
+            <marker date="1525969496576" expanded="true" signature="24662:24895" ph="INSERT INTO log_transit... " />
+            <marker date="1525969496576" expanded="true" signature="25193:25258" ph="select Trans... log_transit" />
+            <marker date="1525969496576" expanded="true" signature="25654:25888" ph="INSERT INTO log_transit... " />
+            <marker date="1525969496576" expanded="true" signature="26240:26305" ph="select Trans... log_transit" />
+            <marker date="1525969496576" expanded="true" signature="27104:27376" ph="INSERT INTO log_transit... " />
+            <marker date="1525969496576" expanded="true" signature="27847:27912" ph="select Trans... log_transit" />
+            <marker date="1525969496576" expanded="true" signature="28314:28440" ph="INSERT INTO log_transit... " />
+            <marker date="1525969496576" expanded="true" signature="29212:29268" ph="select TaskI... log_task" />
+            <marker date="1525969496576" expanded="true" signature="29485:29694" ph="INSERT INTO log_task... " />
+            <marker date="1525969496576" expanded="true" signature="30464:30520" ph="SELECT ItemI... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="31413:31464" ph="SELECT CellI... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="31619:31669" ph="SELECT Stora... log_cell" />
+            <marker date="1525969496576" expanded="true" signature="32112:32168" ph="SELECT Addre... log_storage" />
+            <marker date="1525969496576" expanded="true" signature="33198:33257" ph="SELECT Avail... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="33430:33527" ph="update log_a... " />
+            <marker date="1525969496576" expanded="true" signature="34160:34218" ph="SELECT Order... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="34922:35014" ph="SELECT ItemI... log_nomenclature" />
+            <marker date="1525969496576" expanded="true" signature="36194:36305" ph="UPDATE log_a... " />
+            <marker date="1525969496576" expanded="true" signature="36463:36543" ph="select Avail... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="36936:37117" ph="INSERT INTO log_availability... " />
+            <marker date="1525969496576" expanded="true" signature="37653:37711" ph="SELECT sum(O... log_availability" />
+            <marker date="1525969496576" expanded="true" signature="37954:37961" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2782">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525969826240" expanded="true" signature="12219:12225" ph="{...}" />
           </folding>
         </state>
       </provider>

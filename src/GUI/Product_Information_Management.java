@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import static client.Client.getAllAvailabilityInList;
 import static client.Client.getAllNomenclatureInList;
+import static client.Client.*;
 
 public class Product_Information_Management extends JFrame{
     private JTable table1;
@@ -44,6 +45,15 @@ public class Product_Information_Management extends JFrame{
         setSize(900, 650);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(InventManagementForm);
+
+        String str = getAllTaskListId();
+        String[] strarray = str.split(" ");
+        comboBox1.removeAllItems();
+
+        for (int j = 0; j < strarray.length; j++){
+            comboBox1.addItem(strarray[j]);
+        }
+
         setResizable(false);
 
 

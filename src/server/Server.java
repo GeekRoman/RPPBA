@@ -204,6 +204,13 @@ public class Server extends Thread {
                         soos.writeObject(storages);
                         break;
                     }
+
+                    case "getAllTaskListId": {
+                        String allTaskList= db.getAllTaskListId();
+                        soos.writeObject(allTaskList);
+                        break;
+                    }
+
                     case "getAllNomenclatureInList": {
                         ArrayList<Nomenclature> nomenclatures = new ArrayList<>(db.getAllNomenclatureInList());
                         soos.writeObject(nomenclatures);
@@ -225,8 +232,8 @@ public class Server extends Thread {
                         soos.writeObject(cells);
                         break;
                     }
-                    case "getAllTaskLiatInList": {
-                        ArrayList<TaskList> taskLists = new ArrayList<>(db.getAllTaskLiatInList());
+                    case "getAllTaskListInList": {
+                        ArrayList<TaskList> taskLists = new ArrayList<TaskList>(db.getAllTaskListInList());
                         soos.writeObject(taskLists);
                         break;
                     }
