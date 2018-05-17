@@ -1,25 +1,38 @@
 package GUI;
 
-import server.Storage;
+import GUI.Nomenclature.NomenclatureListPage;
+import GUI.TaskLists.ListsTaskListPage;
+import GUI.Tasks.Get_products;
+import GUI.Tasks.Inventory_products;
+import GUI.Tasks.Set_products;
+import GUI.Tasks.Transfer_products;
+import server.Availability;
+import server.Nomenclature;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.util.ArrayList;
 
+import static client.Client.getAllAvailabilityInList;
+import static client.Client.getAllNomenclatureInList;
 import static client.Client.*;
 
-public class Product_Information_Management extends JFrame implements ActionListener {
+public class Product_Information_Management extends JFrame{
     private JTable table1;
-    private JButton GetButton;
-    private JButton SetButton;
+    private JButton buttonSetProduct;
+    private JButton buttonGetProduct;
     private JButton ExitButton;
-    private JButton InventButton;
+    private JButton buttonInventarization;
     private JPanel InventManagementForm;
-    private String []columnsHeader = {"ID", "Название", "Длина", "Высота",
-            "Ширина", "Цвет", "Постовщик", "В наличии", "Заказанно", "Склад","Ячейка"};
+    private JButton nomenclatureListButton;
+    private JButton listTasksButton;
+    private JComboBox comboBox1;
+    private JButton buttonTransfer;
+
+    private String []columnsHeader = {"ID", "Тип","Длина", "Высота",
+            "Ширина","Конфигурация", "Цвет", "Постовщик", "В наличии", "Заказанно"};
     DefaultTableModel tableModel = new DefaultTableModel() {
         public boolean isCellEditable(int rowIndex, int columnIndex) {
             return false;
@@ -28,51 +41,158 @@ public class Product_Information_Management extends JFrame implements ActionList
 
 
     public Product_Information_Management  () throws Exception{
-        super();
+        super("Управление продукцией ");
         setSize(900, 650);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(InventManagementForm);
-        this.setResizable(false);
-        this.setVisible(true);
-        InventButton.addActionListener(this);
-        SetButton.addActionListener(this);
-        GetButton.addActionListener(this);
-        ExitButton.addActionListener(this);
-        for (String col: columnsHeader){
-            tableModel.addColumn(col);
+
+        String str = getAllTaskListId();
+        String[] strarray = str.split(" ");
+        comboBox1.removeAllItems();
+
+        for (int j = 0; j < strarray.length; j++){
+            comboBox1.addItem(strarray[j]);
         }
-        table1.setModel(tableModel);
 
-        ArrayList<server.Availability> list;
-       // list = new ArrayList<server.Availability>(getAllAvailabilityInList());
+        setResizable(false);
 
 
-    }
-    public void actionPerformed(ActionEvent e) {
-        String str = e.getActionCommand(), answer;
+        initForm();
 
-        switch(str){
-            case "Получение продукции": {
-                break;
-            }
-            case "Отгрузку продукции": {
-                break;
-            }
+        /*ArrayList<Availability> list;
+       list = new ArrayList<server.Availability>(getAllAvailabilityInList())*/;
 
-            case "Плановую инвентаризацию":{
-                break;
-
-            }
-            case "Назад":{
-                this.dispose();
+        ExitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            dispose();
                 Menu menuform = null;
                 try {
                     menuform = new Menu();
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                break;
             }
+        });
+
+        nomenclatureListButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openNomenclature();
+                } catch (Exception e1){
+
+                }
+
+            }
+        });
+        listTasksButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openTaskList();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+    }
+
+    // Обработка кнопок с заданиями
+    private void initForm() throws Exception{
+        ArrayList<Availability> list = new ArrayList<Availability>(getAllAvailabilityInList());
+        for (String col: columnsHeader){
+            tableModel.addColumn(col);
         }
+        table1.setModel(tableModel);
+
+        for (int i = 0; i < list.size(); i++) {
+            tableModel.addRow(new String[]{
+                    list.get(i).getItemId(),
+                    list.get(i).getType(),
+                    list.get(i).getLength(),
+                    list.get(i).getHeight(),
+                    list.get(i).getWigth(),
+                    list.get(i).getColor(),
+                    list.get(i).getConfig(),
+                    list.get(i).getProvider(),
+                    list.get(i).getQuantity(),
+                    list.get(i).getOrderQuantity(),
+            });
+        };
+
+        buttonSetProduct.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                try {
+                    openSet_Products();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+
+        buttonGetProduct.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openGet_Products();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+
+        buttonInventarization.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openInventory_Products();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+
+
+
+        buttonTransfer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    openTransfer_Products();
+                } catch (Exception e1){
+
+                }
+            }
+        });
+    }
+
+    // Открытие формы Получение продукции
+    private void openSet_Products() throws Exception{
+        Set_products set_products =  new Set_products();
+        set_products.setVisible(true);
+    }
+
+    // Открытие формы Отгрузка продукции
+    private void openGet_Products() throws Exception{
+        new Get_products().setVisible(true);
+    }
+
+    // Открытие формы Инветаризация склада
+    private void openInventory_Products() throws Exception{
+        new Inventory_products().setVisible(true);
+    }
+
+    // Открытие формы Перемещение продукции
+    private void openTransfer_Products() throws Exception{
+        new Transfer_products().setVisible(true);
+    }
+
+    private void openNomenclature() throws Exception{
+        new NomenclatureListPage().setVisible(true);
+    }
+    private void openTaskList() throws Exception{
+        new ListsTaskListPage().setVisible(true);
     }
 }

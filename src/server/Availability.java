@@ -2,10 +2,10 @@ package server;
 import java.io.Serializable;
 public class Availability  implements Serializable{
     public String ItemId;
-    public String Name;
+    public String Type;
     public String Length;
     public String Height;
-    public String Wight;
+    public String Wigth;
     public String Config;
     public String Color;
     public String Provider;
@@ -16,15 +16,15 @@ public class Availability  implements Serializable{
     Availability(){}
 
 
-    public Availability (String ItemId,String Name,String Length,
-                         String Height,String Wight,String Config,
+    public Availability (String ItemId,String Type,String Length,
+                         String Height,String Wigth,String Config,
                          String Color,String Provider,String Quantity,
-                         String OrderQuantity,String StorageId,String CellId){
+                         String OrderQuantity){
         this.ItemId = ItemId;
-        this.Name = Name;
+        this.Type = Type;
         this.Length = Length;
         this.Height = Height;
-        this.Wight = Wight;
+        this.Wigth = Wigth;
         this.Config = Config;
         this.Color = Color;
         this.Provider = Provider;
@@ -34,8 +34,15 @@ public class Availability  implements Serializable{
         this.CellId = CellId;
     }
 
-    public String getName() {
-        return Name;
+    public Availability(String ItemId,String OrderQuantity,String CellId){
+        this.ItemId = ItemId;
+        this.OrderQuantity = OrderQuantity;
+        this.CellId = CellId;
+    }
+
+
+    public String getType() {
+        return Type;
     }
 
     public String getCellId() {
@@ -74,9 +81,10 @@ public class Availability  implements Serializable{
         return Quantity;
     }
 
-    public String getWight() {
-        return Wight;
+    public String getWigth() {
+        return Wigth;
     }
+
     public String getStorageId() {
         return StorageId;
     }

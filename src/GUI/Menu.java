@@ -5,7 +5,8 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.io.IOException;
 import  java.lang.*;
-import  server.Storage;
+
+import GUI.Storage.StorageForm;
 
 import static client.Client.quit;
 
@@ -16,11 +17,11 @@ public class Menu extends JFrame implements ActionListener {
     private JPanel FormMenu;
 
     public Menu () throws Exception {
-        super();
-        setSize(600, 200);
+        super("Меню");
+        setSize(600, 250);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(FormMenu);
-        this.setResizable(false);
+        this.setResizable(true);
         this.setVisible(true);
         Button1.addActionListener(this);
         Button2.addActionListener(this);
@@ -47,8 +48,6 @@ public class Menu extends JFrame implements ActionListener {
                 this.dispose();
                 StorageForm newStorage = null;
                 try {
-
-
                     newStorage = new StorageForm();
                     newStorage.setResizable(false);
                     newStorage.setVisible(true);

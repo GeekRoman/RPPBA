@@ -13,6 +13,11 @@ public class Storage implements Serializable{
         this.Status = Status;
     }
 
+    public Storage(String StorageId,String Status){
+        this.StorageId = StorageId;
+        this.Status = Status;
+    }
+
     public String getStatus() {
         return Status;
     }
